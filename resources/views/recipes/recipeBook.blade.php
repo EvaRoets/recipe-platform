@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
     <p>This is the recipe book page</p>
-    <div class="recipe-container">
+    <div class="recipe-book-container">
         <div class="recipe-filter">
 
         </div>
