@@ -8,12 +8,12 @@
 </head>
 <body class="antialiased">
 
-@include('components/header')
+@include('layouts.components.header')
 
 @section('content')
 @show
 
-@include('components/footer')
+@include('layouts.components.footer')
 
 </body>
 </html>
