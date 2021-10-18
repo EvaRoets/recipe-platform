@@ -1,5 +1,7 @@
 /*header begins here*/
-.navbar{}
+.navbar{
+    display:flex;
+}
 .logo-container{}
 .logo{}
 
@@ -27,11 +29,9 @@ button {}
     outline: none;
     font-size: 15px;
 }
-
 .active, .collapsible:hover {
     background-color: #ccc;
 }
-
 .content {
     padding: 0 18px;
     display: none;
@@ -42,7 +42,11 @@ button {}
 }
 
 /*home begins here*/
-.home-container{}
+.home-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
 .home-filter{}
 .home-feed{}
 .pop-up{}
@@ -50,6 +54,11 @@ button {}
 
 
 /*recipe card begins here*/
+
+.recipe-container + .recipe-container{
+    
+}
+
 .badge {
     color:black!important;
     background: #a0aec0!important  ;

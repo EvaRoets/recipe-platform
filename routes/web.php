@@ -7,5 +7,7 @@ Route::get('/', [Controller::class, 'index'])->name('home');
 
 
 
+Route::get('cardFeatured', function () {
+    return view('recipes.components.cardFeatured')
 
-
+});
