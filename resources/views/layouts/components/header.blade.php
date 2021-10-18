@@ -4,14 +4,14 @@
 <header>
     <div class="navbar">
 {{--    logo starts here--}}
-        <div class="logo">
-            <img class="" src="" alt=""/>
+        <div class="logo-container">
+            <img class="logo" src="" alt=""/>
             <a class="active" href="#home">Home</a>
         </div>
 
 {{--    search bar starts here--}}
         <div class="searchbar">
-                <form action="/action_page.php">
+                <form action="">
                     <label>
                         <input type="text" placeholder="Search..." name="search">
                         <button type="submit"><i class="fa fa-search"></i></button>

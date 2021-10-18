@@ -1,11 +1,26 @@
 {{--TODO check for input attributes--}}
+{{--TODO add dropdown with selectable ingredient quantities--}}
+{{--TODO let user add additional row--}}
+{{--TODO add ingredients and quantities with pictures--}}
+{{--TODO adjust ingredients depending on nu;ber of persons for recipe--}}
+{{--TODO add how long it takes to cook the recipe--}}
 
+@extends('layouts.layout')
+@section('content')
 <div class="create-recipe-container">
         <div class="create-gallery">
             <form>
-                <label for="img">Select image(s)</label>
+                <label for="img">Upload image(s)</label>
                 <input type="image" id="img" name="img" accept="image/*">
                 <input type="submit" value="Save images">
+            </form>
+        </div>
+        <div class="create-title">
+            <form>
+                <label for="title">Add title</label>
+                <input type="text" id="title" name="title">
+                <input type="submit" value="Save title">
+
             </form>
         </div>
         <div class="create-tags">
@@ -25,8 +40,6 @@
             </form>
         </div>
         <div class="create-ingredients">
-        {{--TODO add dropdown with selectable quantities--}}
-        {{--TODO let user add additional row--}}
             <form>
                 <label for="tags">Add ingredients</label>
                 <table>
@@ -66,13 +79,10 @@
                 <label for="tags">Add instructions</label>
                 <input type="text">
                 <input type="submit" value="Save instructions">
-
             </form>
         </div>
     </form>
-
-
-
-
-
 </div>
+
+@endsection
+

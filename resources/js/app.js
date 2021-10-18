@@ -2,7 +2,6 @@ require('./bootstrap');
 
 
 // collapsible profile starts here
-
 let coll = document.getElementsByClassName("collapsible");
 
 for (i = 0; i < coll.length; i++) {

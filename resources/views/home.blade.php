@@ -6,7 +6,10 @@
 
         </div>
         <div class="feed">
-
+        @include('recipes.components.cardFeatured')
+        </div>
+        <div class="pop-up">
+            <button class="Add">Add recipe</button>
         </div>
     </div>
 @endsection
