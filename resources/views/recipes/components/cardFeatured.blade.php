@@ -1,7 +1,7 @@
-<div class="recipe-container">
+<div class="card-featured-container">
     <div class="card-gallery">
         {{--        TODO display image(s) from database --}}
-        <img src="../../../css/images/shakshuka.jpeg" alt="recipe-picture(s)"/>
+        <img src="../../../../public/images/shakshuka.jpeg" alt="recipe-picture(s)"/>
     </div>
     <div class="card-title">
         {{--        TODO display title from database--}}
