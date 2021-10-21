@@ -1,10 +1,15 @@
 /*General starts here*/
 
 /*color scheme starts here */
-/*#DED0D0*/
-/*#FFF5E9*/
-/*#7DB29E*/
-/*#4E918E*/
+$background-color: #FFF5E9;
+$dark-green: #4E918E;
+$light-green: #7DB29E;
+$bright-accent: #eb7878;
+$light-accent: #DED0D0;
+
+
+
+
 
 /*Font-Awesome starts here*/
 $fa-font-path:        "../webfonts";
@@ -15,8 +20,8 @@ $fa-font-path:        "../webfonts";
 
 
 body {
-    background-color: #FFF5E9;
-    color: #4E918E;
+    background-color: $background-color;
+    color: $dark-green;
 }
 
 
@@ -56,8 +61,8 @@ button {}
 /*collapsible profile begins here*/
 .profile{}
 .collapsible {
-    background-color: #eee;
-    color: #444;
+    background-color: $background-color;
+    color: $dark-green;
     cursor: pointer;
     padding: 18px;
     width: 100%;

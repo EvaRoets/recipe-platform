@@ -1,9 +1,5 @@
 /*General starts here*/
 /*color scheme starts here */
-/*#DED0D0*/
-/*#FFF5E9*/
-/*#7DB29E*/
-/*#4E918E*/
 /*Font-Awesome starts here*/
 /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
@@ -6162,8 +6158,8 @@ form {
 
 /*collapsible profile begins here*/
 .collapsible {
-  background-color: #eee;
-  color: #444;
+  background-color: #FFF5E9;
+  color: #4E918E;
   cursor: pointer;
   padding: 18px;
   width: 100%;

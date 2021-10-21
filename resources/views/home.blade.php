@@ -6,6 +6,7 @@
             <form>
                 <br><label for="main-ingredient">Main ingredient</label><br>
                 {{-- TODO check for proper list--}}
+                {{--TODO replace with for each, 1 label, array all ingredients in json--}}
                 <label for="vegetables"><input type="radio" id="vegetables" name="main-ingredient" value="Vegetables">Vegetables</label><br>
                 <label for="fruit"><input type="radio" id="fruit" name="main-ingredient" value="Fruits">Fruit</label><br>
                 <label for="Chicken"><input type="radio" id="chicken" name="main-ingredient" value="Chicken">Chicken</label><br>
@@ -41,6 +42,8 @@
             </form>
         </div>
         <div class="feed">
+                    {{-- TODO verify @include() option to display multiple cardFeatured--}}
+
             <div class="card-featured-container">
                 <div class="card-title">
                     {{--        TODO display title from database--}}
