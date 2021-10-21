@@ -5,8 +5,8 @@
     <div class="navbar">
 {{--    logo starts here--}}
         <div class="logo-container">
-            <img class="logo" src="" alt=""/>
-            <a class="active" href="#home">Home</a>
+            <a href="#home">
+                <img class="logo" src={{ asset('images/logo/flavorly-icon.png') }} alt=""/></a>
         </div>
 
 {{--    search bar starts here--}}
