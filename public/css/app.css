@@ -31,6 +31,8 @@ form{
 label{}
 input[type=text] {}
 input[type=text]:focus {}
+::-moz-placeholder {}
+:-ms-input-placeholder {}
 ::placeholder {}
 button {}
 
@@ -83,3 +85,4 @@ button {}
     color:black!important;
     background: #a0aec0!important  ;
 }
+
