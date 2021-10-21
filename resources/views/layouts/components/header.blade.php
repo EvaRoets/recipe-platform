@@ -3,23 +3,27 @@
 
 <header>
     <div class="navbar">
-{{--    logo starts here--}}
+        {{--    logo starts here--}}
         <div class="logo-container">
             <a href="#home">
                 <img class="logo" src={{ asset('images/logo/flavorly-icon.png') }} alt=""/></a>
         </div>
 
-{{--    search bar starts here--}}
+        {{--    search bar starts here--}}
         <div class="searchbar">
-                <form action="">
-                    <label>
-                        <input type="text" placeholder="Search..." name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </label>
-                </form>
+            <form action="">
+                <label>
+                    <input type="text" placeholder="Search..." name="search">
+                    <button class="search-button" type="submit" value="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+
+
+                </label>
+            </form>
         </div>
 
-{{--    profile collapse starts here--}}
+        {{--    profile collapse starts here--}}
         <div class="profile">
             <button type="button" class="collapsible">Profile</button>
             <div class="content">
