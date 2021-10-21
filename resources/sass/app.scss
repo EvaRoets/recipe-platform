@@ -7,6 +7,7 @@
 /*#4E918E*/
 
 /*Font-Awesome starts here*/
+$fa-font-path:        "../webfonts";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/regular";
 @import "~@fortawesome/fontawesome-free/scss/solid";
@@ -27,6 +28,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .logo-container{}
