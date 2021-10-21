@@ -8,26 +8,20 @@ $bright-accent: #eb7878;
 $light-accent: #DED0D0;
 
 
-
-
-
 /*Font-Awesome starts here*/
-$fa-font-path:        "../webfonts";
+$fa-font-path: "../webfonts";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/regular";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
-
 
 body {
     background-color: $background-color;
     color: $dark-green;
 }
 
-
-
 /*header begins here*/
-.navbar{
+.navbar {
     display: flex;
     text-align: center;
     flex-direction: row;
@@ -35,31 +29,60 @@ body {
     align-items: center;
     overflow: hidden;
 }
-
-.logo-container{}
-.logo{
-    width: 35px;
+.logo-container {
+}
+.logo {
+    width: 250px;
     height: auto;
-    padding: 20px
+    padding: 20px;
 }
 
 /*searchbar starts here */
-.searchbar{
-    border: #1a202c solid 2px;
+.search-container {
+    margin: 0 300px;
+    background: $light-accent;
+    height: 30px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
 }
-form{
-    border: #1a202c solid 2px;
+form {
 }
-label{}
-input[type=text] {}
-input[type=text]:focus {}
-::placeholder {}
-button {}
+input[type=text] {
+    border: none;
+    background: $light-accent;
+    cursor: pointer;
+}
+//TODO: get rid off border when click
+input[type=text]:focus {
 
+}
+::placeholder {
+    color: $dark-green;
+    font-weight: bold;
+}
+.search-button {
+    border: none;
+    background: $light-accent;
+    cursor: pointer;
+
+}
 
 
 /*collapsible profile begins here*/
-.profile{}
+.profile-container {}
+.profile {
+    width: 50px;
+    height: auto;
+    padding: 20px;
+}
 .collapsible {
     background-color: $background-color;
     color: $dark-green;
@@ -67,7 +90,7 @@ button {}
     padding: 18px;
     width: 100%;
     border: none;
-    text-align: left;
+    text-align: center;
     outline: none;
     font-size: 15px;
 }
@@ -78,30 +101,37 @@ button {}
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: $light-green;
     max-height: 0;
     transition: max-height 0.2s ease-out;
 }
+.fas, .fa {
+    color: $dark-green;
+}
 
 /*home begins here*/
-.home-container{
+.home-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
 
-.home-filter{}
-.home-feed{}
-.pop-up{}
+.home-filter {
+}
 
+.home-feed {
+}
+
+.pop-up {
+}
 
 
 /*recipe card begins here*/
 
-.recipe-container + .recipe-container{
+.recipe-container + .recipe-container {
 
 }
 
 .badge {
-    color:black!important;
-    background: #a0aec0!important  ;
+    color: black !important;
+    background: #a0aec0 !important;
 }

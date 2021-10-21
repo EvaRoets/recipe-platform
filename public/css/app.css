@@ -6142,21 +6142,59 @@ body {
 }
 
 .logo {
-  width: 35px;
+  width: 250px;
   height: auto;
   padding: 20px;
 }
 
 /*searchbar starts here */
-.searchbar {
-  border: #1a202c solid 2px;
+.search-container {
+  margin: 0 300px;
+  background: #DED0D0;
+  height: 30px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
-form {
-  border: #1a202c solid 2px;
+input[type=text] {
+  border: none;
+  background: #DED0D0;
+  cursor: pointer;
+}
+
+::-moz-placeholder {
+  color: #4E918E;
+  font-weight: bold;
+}
+
+:-ms-input-placeholder {
+  color: #4E918E;
+  font-weight: bold;
+}
+
+::placeholder {
+  color: #4E918E;
+  font-weight: bold;
+}
+
+.search-button {
+  border: none;
+  background: #DED0D0;
+  cursor: pointer;
 }
 
 /*collapsible profile begins here*/
+.profile {
+  width: 50px;
+  height: auto;
+  padding: 20px;
+}
+
 .collapsible {
   background-color: #FFF5E9;
   color: #4E918E;
@@ -6164,7 +6202,7 @@ form {
   padding: 18px;
   width: 100%;
   border: none;
-  text-align: left;
+  text-align: center;
   outline: none;
   font-size: 15px;
 }
@@ -6177,9 +6215,13 @@ form {
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #7DB29E;
   max-height: 0;
   transition: max-height 0.2s ease-out;
+}
+
+.fas, .fa {
+  color: #4E918E;
 }
 
 /*home begins here*/
