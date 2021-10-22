@@ -186,33 +186,20 @@ input[type=text]:focus {
     border-bottom: 1px solid $light-accent;
     border-left: 1px solid $light-accent;
     border-right: 1px solid $light-accent;
-    margin: 25px 50px;
+    margin: 100px 50px;
     padding: 30px 50px 10px 50px;
     box-shadow: $box-shadow-featured;
-}
 
+}
 .card-title {
     font-family: $font-title;
     text-align: center
 }
-
 .card-gallery {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center
-}
-
-.card-image-container {
-    display: flex;
-    justify-content: center;
-}
-
-.card-image {
-    border-radius: $border-radius;
-    box-shadow: $box-shadow-image;
-    width: 500px;
-    height: auto;
 }
 
 .card-tags {
@@ -222,8 +209,8 @@ input[type=text]:focus {
     flex-wrap: wrap;
     justify-content: center;
     line-height: 0.7;
+    max-width: 500px;
 }
-
 badge {
     color: $background-color;
     background: $bright-accent;
@@ -232,11 +219,20 @@ badge {
     border-radius: $border-radius;
     box-shadow: $box-shadow;
 }
-
 .card-tags, .card-buttons {
     margin: 25px 15px 15px 15px;
 }
-
+.card-image-container {
+    display: flex;
+    justify-content: center;
+}
+.card-image {
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-image;
+    width: 500px;
+    height: auto;
+    cursor: pointer;
+}
 .card-buttons {
     display: flex;
     flex-direction: row;
@@ -245,13 +241,9 @@ badge {
     align-items: center;
 }
 
-.like-icon {
-    width: 25px;
-}
-
-.recipe-container + .recipe-container {
-
-}
+//.recipe-container + .recipe-container {
+//
+//}
 
 
 /*Pop-up starts here*/
