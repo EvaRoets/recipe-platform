@@ -6157,11 +6157,15 @@ body {
 
 /*header begins here*/
 .navbar {
-  display: flex;
+  background-color: #FFF5E9;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  border-radius: 30px;
+  border-bottom: 1px solid red;
+  position: fixed;
+  top: 0;
 }
 
 .logo {
