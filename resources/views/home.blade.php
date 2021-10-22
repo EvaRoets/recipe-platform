@@ -38,7 +38,7 @@
                 <label for="Dairy-free"> <input type="radio" id="dairy-free" name="special-occasions" value="Dairy-free">Dairy-free</label><br>
                 <label for="Gluten-free"><input type="radio" id="gluten-free" name="special-occasions" value="Gluten-free">Gluten-free</label><br>
 
-                <button type="submit" class="Search">Search recipes</button>
+                <button type="submit" class="search"><i class="fas fa-search"></i></button>
             </form>
         </div>
         <div class="feed">
@@ -63,14 +63,15 @@
                     {{--        TODO display tags from database--}}
                 </div>
                 <div class="card-buttons">
-                    <button class="like">Like</button>
-                    <button class="save">Save</button>
+{{--                    <button class="like"><img alt="like-icon" class="like-icon" src={{ asset('images/like-icon.png') }} /></button>--}}
+                    <button class="save"><i class="fas fa-heart"></i></button>
+                    <button class="like"><i class="fas fa-bookmark"></i></button>
                 </div>
             </div>
 
         </div>
         <div class="pop-up">
-            <button class="Add">Add recipe</button>
+            <button class="add"><i class="fas fa-plus-circle"></i></button>
         </div>
     </div>
 @endsection

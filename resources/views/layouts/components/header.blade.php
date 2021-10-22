@@ -1,5 +1,4 @@
 {{--TODO add action_page.php--}}
-{{--TODO add #home--}}
 
 <header>
     <div class="navbar">

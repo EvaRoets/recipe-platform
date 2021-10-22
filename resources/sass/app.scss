@@ -1,6 +1,4 @@
-/*General starts here*/
-
-/*color scheme starts here */
+/*Color scheme starts here */
 $background-color: #FFF5E9;
 $dark-green: #4E918E;
 $light-green: #7DB29E;
@@ -15,9 +13,21 @@ $fa-font-path: "../webfonts";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
+/*General starts here*/
 body {
     background-color: $background-color;
     color: $dark-green;
+}
+.save, .like, .search, .add {
+    background: #DED0D0;
+    margin: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 6px 0 rgb(255 255 255 / 30%), -4px -4px 6px 0 rgb(116 125 136 / 20%), inset -4px -4px 6px 0 rgb(255 255 255 / 20%), inset 4px 4px 6px 0 rgb(0 0 0 / 20%);
 }
 
 /*header begins here*/
@@ -29,8 +39,7 @@ body {
     align-items: center;
     overflow: hidden;
 }
-.logo-container {
-}
+.logo-container {}
 .logo {
     width: 250px;
     height: auto;
@@ -39,7 +48,7 @@ body {
 
 /*searchbar starts here */
 .search-container {
-    margin: 0 300px;
+    margin: 0 100px;
     background: $light-accent;
     height: 30px;
     border-radius: 30px;
@@ -48,22 +57,21 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
     -4px -4px 6px 0 rgba(116, 125, 136, .2),
-    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
 }
-form {
-}
+form {}
 input[type=text] {
     border: none;
     background: $light-accent;
     cursor: pointer;
+    width: 400px;
 }
-//TODO: get rid off border when click
-input[type=text]:focus {
 
-}
+//TODO: get rid off border when click
+input[type=text]:focus {}
 ::placeholder {
     color: $dark-green;
     font-weight: bold;
@@ -72,9 +80,7 @@ input[type=text]:focus {
     border: none;
     background: $light-accent;
     cursor: pointer;
-
 }
-
 
 /*collapsible profile begins here*/
 .profile-container {}
@@ -112,10 +118,13 @@ input[type=text]:focus {
 /*home begins here*/
 .home-container {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
+    justify-items: start;
+    align-items: start;
 }
 
 .home-filter {
+    margin-left: 20px;
 }
 
 .home-feed {
@@ -125,13 +134,37 @@ input[type=text]:focus {
 }
 
 
-/*recipe card begins here*/
+/*card featured begins here*/
+.card-featured-container{
+    border-radius: 5px;
+    border: 2px solid $light-green;
+}
+.card-title{
+    font-family: $font-title;
+}
+.card-gallery{}
+.card-tags{}
+.card-buttons{
+    display:flex;
+}
+
+
+badge {
+    color: $dark-green;
+    background: lightcoral;;
+}
+
+
+
+.like-icon {
+    width: 25px;
+}
+
+
 
 .recipe-container + .recipe-container {
 
 }
 
-.badge {
-    color: black !important;
-    background: #a0aec0 !important;
-}
+
+/*Pop-up starts here*/
