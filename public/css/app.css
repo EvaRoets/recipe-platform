@@ -6165,7 +6165,7 @@ body {
 }
 
 .logo {
-  width: 250px;
+  width: 150px;
   height: auto;
   padding: 20px;
 }
@@ -6208,7 +6208,7 @@ input[type=text] {
 
 /*collapsible profile begins here*/
 .profile {
-  width: 50px;
+  width: 100px;
   height: auto;
   padding: 20px;
 }

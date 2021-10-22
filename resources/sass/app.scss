@@ -52,7 +52,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .save, .like {
     color: $bright-accent;
     border: none;
@@ -61,12 +60,10 @@ body {
     padding: 20px 25px;
     margin: 15px;
 }
-
 .search, .see {
     color: $dark-green;
     border: none;
 }
-
 
 /*header begins here*/
 .navbar {
@@ -84,7 +81,7 @@ body {
 }
 
 .logo {
-    width: 250px;
+    width: 150px;
     height: auto;
     padding: 20px;
 }
@@ -128,7 +125,7 @@ input[type=text]:focus {
 }
 
 .profile {
-    width: 50px;
+    width: 100px;
     height: auto;
     padding: 20px;
 }
