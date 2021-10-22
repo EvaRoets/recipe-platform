@@ -6134,16 +6134,25 @@ body {
   font-family: "Montserrat Alternates", sans-serif;
 }
 
-.save, .like, .search, .add, .see {
+.save, .like, .search, .see {
   background: #DED0D0;
-  margin: 15px;
-  padding: 20px 25px;
-  border: none;
-  border-radius: 30px;
   cursor: pointer;
   justify-content: center;
   align-items: center;
+}
+
+.save, .like {
+  color: #eb7878;
+  border: none;
+  border-radius: 30px;
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px 25px;
+  margin: 15px;
+}
+
+.search, .see {
+  color: #4E918E;
+  border: none;
 }
 
 /*header begins here*/
@@ -6151,11 +6160,8 @@ body {
   display: flex;
   text-align: center;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding-bottom: 80px;
-  border-radius: 30px;
-  border-bottom: 1px solid #DED0D0;
 }
 
 .logo {
@@ -6200,12 +6206,6 @@ input[type=text] {
   font-weight: bold;
 }
 
-.search-button {
-  border: none;
-  background: #DED0D0;
-  cursor: pointer;
-}
-
 /*collapsible profile begins here*/
 .profile {
   width: 50px;
@@ -6226,7 +6226,7 @@ input[type=text] {
 }
 
 .active, .collapsible:hover {
-  background-color: #ccc;
+  background-color: #FFF5E9;
 }
 
 .content {
@@ -6236,14 +6236,6 @@ input[type=text] {
   background-color: #7DB29E;
   max-height: 0;
   transition: max-height 0.2s ease-out;
-}
-
-.fa {
-  color: #4E918E;
-}
-
-.fas {
-  color: #eb7878;
 }
 
 /*home begins here*/
@@ -6353,4 +6345,31 @@ badge {
 }
 
 /*Pop-up starts here*/
+.create-container {
+  position: fixed;
+  bottom: 0;
+}
+
+.add {
+  background: #FFF5E9;
+  color: #eb7878;
+  padding: 10px 25px;
+  border: none;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+  width: 500px;
+  transition: width 2s, height 2s;
+}
+
+.add:hover {
+  background: #eb7878;
+  color: #FFF5E9;
+  transform: scale(1.1);
+  width: 545px;
+  height: 50px;
+}
 

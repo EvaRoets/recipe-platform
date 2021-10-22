@@ -20,7 +20,11 @@ $fa-font-path: "../webfonts";
 
 /*General starts here*/
 $border-radius: 30px;
-$box-shadow: 4px 4px 6px 0 rgb(255 255 255 / 30%), -4px -4px 6px 0 rgb(116 125 136 / 20%), inset -4px -4px 6px 0 rgb(255 255 255 / 20%), inset 4px 4px 6px 0 rgb(0 0 0 / 20%);
+$box-shadow: 4px 4px 6px 0 rgb(255 255 255 / 30%),
+-4px -4px 6px 0 rgb(116 125 136 / 20%),
+inset -4px -4px 6px 0 rgb(255 255 255 / 20%),
+inset 4px 4px 6px 0 rgb(0 0 0 / 20%);
+
 $box-shadow-featured: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
 0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -42,16 +46,25 @@ body {
     font-family: $font-family;
 }
 
-.save, .like, .search, .add, .see {
-    background: #DED0D0;
-    margin: 15px;
-    padding: 20px 25px;
-    border: none;
-    border-radius: $border-radius;
+.save, .like, .search, .see {
+    background: $light-accent;
     cursor: pointer;
     justify-content: center;
     align-items: center;
+}
+
+.save, .like {
+    color: $bright-accent;
+    border: none;
+    border-radius: $border-radius;
     box-shadow: $box-shadow;
+    padding: 20px 25px;
+    margin: 15px;
+}
+
+.search, .see {
+    color: $dark-green;
+    border: none;
 }
 
 
@@ -60,11 +73,12 @@ body {
     display: flex;
     text-align: center;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding-bottom: 80px;
-    border-radius: $border-radius;
-    border-bottom: 1px solid $light-accent;}
+    //padding-bottom: 80px;
+    //border-radius: $border-radius;
+    //border-bottom: 1px solid $light-accent;
+}
 
 .logo-container {
 }
@@ -108,11 +122,6 @@ input[type=text]:focus {
     font-weight: bold;
 }
 
-.search-button {
-    border: none;
-    background: $light-accent;
-    cursor: pointer;
-}
 
 /*collapsible profile begins here*/
 .profile-container {
@@ -137,7 +146,7 @@ input[type=text]:focus {
 }
 
 .active, .collapsible:hover {
-    background-color: #ccc;
+    background-color: $background-color;
 }
 
 .content {
@@ -149,13 +158,6 @@ input[type=text]:focus {
     transition: max-height 0.2s ease-out;
 }
 
-.fa {
-    color: $dark-green;
-}
-
-.fas {
-    color: $bright-accent;
-}
 
 /*home begins here*/
 .home-container {
@@ -177,13 +179,14 @@ input[type=text]:focus {
     justify-content: center;
 }
 
-.filter{
+.filter {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
 }
-.filter-button{
+
+.filter-button {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -193,7 +196,6 @@ input[type=text]:focus {
     padding: 0 10px;
     margin: 0 20px;
 }
-
 
 
 .home-feed {
@@ -277,8 +279,32 @@ badge {
 
 
 /*Pop-up starts here*/
-.create-container{
-
+.create-container {
+    position: fixed;
+    bottom: 0;
+    //border: red 10px solid;
 }
 
+.add {
+    background: $background-color;
+    color: $bright-accent;
+    padding: 10px 25px;
+    border: none;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $box-shadow;
+    width: 500px;
+    transition: width 2s, height 2s
+}
+
+.add:hover {
+    background: $bright-accent;
+    color: $background-color;
+    transform: scale(1.1);
+    width: 545px;
+    height: 50px;
+}
 
