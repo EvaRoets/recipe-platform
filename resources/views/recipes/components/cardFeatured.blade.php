@@ -1,3 +1,4 @@
+{{--This is the card that appears in the feed--}}
 <div class="card-featured-container">
     <div class="card-title">
         {{--        TODO display title from database--}}
