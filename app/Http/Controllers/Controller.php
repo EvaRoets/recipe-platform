@@ -22,4 +22,9 @@ class Controller extends BaseController
     {
         return view('login');
     }
+
+    function register()
+    {
+        return view('register');
+    }
 }

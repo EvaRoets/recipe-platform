@@ -32,7 +32,8 @@ class SessionController extends Controller
 
     function successlogin()
     {
-        return view('home');
+        Auth::login();
+        return redirect('home');
     }
 
     function logout()
