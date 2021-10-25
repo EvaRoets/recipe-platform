@@ -14,13 +14,15 @@ class RegistrationController extends Controller
             'name' => 'required',
             'first_name' => 'required',
             'email' => 'required|email',
-            'password' => 'required'
+            'password' => 'required|confirmed'
         ]);
 
         $user = User::create(request(['name', 'first_name', 'email', 'password']));
 
         Auth::login($user);
+    }
 
+    function registersuccess(){
         return redirect()->home();
     }
 }
