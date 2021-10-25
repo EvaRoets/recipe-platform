@@ -21,7 +21,7 @@
         {{--    profile collapse starts here--}}
         <div class="profile-container">
             <button type="button" class="collapsible">
-                <img class="profile" src={{ asset('images/account.png') }} alt=""/>
+                <a href="./login"><img class="profile" src={{ asset('images/account.png') }} alt=""/></a>
             </button>
             <div class="content">
                 <p>Lorem ipsum...</p>

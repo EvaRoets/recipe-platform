@@ -1,8 +1,8 @@
 @extends('layouts.layout')
 @section('content')
     <h1>Register</h1>
+    {{-- Check for errors --}}
     @if ($message = Session::get('error'))
-        <button type="button" class="close" data-dismiss="alert">×</button>
         <strong>{{ $message }}</strong>
     @endif
 
@@ -13,6 +13,8 @@
         @endforeach
         </ul>
     @endif
+
+    {{-- Registration form --}}
     <form action="{{ url('/registration') }}" method="post">
         @csrf
         <label for="first_name">First Name:</label>
