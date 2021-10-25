@@ -1,10 +1,6 @@
 @extends('layouts.layout')
 @section('content')
     <h1>Register</h1>
-    @if(isset(Auth::user()->email))
-        <script>window.location="/registersuccess";</script>
-    @endif
-
     @if ($message = Session::get('error'))
         <button type="button" class="close" data-dismiss="alert">×</button>
         <strong>{{ $message }}</strong>
