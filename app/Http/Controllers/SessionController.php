@@ -21,7 +21,7 @@ class SessionController extends Controller
 
         if(Auth::attempt($user_data))
         {
-            return redirect('/successlogin');
+            return redirect('successlogin');
         }
         else
         {

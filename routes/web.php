@@ -8,11 +8,11 @@ use App\Http\Controllers\RegistrationController;
 Route::get('/', [Controller::class, 'index'])->name('home');
 
 Route::get('/login', [Controller::class, 'login'])->name('login');
-Route::post('/checklogin', [SessionController::class, 'checklogin']);
-Route::get('/successlogin', [SessionController::class, 'successlogin']);
-Route::get('/logout', [SessionController::class, 'logout']);
-Route::get('/register', [Controller::class, 'register']);
-Route::post('/registration', [RegistrationController::class, 'register']);
+Route::post('/checklogin', [SessionController::class, 'checklogin'])->name('checklogin');
+Route::get('/successlogin', [SessionController::class, 'successlogin'])->name('successlogin');
+Route::get('/logout', [SessionController::class, 'logout'])->name('logout');
+Route::get('/register', [Controller::class, 'register'])->name('register');
+Route::post('/registration', [RegistrationController::class, 'register'])->name('registration');
 
 Route::get('recipeBook', function () {
     return view('recipeBook');

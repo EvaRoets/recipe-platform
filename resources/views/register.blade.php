@@ -15,7 +15,7 @@
     @endif
 
     {{-- Registration form --}}
-    <form action="{{ url('/registration') }}" method="post">
+    <form action={{ route('registration') }} method="post">
         @csrf
         <label for="first_name">First Name:</label>
         <input type="text" name="first_name" id="first_name" required>

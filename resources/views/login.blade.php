@@ -15,7 +15,7 @@
             </ul>
         @endif
 
-        <form method="post" action="{{ url('/checklogin') }}">
+        <form method="post" action={{ route('checklogin') }}>
             @csrf
             <label for="email">Enter Email</label>
             <input type="email" name="email" />
@@ -23,7 +23,7 @@
             <input type="password" name="password" />
             <input type="submit" name="login" value="Login" />
         </form>
-        <a href="./register">Don't have an account? Sign up here!</a>
+        <a href={{ route('register') }}>Don't have an account? Sign up here!</a>
     @endif
     
 @endsection

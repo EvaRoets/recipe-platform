@@ -4,7 +4,7 @@
     <div class="navbar">
         {{--    logo starts here--}}
         <div class="logo-container">
-            <a href="#home">
+            <a href={{ route('home') }}>
                 <img class="logo" src={{ asset('images/logo/flavorly-full-crop.png') }} alt=""/>
             </a>
         </div>
@@ -21,7 +21,7 @@
         {{--    profile collapse starts here--}}
         <div class="profile-container">
             <button type="button" class="collapsible">
-                <a href="./login"><img class="profile" src={{ asset('images/account.png') }} alt=""/></a>
+                <a href={{ route('login') }}><img class="profile" src={{ asset('images/account.png') }} alt=""/></a>
             </button>
             <div class="content">
                 <p>Lorem ipsum...</p>
