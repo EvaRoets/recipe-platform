@@ -22,7 +22,7 @@ class Controller extends BaseController
 
     function login()
     {
-        return view('login');
+            return view('login'); 
     }
 
     function register()

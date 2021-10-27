@@ -2,43 +2,35 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class SessionController extends Controller
 {
     function checklogin(Request $request)
     {
-        $this->validate($request, [
-            'email'   => 'required|email',
-            'password'  => 'required|alphaNum|min:3'
+        $attributes = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required'
         ]);
 
-        $user_data = array(
-            'email'  => $request->get('email'),
-            'password' => $request->get('password')
-        );
-
-        if(Auth::attempt($user_data))
+        if(Auth::attempt($attributes))
         {
-            return redirect('successlogin');
+            $user = User::where('email', $attributes['email'])->get();
+            Auth::loginUsingId($user[0]->id);
+            return redirect()->route('home');
         }
         else
         {
             return back()->with('error', 'Wrong Login Details');
         }
-
-    }
-
-    function successlogin()
-    {
-        Auth::login();
-        return redirect('home');
     }
 
     function logout()
     {
         Auth::logout();
-        return redirect('home');
+        return redirect()->route('home');
     }
 }
