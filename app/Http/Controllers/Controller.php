@@ -22,11 +22,23 @@ class Controller extends BaseController
 
     function login()
     {
-            return view('login'); 
+        if(Auth::check())
+        {
+            redirect()->account();
+        }
+        else
+        {
+            return view('login');
+        }  
     }
 
     function register()
     {
         return view('register');
+    }
+
+    function account()
+    {
+        return view('account');
     }
 }

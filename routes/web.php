@@ -12,6 +12,7 @@ Route::post('/checklogin', [SessionController::class, 'checklogin'])->name('chec
 Route::get('/logout', [SessionController::class, 'logout'])->name('logout');
 Route::get('/register', [Controller::class, 'register'])->name('register');
 Route::post('/registration', [RegistrationController::class, 'register'])->name('registration');
+Route::get('/account', [Controller::class, 'account'])->name('account');
 
 Route::get('recipeBook', function () {
     return view('recipeBook');
