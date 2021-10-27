@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
@@ -16,7 +15,7 @@ class Controller extends BaseController
 
     public function index()
     {
-        $posts = DB::select('select * from posts');
+        $posts = Post::all()->take(10);
         return view('home', ['posts' => $posts]);
     }
 
