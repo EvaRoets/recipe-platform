@@ -19,6 +19,12 @@ class Controller extends BaseController
         return view('home', ['posts' => $posts]);
     }
 
+    public function search()
+    {
+        $posts = Post::where('title', 'LIKE', '%'.request()->search.'%')->get();
+        return view('home', ['posts' => $posts]);
+    }
+
     function login()
     {
         if(Auth::check())

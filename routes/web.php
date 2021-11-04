@@ -15,6 +15,7 @@ Route::post('/registration', [RegistrationController::class, 'register'])->name(
 Route::get('/account', [Controller::class, 'account'])->name('account');
 Route::get('/recipebook', [Controller::class, 'recipebook'])->name('recipebook');
 Route::get('/save', [Controller::class, 'savePost'])->name('save');
+Route::get('/search', [Controller::class, 'search'])->name('search');
 
 Route::get('cardFeatured', function () {
     return view('cardFeatured');
