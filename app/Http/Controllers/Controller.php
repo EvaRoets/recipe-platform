@@ -94,4 +94,10 @@ class Controller extends BaseController
             return redirect()->back();
         }
     }
+
+    function details()
+    {
+        $details = Post::where('id', request()->postid)->first();
+        return view('recipes.show', ['details' => $details]);
+    }
 }

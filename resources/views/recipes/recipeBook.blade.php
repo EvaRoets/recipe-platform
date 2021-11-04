@@ -20,6 +20,7 @@
                         <div class="card-image-container">
                             <img class="card-image" alt="recipe-picture(s)" src={{ asset($data->image) }} />
                         </div>
+                        <a href={{ route("details", ['postid' => $data->id]) }}><button class="fullView"><i class="fas fa-glasses"></i></button></a>
                     </div>
                 </div>
             @endforeach
