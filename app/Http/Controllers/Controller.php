@@ -80,7 +80,7 @@ class Controller extends BaseController
             $favorites = explode(',', Auth::user()->favorites);
             if(!in_array(request()->postid, $favorites))
             {
-                if(!$favorites[0] = NULL)
+                if(!Auth::user()->favorites = ' ')
                 {
                     $newFavorites = Auth::user()->favorites . ',' . request()->postid;
                 }
