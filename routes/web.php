@@ -13,11 +13,8 @@ Route::get('/logout', [SessionController::class, 'logout'])->name('logout');
 Route::get('/register', [Controller::class, 'register'])->name('register');
 Route::post('/registration', [RegistrationController::class, 'register'])->name('registration');
 Route::get('/account', [Controller::class, 'account'])->name('account');
-
-Route::get('recipeBook', function () {
-    return view('recipeBook');
-});
-
+Route::get('/recipebook', [Controller::class, 'recipebook'])->name('recipebook');
+Route::get('/save', [Controller::class, 'savePost'])->name('save');
 
 Route::get('cardFeatured', function () {
     return view('cardFeatured');

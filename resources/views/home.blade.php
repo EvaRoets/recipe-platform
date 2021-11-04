@@ -19,8 +19,8 @@
                         <img class="card-image" alt="recipe-picture(s)" src={{ asset($data->image) }} />
                     </div>
                     <div class="card-buttons">
-                        <button class="save"><i class="fas fa-heart"></i></button>
-                        <button class="like"><i class="fas fa-bookmark"></i></button>
+                        <a href={{ route("save", ['postid' => $data->id]) }}><button class="save"><i class="fas fa-heart"></i></button></a>
+                        <a href=""><button class="like"><i class="fas fa-bookmark"></i></button></a>
                     </div>
                 </div>
             </div>

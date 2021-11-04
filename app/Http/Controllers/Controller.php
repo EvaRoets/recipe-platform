@@ -23,7 +23,7 @@ class Controller extends BaseController
     {
         if(Auth::check())
         {
-            redirect()->account();
+            return redirect()->account();
         }
         else
         {
@@ -38,6 +38,54 @@ class Controller extends BaseController
 
     function account()
     {
-        return view('account');
+        if(Auth::check())
+        {
+            return view('account');
+        }
+        else
+        {
+            return redirect()->home();
+        }  
+    }
+
+    function recipebook()
+    {
+        if(Auth::check())
+        {
+            $favorites = explode(',', Auth::user()->favorites);
+            $posts = [];
+            foreach($favorites as $favorite)
+            {
+                array_push($posts, Post::where('id', $favorite)->first());
+            }           
+            return view('recipes.recipeBook', ['posts' => $posts]);
+        }
+        else
+        {
+            return redirect()->home();
+        }
+        
+    }
+
+    function savePost()
+    {
+        if(Auth::check())
+        {
+            $favorites = explode(',', Auth::user()->favorites);
+            if(!in_array(request()->postid, $favorites))
+            {
+                if(!$favorites[0] = NULL)
+                {
+                    $newFavorites = Auth::user()->favorites . ',' . request()->postid;
+                }
+                else
+                {
+                    $newFavorites = request()->postid;
+                }
+                Auth::user()->favorites = $newFavorites;
+                Auth::user()->save();
+            }
+            return redirect()->back();
+        }
     }
 }

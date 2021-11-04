@@ -6,4 +6,5 @@
         <li>Name: {{ Auth::user()->name }}</li>
         <li>Email: {{ Auth::user()->email }}</li>
     </ul>
+    <a href={{ route('recipebook') }}>To Recipe Book</a>
 @endsection
