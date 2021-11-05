@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
 
 class PostController extends Controller
 {
@@ -19,22 +20,27 @@ class PostController extends Controller
         }
     }
 
-    function createpost()
+    function createpost(Request $request)
     {
-        $this->validate(request(), [
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:5048',
             'title' => 'required',
             'tags' => 'required',
             'ingredients' => 'required',
             'description' => 'required'
         ]);
 
-        $imageName = time().'.'.request()->image;
-        request()->image->move(public_path('image'),$imageName);
-        
-        Post::create($imageName, request(['title', 'tags', 'ingredients', 'description']));
+        $imageName = time() . '-' . $request->name . '.' . $request->image->extension();  
+        $request->image->move(public_path('images'), $imageName);
+
+        Post::create([
+            'image' => 'images/'.$imageName,
+            'title' => $request->input('title'),
+            'tags' => $request->input('tags'),
+            'ingredients' => $request->input('ingredients'),
+            'description' => $request->input('description')
+        ]);
 
         return redirect()->home();
-
     }
 }
