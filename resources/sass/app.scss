@@ -39,13 +39,38 @@ $box-shadow-image: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
 0 41.8px 33.4px rgba(0, 0, 0, 0.086);
 
-
-body {
+html {
     background-color: $background-color;
-    color: $dark-green;
-    font-family: $font-family;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
+body {
+    color: #4E918E;
+    font-family: "Montserrat Alternates", sans-serif;
+    margin: 0 auto;
+}
+
+/*scrollbar starts here */
+html::-webkit-scrollbar {
+    width: 1.5em;
+}
+
+html::-webkit-scrollbar-track {
+    -webkit-box-shadow: $box-shadow;
+    background: $light-accent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: $dark-green;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    margin: 5px;
+}
+
+
+/* buttons start here */
 .save, .like, .search, .view {
     background: $light-accent;
     cursor: pointer;
