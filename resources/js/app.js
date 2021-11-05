@@ -14,6 +14,12 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
+
+// collapsible create-container starts here
+let create = document.getElementById("create");
+create.addEventListener("click", function () {
+})
+
 //TODO verify
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_shrink_header_scroll
 // https://www.w3schools.com/howto/howto_js_sticky_header.asp

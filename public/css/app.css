@@ -6159,14 +6159,14 @@ html::-webkit-scrollbar-thumb {
 }
 
 /* buttons start here */
-.save, .like, .search, .view {
+.save, .like, .search, .view, .post {
   background: #DED0D0;
   cursor: pointer;
   justify-content: center;
   align-items: center;
 }
 
-.save, .like, .view {
+.save, .like, .view, .post {
   color: #eb7878;
   border: none;
   border-radius: 30px;
@@ -6220,6 +6220,14 @@ html::-webkit-scrollbar-thumb {
 }
 
 input[type=text] {
+  border: none;
+  background: #DED0D0;
+  cursor: pointer;
+  width: 400px;
+  text-align: center;
+}
+
+input[type=file] {
   border: none;
   background: #DED0D0;
   cursor: pointer;
@@ -6422,5 +6430,94 @@ badge {
   bottom: 0;
   text-align: center;
   padding: 2px;
+}
+
+/* Create post starts here */
+.create-recipe-container {
+  display: flex;
+  justify-items: start;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 100px 50px;
+}
+
+.create-post {
+  border-radius: 30px;
+  border-bottom: 1px solid #DED0D0;
+  border-left: 1px solid #DED0D0;
+  border-right: 1px solid #DED0D0;
+  margin: 100px;
+  padding: 30px 50px 10px 50px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  max-width: 545px;
+}
+
+.create-recipe-title {
+  font-family: "Comfortaa", cursive;
+  text-align: center;
+  border-radius: 30px;
+  border-bottom: 1px solid #DED0D0;
+}
+
+.create-gallery {
+  margin: 25px;
+  border: 1px solid red;
+  display: flex;
+}
+
+.create-title {
+  margin: 40px 25px 0 25px;
+  background: #DED0D0;
+  height: 10px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.input-instruction {
+  color: #7DB29E;
+  font-style: italic;
+  margin-top: -2px;
+}
+
+.create-tags {
+  margin: 40px 25px 0 25px;
+  background: #DED0D0;
+  height: 10px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.create-ingredients {
+  margin: 40px 25px 0 25px;
+  background: #DED0D0;
+  height: 10px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.create-instructions {
+  margin: 40px 25px 0 25px;
+  background: #DED0D0;
+  height: 10px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 

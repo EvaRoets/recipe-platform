@@ -69,14 +69,14 @@ html::-webkit-scrollbar-thumb {
 }
 
 /* buttons start here */
-.save, .like, .search, .view {
+.save, .like, .search, .view, .post {
     background: $light-accent;
     cursor: pointer;
     justify-content: center;
     align-items: center;
 }
 
-.save, .like, .view {
+.save, .like, .view, .post {
     color: $bright-accent;
     border: none;
     border-radius: $border-radius;
@@ -143,6 +143,13 @@ input[type=text] {
     text-align: center;
 }
 
+input[type=file] {
+    border: none;
+    background: $light-accent;
+    cursor: pointer;
+    width: 400px;
+    text-align: center;
+}
 //TODO: get rid off border when click
 input[type=text]:focus {
 }
@@ -227,11 +234,9 @@ input[type=text]:focus {
     margin: 0 20px;
 }
 
-
 .home-feed {
     padding-top: 120px;
 }
-
 
 /*card featured begins here*/
 .card-featured-container {
@@ -242,7 +247,6 @@ input[type=text]:focus {
     margin: 100px 50px;
     padding: 30px 50px 10px 50px;
     box-shadow: $box-shadow-featured;
-
 }
 
 .card-title {
@@ -251,15 +255,12 @@ input[type=text]:focus {
     border-radius: $border-radius;
     border-bottom: 1px solid $light-accent;
 }
-
 .card-gallery {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-
 }
-
 .card-tags {
     display: flex;
     padding: 15px 15px 15px 0;
@@ -269,7 +270,6 @@ input[type=text]:focus {
     line-height: 0.7;
     max-width: 500px;
 }
-
 badge {
     color: $background-color;
     background: $bright-accent;
@@ -303,11 +303,6 @@ badge {
     justify-content: center;
     align-items: center;
 }
-
-//.recipe-container + .recipe-container {
-//
-//}
-
 
 /*Pop-up starts here*/
 .create-container {
@@ -346,4 +341,86 @@ badge {
     padding: 2px;
 }
 
+/* Create post starts here */
+.create-recipe-container{
+    display: flex;
+    justify-items: start;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin: 100px 50px;
 
+}
+.create-post{
+    border-radius: $border-radius;
+    border-bottom: 1px solid $light-accent;
+    border-left: 1px solid $light-accent;
+    border-right: 1px solid $light-accent;
+    margin: 100px;
+    padding: 30px 50px 10px 50px;
+    box-shadow: $box-shadow-featured;
+    max-width: 545px;
+}
+.create-recipe-title{
+    font-family: $font-title;
+    text-align: center;
+    border-radius: $border-radius;
+    border-bottom: 1px solid $light-accent;
+}
+
+
+.create-gallery{
+    margin: 25px;
+    border: 1px solid red;
+    display: flex;
+}
+.create-title {
+    margin: 40px 25px 0 25px;
+    background: $light-accent;
+    height: 10px;
+    border-radius: $border-radius;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: $box-shadow;
+}
+.input-instruction{
+    color: $light-green;
+    font-style: italic;
+    margin-top: -2px;
+}
+.create-tags{
+    margin: 40px 25px 0 25px;
+    background: $light-accent;
+    height: 10px;
+    border-radius: $border-radius;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: $box-shadow;
+}
+.create-ingredients{
+    margin: 40px 25px 0 25px;
+    background: $light-accent;
+    height: 10px;
+    border-radius: $border-radius;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: $box-shadow;
+}
+.create-instructions{
+    margin: 40px 25px 0 25px;
+    background: $light-accent;
+    height: 10px;
+    border-radius: $border-radius;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: $box-shadow;
+}
