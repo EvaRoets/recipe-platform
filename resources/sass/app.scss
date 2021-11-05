@@ -52,7 +52,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .save, .like {
     color: $bright-accent;
     border: none;
@@ -61,30 +60,38 @@ body {
     padding: 20px 25px;
     margin: 15px;
 }
-
 .search, .see {
     color: $dark-green;
     border: none;
 }
 
-
 /*header begins here*/
 .navbar {
-    display: flex;
-    text-align: center;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    //display: flex;
+    //text-align: center;
+    //flex-direction: row;
+    //justify-content: space-between;
+    //align-items: center;
     //padding-bottom: 80px;
     //border-radius: $border-radius;
     //border-bottom: 1px solid $light-accent;
+
+    background-color: $background-color;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    border-radius: 30px;
+    border-bottom: 1px solid red;
+    position: fixed;
+    top:0;
 }
 
 .logo-container {
 }
 
 .logo {
-    width: 250px;
+    width: 150px;
     height: auto;
     padding: 20px;
 }
@@ -128,7 +135,7 @@ input[type=text]:focus {
 }
 
 .profile {
-    width: 50px;
+    width: 100px;
     height: auto;
     padding: 20px;
 }
@@ -282,7 +289,6 @@ badge {
 .create-container {
     position: fixed;
     bottom: 0;
-    //border: red 10px solid;
 }
 
 .add {

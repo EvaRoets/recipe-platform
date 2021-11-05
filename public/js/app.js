@@ -2076,6 +2076,35 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "block";
     }
   });
+} //TODO verify
+// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_shrink_header_scroll
+// https://www.w3schools.com/howto/howto_js_sticky_header.asp
+//TODO link all JS
+//sticky and smaller navbar on scroll
+
+
+window.onscroll = function () {
+  scrollSmaller();
+  scrollSticky();
+};
+
+var navbar = document.getElementsByClassName("navbar");
+var sticky = navbar.offsetTop;
+
+function scrollSmaller() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    navbar.style.fontSize = "30px";
+  } else {
+    navbar.style.fontSize = "90px";
+  }
+}
+
+function scrollSticky() {
+  if (window.pageYOffset > sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
 }
 
 /***/ }),
