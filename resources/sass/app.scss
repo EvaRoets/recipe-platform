@@ -46,13 +46,13 @@ body {
     font-family: $font-family;
 }
 
-.save, .like, .search, .see {
+.save, .like, .search, .view {
     background: $light-accent;
     cursor: pointer;
     justify-content: center;
     align-items: center;
 }
-.save, .like {
+.save, .like, .view {
     color: $bright-accent;
     border: none;
     border-radius: $border-radius;
@@ -215,7 +215,7 @@ input[type=text]:focus {
     border-bottom: 1px solid $light-accent;
     border-left: 1px solid $light-accent;
     border-right: 1px solid $light-accent;
-    margin: 100px 50px;
+    margin: 250px 50px 100px 50px;
     padding: 30px 50px 10px 50px;
     box-shadow: $box-shadow-featured;
 
