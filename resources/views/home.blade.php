@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
     <div class="home-container">
-        <div class="feed">
+        <div class="home-feed">
             @foreach($posts as $key => $data)
                 <div class="card-featured-container">
                     <div class="card-title">
@@ -31,10 +31,10 @@
                 </div>
             @endforeach
 
-            <div class="create-container">
-                <div class="create"></div>
-                <button class="add"><i class="fas fa-plus-circle"></i></button>
-            </div>
+{{--            <div class="create-container">--}}
+{{--                <div class="create"></div>--}}
+{{--                <button class="add"><i class="fas fa-plus-circle"></i></button>--}}
+{{--            </div>--}}
         </div>
     </div>
     <script src="../js/app.js"></script>

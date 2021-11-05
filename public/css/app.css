@@ -6162,10 +6162,10 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
   align-items: center;
-  border-radius: 30px;
-  border-bottom: 1px solid red;
   position: fixed;
   top: 0;
+  border-radius: 30px;
+  border-bottom: 1px solid #DED0D0;
 }
 
 .logo {
@@ -6279,13 +6279,17 @@ input[type=text] {
   margin: 0 20px;
 }
 
+.home-feed {
+  padding-top: 120px;
+}
+
 /*card featured begins here*/
 .card-featured-container {
   border-radius: 30px;
   border-bottom: 1px solid #DED0D0;
   border-left: 1px solid #DED0D0;
   border-right: 1px solid #DED0D0;
-  margin: 220px 50px 100px 50px;
+  margin: 100px 50px;
   padding: 30px 50px 10px 50px;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 }
@@ -6349,11 +6353,6 @@ badge {
 }
 
 /*Pop-up starts here*/
-.create-container {
-  position: fixed;
-  bottom: 0;
-}
-
 .add {
   background: #FFF5E9;
   color: #eb7878;
@@ -6375,5 +6374,11 @@ badge {
   transform: scale(1.1);
   width: 545px;
   height: 50px;
+}
+
+.footer-container {
+  background-color: #FFF5E9;
+  bottom: 0;
+  text-align: center;
 }
 

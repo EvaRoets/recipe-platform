@@ -1,4 +1,3 @@
-require('./bootstrap');
 
 // collapsible profile starts here
 let coll = document.getElementsByClassName("collapsible");
