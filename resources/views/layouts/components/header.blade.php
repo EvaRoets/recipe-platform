@@ -10,10 +10,13 @@
         {{--    search bar starts here--}}
         <div class="search-container">
             <form method="get" action={{ route('search') }}>
-                <input type="text" placeholder="Search..." name="search">
-                <button class="search" type="submit" value="submit">
-                    <i class="fa fa-search"></i>
-                </button>
+                <div class="search-box">
+                    <input type="text" placeholder="Search your recipe..." name="search">
+                    <button class="search" type="submit" value="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+
             </form>
         </div>
 
@@ -27,7 +30,8 @@
                 <a href={{ route('logout') }}>Logout</a>
             @else
                 <button type="button" class="collapsible">
-                    <a href={{ route('login') }}><img class="profile" src={{ asset('images/account.png') }} alt="profile"/></a>
+                    <a href={{ route('login') }}><img class="profile"
+                                                      src={{ asset('images/account.png') }} alt="profile"/></a>
                 </button>
                 <div class="content">
                     <p>Lorem ipsum...</p>

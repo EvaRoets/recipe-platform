@@ -40,7 +40,6 @@ $box-shadow-image: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
 0 41.8px 33.4px rgba(0, 0, 0, 0.086);
 
 
-
 body {
     background-color: $background-color;
     color: $dark-green;
@@ -107,11 +106,18 @@ body {
 form {
 }
 
+.search-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
 input[type=text] {
     border: none;
     background: $light-accent;
     cursor: pointer;
     width: 400px;
+    text-align: center;
 }
 
 //TODO: get rid off border when click
@@ -121,6 +127,7 @@ input[type=text]:focus {
 ::placeholder {
     color: $dark-green;
     font-weight: bold;
+    font-style: italic;
 }
 
 

@@ -6188,26 +6188,36 @@ body {
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
+.search-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
 input[type=text] {
   border: none;
   background: #DED0D0;
   cursor: pointer;
   width: 400px;
+  text-align: center;
 }
 
 ::-moz-placeholder {
   color: #4E918E;
   font-weight: bold;
+  font-style: italic;
 }
 
 :-ms-input-placeholder {
   color: #4E918E;
   font-weight: bold;
+  font-style: italic;
 }
 
 ::placeholder {
   color: #4E918E;
   font-weight: bold;
+  font-style: italic;
 }
 
 /*collapsible profile begins here*/
