@@ -30,11 +30,10 @@
                     </div>
                 </div>
             @endforeach
-
-{{--            <div class="create-container">--}}
-{{--                <div class="create"></div>--}}
-{{--                <button class="add"><i class="fas fa-plus-circle"></i></button>--}}
-{{--            </div>--}}
+        </div>
+        <div class="create-container">
+            {{--                <div class="create"></div>--}}
+            <button class="add"><i class="fas fa-plus-circle"></i></button>
         </div>
     </div>
     <script src="../js/app.js"></script>

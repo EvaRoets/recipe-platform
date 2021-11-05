@@ -32,7 +32,6 @@ $box-shadow-featured: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
 0 100px 80px rgba(0, 0, 0, 0.12);
 
-
 $box-shadow-image: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
 0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -68,7 +67,6 @@ html::-webkit-scrollbar-thumb {
     box-shadow: $box-shadow;
     margin: 5px;
 }
-
 
 /* buttons start here */
 .save, .like, .search, .view {
@@ -155,7 +153,6 @@ input[type=text]:focus {
     font-style: italic;
 }
 
-
 /*collapsible profile begins here*/
 .profile-container {
 }
@@ -164,12 +161,12 @@ input[type=text]:focus {
     width: 100px;
     height: auto;
     padding: 20px;
+    cursor: pointer;
 }
 
 .collapsible {
     background-color: $background-color;
     color: $dark-green;
-    cursor: pointer;
     padding: 18px;
     width: 100%;
     border: none;
@@ -314,8 +311,9 @@ badge {
 
 /*Pop-up starts here*/
 .create-container {
-    //position: fixed;
-    //bottom: 0;
+    position: fixed;
+    bottom: 0;
+    margin: 0 50px;
 }
 
 .add {
@@ -330,13 +328,13 @@ badge {
     align-items: center;
     box-shadow: $box-shadow;
     width: 500px;
-    transition: width 2s, height 2s
+    transition: width 1.5s, height 1.5s
 }
 
 .add:hover {
     background: $bright-accent;
     color: $background-color;
-    transform: scale(1.1);
+    transform: scale(1);
     width: 545px;
     height: 50px;
 }
@@ -345,6 +343,7 @@ badge {
     background-color: $background-color;
     bottom: 0;
     text-align: center;
+    padding: 2px;
 }
 
 
