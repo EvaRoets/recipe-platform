@@ -37,7 +37,7 @@
             </div>
         </div>
     </div>
-    <script src="../../js/app.js"></script>
+    <script src="../js/app.js"></script>
     <noscript>Your browser does not support JavaScript.</noscript>
 @endsection
 
