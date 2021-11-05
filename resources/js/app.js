@@ -16,6 +16,8 @@ for (i = 0; i < coll.length; i++) {
 }
 
 //TODO verify
+// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_shrink_header_scroll
+// https://www.w3schools.com/howto/howto_js_sticky_header.asp
 //TODO link all JS
 //sticky and smaller navbar on scroll
 window.onscroll = function () {

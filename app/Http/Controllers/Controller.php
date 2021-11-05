@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use App\Models\Post;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class Controller extends BaseController
 {
@@ -13,6 +15,29 @@ class Controller extends BaseController
 
     public function index()
     {
-        return view('home');
+        $posts = Post::all()->take(10);
+        return view('home', ['posts' => $posts]);
+    }
+
+    function login()
+    {
+        if(Auth::check())
+        {
+            redirect()->account();
+        }
+        else
+        {
+            return view('login');
+        }  
+    }
+
+    function register()
+    {
+        return view('register');
+    }
+
+    function account()
+    {
+        return view('account');
     }
 }
