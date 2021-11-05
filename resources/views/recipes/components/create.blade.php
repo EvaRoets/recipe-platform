@@ -8,79 +8,41 @@
 @extends('layouts.layout')
 @section('content')
 <div class="create-recipe-container">
+    @if ($message = Session::get('error'))
+        <strong>{{ $message }}</strong>
+    @endif
+
+    @if (count($errors) > 0)
+        <ul>
+        @foreach($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+        </ul>
+    @endif
+
+    <form method="post" action={{ route("createpost") }} enctype="multipart/form-data">
+    @csrf
         <div class="create-gallery">
-            <form>
-                <label for="img">Upload image(s)</label>
-                <input type="image" id="img" name="img" accept="image/*">
-                <input type="submit" value="Save images">
-            </form>
+                <label for="image">Upload image</label>
+                <input type="file" id="image" name="image">
         </div>
         <div class="create-title">
-            <form>
                 <label for="title">Add title</label>
                 <input type="text" id="title" name="title">
-                <input type="submit" value="Save title">
-
-            </form>
         </div>
         <div class="create-tags">
-            <form>
-                <label for="tags">Add tag(s)</label>
-                <input type="checkbox" id="tag1" name="tag1" value="#">
-                <label for="tag1">Tag 1</label><br>
-                <input type="checkbox" id="tag2" name="tag2" value="#">
-                <label for="tag1">Tag 2</label><br>
-                <input type="checkbox" id="tag3" name="tag3" value="#">
-                <label for="tag1">Tag 3</label><br>
-                <input type="checkbox" id="tag4" name="tag4" value="#">
-                <label for="tag1">Tag 4</label><br>
-                <input type="checkbox" id="tag5" name="tag5" value="#">
-                <label for="tag1">Tag 5</label><br>
-                <input type="submit" value="Save tags">
-            </form>
+                <label for="tags">Add tag(s)(seperate with a ',')</label>
+                <input type="text" id="tags" name="tags">
         </div>
         <div class="create-ingredients">
-            <form>
-                <label for="tags">Add ingredients</label>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Quantities</th>
-                        <th>Measurements</th>
-                        <th>Ingredients</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>text1.1</td>
-                        <td>text1.2</td>
-                        <td>text1.3</td>
-                    </tr>
-                    <tr>
-                        <td>text2.1</td>
-                        <td>text2.2</td>
-                        <td>text2.3</td>
-                    </tr>
-                    <tr>
-                        <td>text3.1</td>
-                        <td>text3.2</td>
-                        <td>text3.3</td>
-                    </tr>
-                    <tr>
-                    </tr>
-                    </tbody>
-                </table>
-                <input type="submit" value="Save ingredients">
-            </form>
+                <label for="ingredients">Add ingredients(seperate with a ',')</label>
+                <input type="text" name="ingredients" id="ingredients">
         </div>
         <div class="instructions">
-            <form>
-{{--                TODO add bullets --}}
-                <label for="tags">Add instructions</label>
-                <input type="text">
-                <input type="submit" value="Save instructions">
-            </form>
+                <label for="description">Add instructions</label>
+                <input type="text" name="description">
         </div>
+        <input type="submit" value="Save Post">
     </form>
 </div>
 

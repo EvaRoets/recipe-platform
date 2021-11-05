@@ -11,12 +11,12 @@
 
         {{--    search bar starts here--}}
         <div class="search-container">
-{{--            <form action="">--}}
-                    <input type="text" placeholder="Search..." name="search">
-                    <button class="search" type="submit" value="submit">
-                        <i class="fa fa-search"></i>
-                    </button>
-{{--            </form>--}}
+            <form nethod="get" action={{ route('search') }}>
+                <input type="text" placeholder="Search..." name="search">
+                <button class="search" type="submit" value="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
         </div>
         {{--    profile collapse starts here--}}
         <div class="profile-container">

@@ -19,11 +19,17 @@ class Controller extends BaseController
         return view('home', ['posts' => $posts]);
     }
 
+    public function search()
+    {
+        $posts = Post::where('title', 'LIKE', '%'.request()->search.'%')->get();
+        return view('home', ['posts' => $posts]);
+    }
+
     function login()
     {
         if(Auth::check())
         {
-            redirect()->account();
+            return redirect()->account();
         }
         else
         {
@@ -38,6 +44,60 @@ class Controller extends BaseController
 
     function account()
     {
-        return view('account');
+        if(Auth::check())
+        {
+            return view('account');
+        }
+        else
+        {
+            return redirect()->home();
+        }  
+    }
+
+    function recipebook()
+    {
+        if(Auth::check())
+        {
+            $favorites = explode(',', Auth::user()->favorites);
+            $posts = [];
+            foreach($favorites as $favorite)
+            {
+                array_push($posts, Post::where('id', $favorite)->first());
+            }           
+            return view('recipes.recipeBook', ['posts' => $posts]);
+        }
+        else
+        {
+            return redirect()->home();
+        }
+        
+    }
+
+    function savePost()
+    {
+        if(Auth::check())
+        {
+            $favorites = explode(',', Auth::user()->favorites);
+            if(!in_array(request()->postid, $favorites))
+            {
+                if(!Auth::user()->favorites = ' ')
+                {
+                    $newFavorites = Auth::user()->favorites . ',' . request()->postid;
+                }
+                else
+                {
+                    $newFavorites = request()->postid;
+                }
+                Auth::user()->favorites = $newFavorites;
+                Auth::user()->save();
+            }
+            return redirect()->back();
+        }
+    }
+
+    function details()
+    {
+        $details = Post::where('id', request()->postid)->first();
+        return view('recipes.show', ['details' => $details]);
     }
 }
