@@ -7,7 +7,12 @@
   \*****************************/
 /***/ (() => {
 
-// collapsible profile starts here
+// collapsible create-container starts here
+var create = document.getElementById("create");
+create.addEventListener("click", function () {
+  alert("A modal box will replace this alert message");
+}); // collapsible profile starts here
+
 var coll = document.getElementsByClassName("collapsible");
 
 for (i = 0; i < coll.length; i++) {
@@ -21,39 +26,34 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "block";
     }
   });
-} // collapsible create-container starts here
-
-
-var create = document.getElementById("create");
-create.addEventListener("click", function () {}); //TODO verify
-// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_shrink_header_scroll
-// https://www.w3schools.com/howto/howto_js_sticky_header.asp
-//TODO link all JS
-//sticky and smaller navbar on scroll
-
-window.onscroll = function () {
-  scrollSmaller();
-  scrollSticky();
-};
-
-var navbar = document.getElementsByClassName("navbar");
-var sticky = navbar.offsetTop;
-
-function scrollSmaller() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    navbar.style.fontSize = "30px";
-  } else {
-    navbar.style.fontSize = "90px";
-  }
-}
-
-function scrollSticky() {
-  if (window.pageYOffset > sticky) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
+} // //TODO verify
+// // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_shrink_header_scroll
+// // https://www.w3schools.com/howto/howto_js_sticky_header.asp
+// //TODO link all JS
+// //sticky and smaller navbar on scroll
+// window.onscroll = function () {
+//     scrollSmaller();
+//     scrollSticky();
+// };
+//
+// let navbar = document.getElementsByClassName("navbar");
+// let sticky = navbar.offsetTop;
+//
+// function scrollSmaller() {
+//     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+//         navbar.style.fontSize = "30px";
+//     } else {
+//         navbar.style.fontSize = "90px";
+//     }
+// }
+//
+// function scrollSticky() {
+//     if (window.pageYOffset > sticky) {
+//         navbar.classList.add("sticky");
+//     } else {
+//         navbar.classList.remove("sticky");
+//     }
+// }
 
 /***/ }),
 

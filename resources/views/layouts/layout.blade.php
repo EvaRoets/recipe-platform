@@ -30,7 +30,7 @@
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="">
 
-    <title>Recipes TBD</title>
+    <title>Flavorly | All recipes in once place</title>
 </head>
 <body>
 @include('layouts.components.header')

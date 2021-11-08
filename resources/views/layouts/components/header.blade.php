@@ -34,7 +34,12 @@
                                                       src={{ asset('images/account.png') }} alt="profile"/></a>
                 </button>
                 <div class="content">
-                    <p>Lorem ipsum...</p>
+                    <p>
+                        <i class="fas fa-user-circle"></i>&nbsp; My Flavorly account </br>
+                        <i class="fas fa-bookmark"></i>&nbsp; My recipes</br>
+                        <i class="fas fa-cogs"></i>&nbsp; Settings</br>
+                        <i class="fas fa-sign-out-alt"></i>&nbsp; Log out</br>
+                    </p>
                 </div>
             @endif
 
