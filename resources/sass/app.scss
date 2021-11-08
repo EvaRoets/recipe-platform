@@ -10,6 +10,9 @@ $light-accent: #DED0D0;
 $font-title: 'Comfortaa', cursive;
 $font-family: 'Montserrat Alternates', sans-serif;
 $font-filter: 'Ubuntu', sans-serif;
+$font-12: 12px;
+$font-14: 14px;
+$font-16: 16px;
 
 /*Font-Awesome starts here*/
 $fa-font-path: "../webfonts";
@@ -18,7 +21,7 @@ $fa-font-path: "../webfonts";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
-/*General starts here*/
+/* General starts here*/
 $border-radius: 30px;
 $box-shadow: 4px 4px 6px 0 rgb(255 255 255 / 30%),
 -4px -4px 6px 0 rgb(116 125 136 / 20%),
@@ -53,6 +56,21 @@ body {
 
 label {
     font-style: italic;
+    font-size: $font-14;
+}
+
+a {
+    position: relative;
+    color: $bright-accent;
+    text-decoration: none;
+}
+
+a:active {
+    top: 3px;
+}
+
+p {
+    font-size: $font-14;
 }
 
 /*scrollbar starts here */
@@ -73,14 +91,15 @@ html::-webkit-scrollbar-thumb {
 }
 
 /* buttons start here */
-.save-btn, .like-btn, .search-btn, .view-btn, .post-btn, .login-btn, .register-btn {
+.save-btn, .like-btn, .search-btn, .view-btn, .post-btn, .login-btn, .register-btn, .recipe-btn {
     background: $light-accent;
     cursor: pointer;
     justify-content: center;
     align-items: center;
+    font-size: $font-16;
 }
 
-.save-btn, .like-btn, .view-btn, .post-btn, .login-btn, .register-btn {
+.save-btn, .like-btn, .view-btn, .post-btn, .login-btn, .register-btn, .recipe-btn {
     color: $bright-accent;
     border: none;
     border-radius: $border-radius;
@@ -88,6 +107,12 @@ html::-webkit-scrollbar-thumb {
     padding: 20px 25px;
     margin: 15px;
 }
+
+.save-btn:hover, .like-btn:hover, .view-btn:hover, .post-btn:hover, .login-btn:hover, .register-btn:hover, .recipe-btn:hover {
+    color: $light-accent;
+    background-color: $bright-accent;
+}
+
 
 .search-btn {
     color: $dark-green;
@@ -207,7 +232,7 @@ input[type=text]:focus {
     border: none;
     text-align: center;
     outline: none;
-    font-size: 15px;
+    font-size: $font-14;
 }
 
 .active, .collapsible:hover {
@@ -224,6 +249,7 @@ input[type=text]:focus {
 }
 
 /* login starts here */
+//TODO: add frosted background styling
 .login-container {
     display: flex;
     justify-items: start;
@@ -233,11 +259,7 @@ input[type=text]:focus {
     justify-content: center;
 }
 
-.login-feed {
-    margin-top: 120px;
-}
-
-.check-login-details {
+.login-details, .account-details {
     border-radius: $border-radius;
     border-bottom: 1px solid $light-accent;
     border-left: 1px solid $light-accent;
@@ -273,6 +295,7 @@ input[type=text]:focus {
 
 
 /* register starts here */
+//TODO: add frosted background styling
 .register-container {
     display: flex;
     justify-items: start;
@@ -280,10 +303,6 @@ input[type=text]:focus {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-}
-
-.register-feed {
-    margin-top: 120px;
 }
 
 .register {
@@ -314,6 +333,102 @@ input[type=text]:focus {
     box-shadow: $box-shadow;
 }
 
+/* account starts here */
+.account-container {
+    display: flex;
+    justify-items: start;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.account-details {
+    border-radius: $border-radius;
+    border-bottom: 1px solid $light-accent;
+    border-left: 1px solid $light-accent;
+    border-right: 1px solid $light-accent;
+    margin: 100px 50px;
+    padding: 30px 50px 10px 50px;
+    box-shadow: $box-shadow-featured;
+}
+
+.account-title {
+    font-family: $font-title;
+    text-align: center;
+    border-radius: $border-radius;
+    border-bottom: 1px solid $light-accent;
+}
+
+.account-first-name, .account-last-name, .account-email {
+    margin: 25px;
+    height: 10px;
+    border-radius: 30px;
+    padding: 0 20px;
+
+}
+
+
+/* show details start here */
+.show-recipe-container {
+    display: flex;
+    justify-items: start;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.show-recipe {
+    justify-content: center;
+    border-radius: $border-radius;
+    border-bottom: 1px solid $light-accent;
+    border-left: 1px solid $light-accent;
+    border-right: 1px solid $light-accent;
+    margin: 100px;
+    padding: 30px 50px 10px 50px;
+    box-shadow: $box-shadow-featured;
+    width: 1100px;
+}
+
+.show-title {
+    font-family: $font-title;
+    text-align: center;
+    border-radius: $border-radius;
+    border-bottom: 1px solid $light-accent;
+}
+.show-image-container {
+    display: flex;
+    justify-content: center;
+}
+.show-image {
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-image;
+    width: 60%;
+    height: auto;
+    cursor: pointer;
+    margin: 50px 15px 15px 15px;
+
+}
+.show-tags {
+    display: flex;
+    padding: 15px 15px 15px 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 0.7;
+    margin: 25px 15px 15px 15px;
+}
+
+.show-ingredients {
+    padding: 0 10px 15px 10px;
+}
+
+.show-instructions {
+    padding: 0 10px 50px 10px;
+
+}
+
 /*home begins here*/
 .home-container {
     display: flex;
@@ -341,7 +456,7 @@ input[type=text]:focus {
     align-items: flex-start;
 }
 
-.filter-button {
+.filter-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -352,7 +467,7 @@ input[type=text]:focus {
     margin: 0 20px;
 }
 
-.home-feed {
+.home-feed, .create-feed, .login-feed, .register-feed, .account-feed, .show-feed {
     margin-top: 120px;
 }
 
@@ -457,7 +572,8 @@ badge {
 
 .footer-container {
     background-color: $background-color;
-    position: fixed;
+    font-size: $font-12;
+    //position: fixed;
     bottom: 0;
     text-align: center;
     padding: 2px;
@@ -474,9 +590,6 @@ badge {
     justify-content: center;
 }
 
-.create-feed {
-    margin-top: 120px;
-}
 
 .create-post {
     border-radius: $border-radius;

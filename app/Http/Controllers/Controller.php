@@ -33,13 +33,13 @@ class Controller extends BaseController
         }
         else
         {
-            return view('login');
-        }  
+            return view('login', ['frosted' => true]);
+        }
     }
 
     function register()
     {
-        return view('register');
+        return view('register', ['frosted' => true]);
     }
 
     function account()
@@ -51,7 +51,7 @@ class Controller extends BaseController
         else
         {
             return redirect()->home();
-        }  
+        }
     }
 
     function recipebook()
@@ -63,14 +63,14 @@ class Controller extends BaseController
             foreach($favorites as $favorite)
             {
                 array_push($posts, Post::where('id', $favorite)->first());
-            }           
+            }
             return view('recipes.recipeBook', ['posts' => $posts]);
         }
         else
         {
             return redirect()->home();
         }
-        
+
     }
 
     function savePost()

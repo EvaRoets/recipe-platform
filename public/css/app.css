@@ -6127,7 +6127,7 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-/*General starts here*/
+/* General starts here*/
 html {
   background-color: #FFF5E9;
   height: 100%;
@@ -6143,6 +6143,21 @@ body {
 
 label {
   font-style: italic;
+  font-size: 14px;
+}
+
+a {
+  position: relative;
+  color: #eb7878;
+  text-decoration: none;
+}
+
+a:active {
+  top: 3px;
+}
+
+p {
+  font-size: 14px;
 }
 
 /*scrollbar starts here */
@@ -6163,20 +6178,26 @@ html::-webkit-scrollbar-thumb {
 }
 
 /* buttons start here */
-.save-btn, .like-btn, .search-btn, .view-btn, .post-btn, .login-btn, .register-btn {
+.save-btn, .like-btn, .search-btn, .view-btn, .post-btn, .login-btn, .register-btn, .recipe-btn {
   background: #DED0D0;
   cursor: pointer;
   justify-content: center;
   align-items: center;
+  font-size: 16px;
 }
 
-.save-btn, .like-btn, .view-btn, .post-btn, .login-btn, .register-btn {
+.save-btn, .like-btn, .view-btn, .post-btn, .login-btn, .register-btn, .recipe-btn {
   color: #eb7878;
   border: none;
   border-radius: 30px;
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
   padding: 20px 25px;
   margin: 15px;
+}
+
+.save-btn:hover, .like-btn:hover, .view-btn:hover, .post-btn:hover, .login-btn:hover, .register-btn:hover, .recipe-btn:hover {
+  color: #DED0D0;
+  background-color: #eb7878;
 }
 
 .search-btn {
@@ -6298,7 +6319,7 @@ input[type=password] {
   border: none;
   text-align: center;
   outline: none;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .active, .collapsible:hover {
@@ -6324,11 +6345,7 @@ input[type=password] {
   justify-content: center;
 }
 
-.login-feed {
-  margin-top: 120px;
-}
-
-.check-login-details {
+.login-details, .account-details {
   border-radius: 30px;
   border-bottom: 1px solid #DED0D0;
   border-left: 1px solid #DED0D0;
@@ -6372,10 +6389,6 @@ input[type=password] {
   justify-content: center;
 }
 
-.register-feed {
-  margin-top: 120px;
-}
-
 .register {
   border-radius: 30px;
   border-bottom: 1px solid #DED0D0;
@@ -6404,6 +6417,101 @@ input[type=password] {
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* account starts here */
+.account-container {
+  display: flex;
+  justify-items: start;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.account-details {
+  border-radius: 30px;
+  border-bottom: 1px solid #DED0D0;
+  border-left: 1px solid #DED0D0;
+  border-right: 1px solid #DED0D0;
+  margin: 100px 50px;
+  padding: 30px 50px 10px 50px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.account-title {
+  font-family: "Comfortaa", cursive;
+  text-align: center;
+  border-radius: 30px;
+  border-bottom: 1px solid #DED0D0;
+}
+
+.account-first-name, .account-last-name, .account-email {
+  margin: 25px;
+  height: 10px;
+  border-radius: 30px;
+  padding: 0 20px;
+}
+
+/* show details start here */
+.show-recipe-container {
+  display: flex;
+  justify-items: start;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.show-recipe {
+  justify-content: center;
+  border-radius: 30px;
+  border-bottom: 1px solid #DED0D0;
+  border-left: 1px solid #DED0D0;
+  border-right: 1px solid #DED0D0;
+  margin: 100px;
+  padding: 30px 50px 10px 50px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  width: 1100px;
+}
+
+.show-title {
+  font-family: "Comfortaa", cursive;
+  text-align: center;
+  border-radius: 30px;
+  border-bottom: 1px solid #DED0D0;
+}
+
+.show-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.show-image {
+  border-radius: 30px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086);
+  width: 60%;
+  height: auto;
+  cursor: pointer;
+  margin: 50px 15px 15px 15px;
+}
+
+.show-tags {
+  display: flex;
+  padding: 15px 15px 15px 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  line-height: 0.7;
+  margin: 25px 15px 15px 15px;
+}
+
+.show-ingredients {
+  padding: 0 10px 15px 10px;
+}
+
+.show-instructions {
+  padding: 0 10px 50px 10px;
+}
+
 /*home begins here*/
 .home-container {
   display: flex;
@@ -6430,7 +6538,7 @@ input[type=password] {
   align-items: flex-start;
 }
 
-.filter-button {
+.filter-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6441,7 +6549,7 @@ input[type=password] {
   margin: 0 20px;
 }
 
-.home-feed {
+.home-feed, .create-feed, .login-feed, .register-feed, .account-feed, .show-feed {
   margin-top: 120px;
 }
 
@@ -6546,7 +6654,7 @@ badge {
 
 .footer-container {
   background-color: #FFF5E9;
-  position: fixed;
+  font-size: 12px;
   bottom: 0;
   text-align: center;
   padding: 2px;
@@ -6561,10 +6669,6 @@ badge {
   flex-direction: column;
   align-content: center;
   justify-content: center;
-}
-
-.create-feed {
-  margin-top: 120px;
 }
 
 .create-post {
