@@ -50,7 +50,7 @@
             </div>
         </div>
         <div class="filter-button">
-            <button type="submit" class="search"><i class="fas fa-search"></i></button>
+            <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
         </div>
     </form>
 </div>

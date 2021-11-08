@@ -15,13 +15,13 @@
         </div>
         <div class="card-buttons">
             <a href={{ route("save", ['postid' => $data->id]) }}>
-                <button class="save"><i class="fas fa-bookmark"></i></button>
+                <button class="save-btn"><i class="fas fa-bookmark"></i></button>
             </a>
             <a href="">
-                <button class="like"><i class="fas fa-heart"></i></button>
+                <button class="like-btn"><i class="fas fa-heart"></i></button>
             </a>
             <a href={{ route("details", ['postid' => $data->id]) }}>
-                <button class="view"><i class="fas fa-eye"></i></button>
+                <button class="view-btn"><i class="fas fa-eye"></i></button>
             </a>
         </div>
     </div>

@@ -7,7 +7,7 @@
             @endforeach
         </div>
         <div class="create-container" id="create">
-            <button class="add"><i class="fas fa-plus-circle"></i></button>
+            <button class="add-btn"><i class="fas fa-plus-circle"></i></button>
         </div>
     </div>
 <script src="../js/app.js"></script>

@@ -51,6 +51,10 @@ body {
     margin: 0 auto;
 }
 
+label {
+    font-style: italic;
+}
+
 /*scrollbar starts here */
 html::-webkit-scrollbar {
     width: 1.5em;
@@ -69,14 +73,14 @@ html::-webkit-scrollbar-thumb {
 }
 
 /* buttons start here */
-.save, .like, .search, .view, .post {
+.save-btn, .like-btn, .search-btn, .view-btn, .post-btn, .login-btn, .register-btn {
     background: $light-accent;
     cursor: pointer;
     justify-content: center;
     align-items: center;
 }
 
-.save, .like, .view, .post {
+.save-btn, .like-btn, .view-btn, .post-btn, .login-btn, .register-btn {
     color: $bright-accent;
     border: none;
     border-radius: $border-radius;
@@ -85,7 +89,7 @@ html::-webkit-scrollbar-thumb {
     margin: 15px;
 }
 
-.search, .see {
+.search-btn {
     color: $dark-green;
     border: none;
 }
@@ -131,15 +135,24 @@ form {
 
 .search-box {
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 input[type=text] {
     border: none;
     background: $light-accent;
     cursor: pointer;
-    width: 400px;
+    text-align: center;
+}
+
+input[type=file] {
+    border: none;
+    display: none;
+    background: $light-accent;
+    cursor: pointer;
     text-align: center;
 }
 
@@ -147,9 +160,23 @@ input[type=file] {
     border: none;
     background: $light-accent;
     cursor: pointer;
-    width: 400px;
     text-align: center;
 }
+
+input[type=email] {
+    border: none;
+    background: $light-accent;
+    cursor: pointer;
+    text-align: center;
+}
+
+input[type=password] {
+    border: none;
+    background: $light-accent;
+    cursor: pointer;
+    text-align: center;
+}
+
 //TODO: get rid off border when click
 input[type=text]:focus {
 }
@@ -158,6 +185,7 @@ input[type=text]:focus {
     color: $dark-green;
     font-weight: bold;
     font-style: italic;
+    font-family: $font-family;
 }
 
 /*collapsible profile begins here*/
@@ -195,6 +223,96 @@ input[type=text]:focus {
     transition: max-height 0.2s ease-out;
 }
 
+/* login starts here */
+.login-container {
+    display: flex;
+    justify-items: start;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.login-feed {
+    margin-top: 120px;
+}
+
+.check-login-details {
+    border-radius: $border-radius;
+    border-bottom: 1px solid $light-accent;
+    border-left: 1px solid $light-accent;
+    border-right: 1px solid $light-accent;
+    margin: 100px 50px;
+    padding: 30px 50px 10px 50px;
+    box-shadow: $box-shadow-featured;
+}
+
+.login-title {
+    font-family: $font-title;
+    text-align: center;
+    border-radius: $border-radius;
+    border-bottom: 1px solid $light-accent;
+}
+
+.login-email, .login-password {
+    margin: 20px 25px 0 25px;
+    background: $light-accent;
+    height: 15px;
+    border-radius: $border-radius;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: $box-shadow;
+}
+
+.login-no-account {
+    text-align: center;
+    margin-top: -70px;
+}
+
+
+/* register starts here */
+.register-container {
+    display: flex;
+    justify-items: start;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.register-feed {
+    margin-top: 120px;
+}
+
+.register {
+    border-radius: $border-radius;
+    border-bottom: 1px solid $light-accent;
+    border-left: 1px solid $light-accent;
+    border-right: 1px solid $light-accent;
+    margin: 100px 50px;
+    padding: 30px 50px 10px 50px;
+}
+
+.register-title {
+    font-family: $font-title;
+    text-align: center;
+    border-radius: $border-radius;
+    border-bottom: 1px solid $light-accent;
+}
+
+.register-first-name, .register-last-name, .register-email, .register-password, .register-password-confirm {
+    margin: 20px 25px 0 25px;
+    background: $light-accent;
+    height: 15px;
+    border-radius: $border-radius;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: $box-shadow;
+}
 
 /*home begins here*/
 .home-container {
@@ -235,7 +353,7 @@ input[type=text]:focus {
 }
 
 .home-feed {
-    padding-top: 120px;
+    margin-top: 120px;
 }
 
 /*card featured begins here*/
@@ -255,12 +373,14 @@ input[type=text]:focus {
     border-radius: $border-radius;
     border-bottom: 1px solid $light-accent;
 }
+
 .card-gallery {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
 }
+
 .card-tags {
     display: flex;
     padding: 15px 15px 15px 0;
@@ -270,6 +390,7 @@ input[type=text]:focus {
     line-height: 0.7;
     max-width: 500px;
 }
+
 badge {
     color: $background-color;
     background: $bright-accent;
@@ -311,7 +432,7 @@ badge {
     margin: 0 50px;
 }
 
-.add {
+.add-btn {
     background: $background-color;
     color: $bright-accent;
     padding: 10px 25px;
@@ -326,7 +447,7 @@ badge {
     transition: width 1.5s, height 1.5s
 }
 
-.add:hover {
+.add-btn:hover {
     background: $bright-accent;
     color: $background-color;
     transform: scale(1);
@@ -336,23 +457,28 @@ badge {
 
 .footer-container {
     background-color: $background-color;
+    position: fixed;
     bottom: 0;
     text-align: center;
     padding: 2px;
+    width: 100%;
 }
 
 /* Create post starts here */
-.create-recipe-container{
+.create-recipe-container {
     display: flex;
     justify-items: start;
     align-items: center;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    margin: 100px 50px;
-
 }
-.create-post{
+
+.create-feed {
+    margin-top: 120px;
+}
+
+.create-post {
     border-radius: $border-radius;
     border-bottom: 1px solid $light-accent;
     border-left: 1px solid $light-accent;
@@ -362,23 +488,31 @@ badge {
     box-shadow: $box-shadow-featured;
     max-width: 545px;
 }
-.create-recipe-title{
+
+.create-recipe-title {
     font-family: $font-title;
     text-align: center;
     border-radius: $border-radius;
     border-bottom: 1px solid $light-accent;
 }
 
-
-.create-gallery{
-    margin: 25px;
-    border: 1px solid red;
+.create-gallery {
     display: flex;
-}
-.create-title {
-    margin: 40px 25px 0 25px;
+    margin: 20px 25px 0 25px;
     background: $light-accent;
-    height: 10px;
+    height: 15px;
+    border-radius: $border-radius;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: $box-shadow;
+}
+
+.create-title, .create-tags, .create-ingredients, .create-instructions {
+    margin: 20px 25px 0 25px;
+    background: $light-accent;
+    height: 15px;
     border-radius: $border-radius;
     padding: 10px 20px;
     justify-content: center;
@@ -386,41 +520,8 @@ badge {
     cursor: pointer;
     box-shadow: $box-shadow;
 }
-.input-instruction{
-    color: $light-green;
-    font-style: italic;
-    margin-top: -2px;
-}
-.create-tags{
-    margin: 40px 25px 0 25px;
-    background: $light-accent;
-    height: 10px;
-    border-radius: $border-radius;
-    padding: 10px 20px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: $box-shadow;
-}
-.create-ingredients{
-    margin: 40px 25px 0 25px;
-    background: $light-accent;
-    height: 10px;
-    border-radius: $border-radius;
-    padding: 10px 20px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: $box-shadow;
-}
-.create-instructions{
-    margin: 40px 25px 0 25px;
-    background: $light-accent;
-    height: 10px;
-    border-radius: $border-radius;
-    padding: 10px 20px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: $box-shadow;
+
+.btn-container {
+    text-align: center;
+    margin: 20px;
 }

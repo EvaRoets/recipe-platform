@@ -10,6 +10,6 @@
 {{--        TODO display tags from database--}}
     </div>
     <div class="card-buttons">
-        <button class="see"><i class="fas fa-eye"></i></button>
+        <button class="see-btn"><i class="fas fa-eye"></i></button>
     </div>
 </div>

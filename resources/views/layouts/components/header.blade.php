@@ -12,7 +12,7 @@
             <form method="get" action={{ route('search') }}>
                 <div class="search-box">
                     <input type="text" placeholder="Search your recipe..." name="search">
-                    <button class="search" type="submit" value="submit">
+                    <button class="search-btn" type="submit" value="submit">
                         <i class="fa fa-search"></i>
                     </button>
                 </div>

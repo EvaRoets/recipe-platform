@@ -6141,6 +6141,10 @@ body {
   margin: 0 auto;
 }
 
+label {
+  font-style: italic;
+}
+
 /*scrollbar starts here */
 html::-webkit-scrollbar {
   width: 1.5em;
@@ -6159,14 +6163,14 @@ html::-webkit-scrollbar-thumb {
 }
 
 /* buttons start here */
-.save, .like, .search, .view, .post {
+.save-btn, .like-btn, .search-btn, .view-btn, .post-btn, .login-btn, .register-btn {
   background: #DED0D0;
   cursor: pointer;
   justify-content: center;
   align-items: center;
 }
 
-.save, .like, .view, .post {
+.save-btn, .like-btn, .view-btn, .post-btn, .login-btn, .register-btn {
   color: #eb7878;
   border: none;
   border-radius: 30px;
@@ -6175,7 +6179,7 @@ html::-webkit-scrollbar-thumb {
   margin: 15px;
 }
 
-.search, .see {
+.search-btn {
   color: #4E918E;
   border: none;
 }
@@ -6215,15 +6219,24 @@ html::-webkit-scrollbar-thumb {
 
 .search-box {
   display: flex;
-  flex-direction: row;
   flex-wrap: nowrap;
+  width: 400px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 input[type=text] {
   border: none;
   background: #DED0D0;
   cursor: pointer;
-  width: 400px;
+  text-align: center;
+}
+
+input[type=file] {
+  border: none;
+  display: none;
+  background: #DED0D0;
+  cursor: pointer;
   text-align: center;
 }
 
@@ -6231,7 +6244,20 @@ input[type=file] {
   border: none;
   background: #DED0D0;
   cursor: pointer;
-  width: 400px;
+  text-align: center;
+}
+
+input[type=email] {
+  border: none;
+  background: #DED0D0;
+  cursor: pointer;
+  text-align: center;
+}
+
+input[type=password] {
+  border: none;
+  background: #DED0D0;
+  cursor: pointer;
   text-align: center;
 }
 
@@ -6239,18 +6265,21 @@ input[type=file] {
   color: #4E918E;
   font-weight: bold;
   font-style: italic;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 :-ms-input-placeholder {
   color: #4E918E;
   font-weight: bold;
   font-style: italic;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 ::placeholder {
   color: #4E918E;
   font-weight: bold;
   font-style: italic;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 /*collapsible profile begins here*/
@@ -6283,6 +6312,96 @@ input[type=file] {
   background-color: #7DB29E;
   max-height: 0;
   transition: max-height 0.2s ease-out;
+}
+
+/* login starts here */
+.login-container {
+  display: flex;
+  justify-items: start;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.login-feed {
+  margin-top: 120px;
+}
+
+.check-login-details {
+  border-radius: 30px;
+  border-bottom: 1px solid #DED0D0;
+  border-left: 1px solid #DED0D0;
+  border-right: 1px solid #DED0D0;
+  margin: 100px 50px;
+  padding: 30px 50px 10px 50px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.login-title {
+  font-family: "Comfortaa", cursive;
+  text-align: center;
+  border-radius: 30px;
+  border-bottom: 1px solid #DED0D0;
+}
+
+.login-email, .login-password {
+  margin: 20px 25px 0 25px;
+  background: #DED0D0;
+  height: 15px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.login-no-account {
+  text-align: center;
+  margin-top: -70px;
+}
+
+/* register starts here */
+.register-container {
+  display: flex;
+  justify-items: start;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.register-feed {
+  margin-top: 120px;
+}
+
+.register {
+  border-radius: 30px;
+  border-bottom: 1px solid #DED0D0;
+  border-left: 1px solid #DED0D0;
+  border-right: 1px solid #DED0D0;
+  margin: 100px 50px;
+  padding: 30px 50px 10px 50px;
+}
+
+.register-title {
+  font-family: "Comfortaa", cursive;
+  text-align: center;
+  border-radius: 30px;
+  border-bottom: 1px solid #DED0D0;
+}
+
+.register-first-name, .register-last-name, .register-email, .register-password, .register-password-confirm {
+  margin: 20px 25px 0 25px;
+  background: #DED0D0;
+  height: 15px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
 /*home begins here*/
@@ -6323,7 +6442,7 @@ input[type=file] {
 }
 
 .home-feed {
-  padding-top: 120px;
+  margin-top: 120px;
 }
 
 /*card featured begins here*/
@@ -6402,7 +6521,7 @@ badge {
   margin: 0 50px;
 }
 
-.add {
+.add-btn {
   background: #FFF5E9;
   color: #eb7878;
   padding: 10px 25px;
@@ -6417,7 +6536,7 @@ badge {
   transition: width 1.5s, height 1.5s;
 }
 
-.add:hover {
+.add-btn:hover {
   background: #eb7878;
   color: #FFF5E9;
   transform: scale(1);
@@ -6427,9 +6546,11 @@ badge {
 
 .footer-container {
   background-color: #FFF5E9;
+  position: fixed;
   bottom: 0;
   text-align: center;
   padding: 2px;
+  width: 100%;
 }
 
 /* Create post starts here */
@@ -6440,7 +6561,10 @@ badge {
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  margin: 100px 50px;
+}
+
+.create-feed {
+  margin-top: 120px;
 }
 
 .create-post {
@@ -6462,15 +6586,22 @@ badge {
 }
 
 .create-gallery {
-  margin: 25px;
-  border: 1px solid red;
   display: flex;
+  margin: 20px 25px 0 25px;
+  background: #DED0D0;
+  height: 15px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
-.create-title {
-  margin: 40px 25px 0 25px;
+.create-title, .create-tags, .create-ingredients, .create-instructions {
+  margin: 20px 25px 0 25px;
   background: #DED0D0;
-  height: 10px;
+  height: 15px;
   border-radius: 30px;
   padding: 10px 20px;
   justify-content: center;
@@ -6479,45 +6610,8 @@ badge {
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
-.input-instruction {
-  color: #7DB29E;
-  font-style: italic;
-  margin-top: -2px;
-}
-
-.create-tags {
-  margin: 40px 25px 0 25px;
-  background: #DED0D0;
-  height: 10px;
-  border-radius: 30px;
-  padding: 10px 20px;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
-}
-
-.create-ingredients {
-  margin: 40px 25px 0 25px;
-  background: #DED0D0;
-  height: 10px;
-  border-radius: 30px;
-  padding: 10px 20px;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
-}
-
-.create-instructions {
-  margin: 40px 25px 0 25px;
-  background: #DED0D0;
-  height: 10px;
-  border-radius: 30px;
-  padding: 10px 20px;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+.btn-container {
+  text-align: center;
+  margin: 20px;
 }
 
