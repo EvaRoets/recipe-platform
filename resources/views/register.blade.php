@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
     <div class="register-container">
-        {{-- Check for errors --}}
+{{--        Check for errors--}}
         @if ($message = Session::get('error'))
             <strong>{{ $message }}</strong>
         @endif
@@ -15,7 +15,7 @@
         <div class="register-feed">
             <form method="post" action={{ route('registration') }} >
                 @csrf
-                <div class="register">
+                <div class="register-details">
                     <div class="register-title">
                         <h2>Register</h2>
                     </div>
@@ -39,15 +39,14 @@
                         <label for="password_confirmation">Password confirmation</label>
                         <input type="password" name="password_confirmation" id="password_confirmation" required>
                     </div>
-                    <div class="btn-container">
+                    <div class="register-btn-container">
                         <a href="">
-                            <button class="register-btn" type="submit"><i class="fas fa-sign-in-alt"></i>&nbsp;Register</button>
+                            <button class="register-btn" type="submit"><i class="fas fa-sign-in-alt"></i>&nbsp;Register
+                            </button>
                         </a>
                     </div>
                 </div>
             </form>
         </div>
-
-
     </div>
 @endsection

@@ -6389,7 +6389,7 @@ input[type=password] {
   justify-content: center;
 }
 
-.register {
+.register-details {
   border-radius: 30px;
   border-bottom: 1px solid #DED0D0;
   border-left: 1px solid #DED0D0;
@@ -6671,7 +6671,7 @@ badge {
   justify-content: center;
 }
 
-.create-post {
+.create-recipe {
   border-radius: 30px;
   border-bottom: 1px solid #DED0D0;
   border-left: 1px solid #DED0D0;
@@ -6689,7 +6689,7 @@ badge {
   border-bottom: 1px solid #DED0D0;
 }
 
-.create-gallery {
+.create-images {
   display: flex;
   margin: 20px 25px 0 25px;
   background: #DED0D0;
@@ -6714,7 +6714,7 @@ badge {
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
-.btn-container {
+.create-btn-container, .login-btn-container, .account-btn-container, .register-btn-container {
   text-align: center;
   margin: 20px;
 }

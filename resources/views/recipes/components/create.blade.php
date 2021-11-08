@@ -15,17 +15,17 @@
         <div class="create-feed">
             <form method="post" action={{ route("createpost") }} enctype="multipart/form-data">
                 @csrf
-                <div class="create-post">
+                <div class="create-recipe">
                     <div class="create-recipe-title">
                         <h2>Add your recipe</h2>
-                    </div>
-                    <div class="create-gallery">
-                        <label for="image">Upload image</label>
-                        <input type="file" id="image" name="image" multiple>
                     </div>
                     <div class="create-title">
                         <label for="title">Title</label>
                         <input type="text" id="title" name="title">
+                    </div>
+                    <div class="create-images">
+                        <label for="image">Upload image</label>
+                        <input type="file" id="image" name="image" multiple>
                     </div>
                     <div class="create-tags">
                         <label for="tags">Tag(s)</label>
@@ -39,7 +39,7 @@
                         <label for="Instructions">Instructions</label>
                         <input type="text" name="description">
                     </div>
-                    <div class="btn-container">
+                    <div class="create-btn-container">
                         <a href="">
                             <button class="post-btn" type="submit">
                                 <i class="fas fa-plus-circle"></i>&nbsp; Add

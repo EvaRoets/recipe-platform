@@ -305,7 +305,7 @@ input[type=text]:focus {
     justify-content: center;
 }
 
-.register {
+.register-details {
     border-radius: $border-radius;
     border-bottom: 1px solid $light-accent;
     border-left: 1px solid $light-accent;
@@ -591,7 +591,7 @@ badge {
 }
 
 
-.create-post {
+.create-recipe {
     border-radius: $border-radius;
     border-bottom: 1px solid $light-accent;
     border-left: 1px solid $light-accent;
@@ -609,7 +609,7 @@ badge {
     border-bottom: 1px solid $light-accent;
 }
 
-.create-gallery {
+.create-images {
     display: flex;
     margin: 20px 25px 0 25px;
     background: $light-accent;
@@ -634,7 +634,8 @@ badge {
     box-shadow: $box-shadow;
 }
 
-.btn-container {
+.create-btn-container, .login-btn-container, .account-btn-container, .register-btn-container {
     text-align: center;
     margin: 20px;
 }
+

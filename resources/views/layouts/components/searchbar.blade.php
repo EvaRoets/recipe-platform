@@ -49,7 +49,7 @@
 
             </div>
         </div>
-        <div class="filter-button">
+        <div class="filter-btn">
             <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
         </div>
     </form>

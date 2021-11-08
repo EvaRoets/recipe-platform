@@ -32,7 +32,7 @@
 
     <title>Flavorly | All recipes in once place</title>
 </head>
-<body>
+<body class="{{ !empty($frosted) ? 'frosted' : null }}" >
 @include('layouts.components.header')
 @section('content')
 @show

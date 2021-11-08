@@ -15,7 +15,7 @@
         <div class="login-feed">
             <form method="post" action={{ route('checklogin') }}>
                 @csrf
-                <div class="check-login-details">
+                <div class="login-details">
                     <div class="login-title">
                         <h2>Login</h2>
                     </div>
@@ -27,7 +27,7 @@
                         <label for="password">Password</label>
                         <input type="password" name="password"/>
                     </div>
-                    <div class="btn-container">
+                    <div class="login-btn-container">
                         <a href="">
                             <button class="login-btn" type="submit" name="login" value="Login">
                                 <i class="fas fa-sign-in-alt"></i>&nbsp; Login
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="login-no-account">
-                    <p>Don't have an account yet? Sign up <a href={{ route('register') }}>here!</a></p>
+                    <p>Don't have an account yet? Sign up <a href={{ route('register') }}>here</a>!</p>
                 </div>
             </form>
         </div>

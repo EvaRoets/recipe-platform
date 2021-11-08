@@ -3,7 +3,6 @@
     <p>This is the recipe book page</p>
     <div class="recipe-book-container">
         <div class="recipe-filter">
-
         </div>
         <div class="left-page">
             @foreach($posts as $key => $data)
@@ -26,7 +25,6 @@
             @endforeach
         </div>
         <div class="right-page">
-
         </div>
     </div>
 @endsection
