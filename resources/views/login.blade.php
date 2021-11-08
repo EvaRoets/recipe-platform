@@ -1,26 +1,44 @@
 @extends('layouts.layout')
 @section('content')
-    <h1>Login</h1>
-
-    @if ($message = Session::get('error'))
-        <strong>{{ $message }}</strong>
-    @endif
-
-    @if (count($errors) > 0)
-        <ul>
-        @foreach($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-        </ul>
-    @endif
-
-    <form method="post" action={{ route('checklogin') }}>
-        @csrf
-        <label for="email">Enter Email</label>
-        <input type="email" name="email" />
-        <label for="password">Enter Password</label>
-        <input type="password" name="password" />
-        <input type="submit" name="login" value="Login" />
-    </form>
-    <a href={{ route('register') }}>Don't have an account? Sign up here!</a>
+    <div class="login-container">
+        {{-- Check for errors --}}
+        @if ($message = Session::get('error'))
+            <strong>{{ $message }}</strong>
+        @endif
+        @if (count($errors) > 0)
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        @endif
+        <div class="login-feed">
+            <form method="post" action={{ route('checklogin') }}>
+                @csrf
+                <div class="check-login-details">
+                    <div class="login-title">
+                        <h2>Login</h2>
+                    </div>
+                    <div class="login-email">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email"/>
+                    </div>
+                    <div class="login-password">
+                        <label for="password">Password</label>
+                        <input type="password" name="password"/>
+                    </div>
+                    <div class="btn-container">
+                        <a href="">
+                            <button class="login-btn" type="submit" name="login" value="Login">
+                                <i class="fas fa-sign-in-alt"></i>&nbsp; Login
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="login-no-account">
+                    <p>Don't have an account yet? Sign up <a href={{ route('register') }}>here!</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
 @endsection
