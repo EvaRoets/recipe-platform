@@ -215,6 +215,7 @@ input[type=text]:focus {
 
 /*collapsible profile begins here*/
 .profile-container {
+    position: relative;
 }
 
 .profile {
@@ -228,15 +229,20 @@ input[type=text]:focus {
     background-color: $background-color;
     color: $dark-green;
     padding: 18px;
-    width: 100%;
-    height: auto;
-    text-align: center;
+    //width: 100%;
+    //height: auto;
     outline: none;
-    font-size: $font-14;
+    border: none;
 }
 
 .active, .collapsible:hover {
     top: 3px;
+}
+
+.collapsible:active{
+}
+
+.active, .profile{
 }
 
 .content {
@@ -247,6 +253,9 @@ input[type=text]:focus {
     border-radius: $border-radius;
     text-align: left;
     width: 50%;
+    position: absolute;
+    top: 125px;
+    right: 85px;
 }
 
 /* login starts here */

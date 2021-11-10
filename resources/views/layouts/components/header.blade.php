@@ -20,21 +20,21 @@
             </form>
         </div>
 
-
         {{--    profile collapse starts here--}}
+
         <div class="profile-container">
-{{--            @if(Auth::check())--}}
-{{--                <a href={{ route('account') }}>--}}
-{{--                    <img class="profile" src={{ asset('images/account.png') }} alt="profile"/>--}}
-{{--                    Welcome, {{ Auth::user()->first_name }}--}}
-{{--                </a><br>--}}
-{{--                <a href={{ route('logout') }}>Logout</a>--}}
-{{--            @else--}}
+            {{--            @if(Auth::check())--}}
+            {{--                <a href={{ route('account') }}>--}}
+            {{--                    <img class="profile" src={{ asset('images/account.png') }} alt="profile"/>--}}
+            {{--                    Welcome, {{ Auth::user()->first_name }}--}}
+            {{--                </a><br>--}}
+            {{--                <a href={{ route('logout') }}>Logout</a>--}}
+            {{--            @else--}}
             <button type="button" class="collapsible">
-                <img class="profile"
-                     src={{ asset('images/account.png') }} alt="profile"/>
+                            <img class="profile"
+                                 src={{ asset('images/account.png') }} alt="profile"/>
             </button>
-{{--            @endif--}}
+            {{--            @endif--}}
             <div class="content">
                 <p>
                     <i class="fas fa-user-circle"></i>&nbsp; <b>My account</b> </br> <hr>
@@ -44,5 +44,10 @@
                 </p>
             </div>
         </div>
+
     </div>
 </header>
+
+
+
+
