@@ -19,3 +19,4 @@ Route::get('/search', [Controller::class, 'search'])->name('search');
 Route::get('/details', [Controller::class, 'details'])->name('details');
 Route::get('/creator', [PostController::class, 'creator'])->name('creator');
 Route::post('/createpost', [PostController::class, 'createpost'])->name('createpost');
+Route::get('/settings', [Controller::class, 'settings'])->name('settings');

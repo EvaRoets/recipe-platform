@@ -6398,7 +6398,7 @@ input:-webkit-autofill:focus {
 }
 
 .content {
-  padding: 15px 20px;
+  padding: 25px 25px;
   overflow: hidden;
   display: none;
   background-color: #DED0D0;
@@ -6409,6 +6409,13 @@ input:-webkit-autofill:focus {
   top: 125px;
   right: 80px;
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.content-account,
+.content-recipes,
+.content-settings,
+.content-signout {
+  padding: 5px;
 }
 
 /* login starts here */
@@ -6423,7 +6430,8 @@ input:-webkit-autofill:focus {
 
 .login-details,
 .account-details,
-.register-details {
+.register-details,
+.settings-details {
   border-radius: 30px;
   border-bottom: 1px solid #DED0D0;
   border-left: 1px solid #DED0D0;
@@ -6481,7 +6489,8 @@ input:-webkit-autofill:focus {
 }
 
 /* account starts here */
-.account-container {
+.account-container,
+.settings-container {
   display: flex;
   justify-items: start;
   align-items: center;
@@ -6490,7 +6499,8 @@ input:-webkit-autofill:focus {
   justify-content: center;
 }
 
-.account-title {
+.account-title,
+.settings-title {
   font-family: "Comfortaa", cursive;
   text-align: center;
   border-radius: 30px;
@@ -6615,6 +6625,7 @@ input:-webkit-autofill:focus {
 .create-btn-container,
 .login-btn-container,
 .account-btn-container,
+.settings-box,
 .register-btn-container {
   text-align: center;
   margin: 20px;
@@ -6625,6 +6636,7 @@ input:-webkit-autofill:focus {
 .login-feed,
 .register-feed,
 .account-feed,
+.settings-feed,
 .show-feed {
   margin-top: 120px;
 }

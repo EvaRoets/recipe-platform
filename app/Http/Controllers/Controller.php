@@ -33,25 +33,31 @@ class Controller extends BaseController
         }
         else
         {
-            return view('login', ['frosted' => true]);
+            return view('account.login', ['frosted' => true]);
         }
     }
 
     function register()
     {
-        return view('register', ['frosted' => true]);
+        return view('account.register', ['frosted' => true]);
     }
 
     function account()
     {
-        if(Auth::check())
-        {
-            return view('account');
-        }
-        else
-        {
-            return redirect()->home();
-        }
+//        if(Auth::check())
+//        {
+//            return view('account');
+//        }
+//        else
+//        {
+//            return redirect()->home();
+//        }
+//        TODO: activate code again
+        return view('account.account');
+    }
+    function settings()
+    {
+        return view('account.settings');
     }
 
     function recipebook()
@@ -70,7 +76,8 @@ class Controller extends BaseController
         {
             return redirect()->home();
         }
-
+        //        TODO: activate code again
+//        return view('recipes.recipeBook');
     }
 
     function savePost()
@@ -100,4 +107,5 @@ class Controller extends BaseController
         $details = Post::where('id', request()->postid)->first();
         return view('recipes.show', ['details' => $details]);
     }
+
 }

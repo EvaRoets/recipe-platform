@@ -32,25 +32,25 @@
             </button>
             {{--            @endif--}}
             <div class="content">
-                <a href={{ url ('/register') }}>
+                <a href={{ url ('/account') }}>
                     <div type="button" class="content-account">
                         <i class="fas fa-user-circle"></i>&nbsp; <b>My account</b> </br>
                     </div>
                 </a>
                 <hr>
-                <a href={{url('/register')}}>
+                <a href={{url('/recipebook')}}>
                     <div class="content-recipes">
                         <i class="fas fa-bookmark"></i>&nbsp;<b>My recipes</b> </br>
                     </div>
                 </a>
                 <hr>
-                <a href={{url('/register')}}>
+                <a href={{url('/settings')}}>
                     <div class="content-settings">
                         <i class="fas fa-cogs"></i>&nbsp; <b>Settings</b> </br>
                     </div>
                 </a>
                 <hr>
-                <a href={{url('/resgiter')}}>
+                <a href={{url('/')}}>
                     <div class="content-signout">
                         <i class="fas fa-sign-out-alt"></i>&nbsp;<b> Log out</b> </br>
                     </div>
