@@ -12,13 +12,17 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
-
 // collapsible create-container starts here
 let create = document.getElementById("create");
 create.addEventListener("click", function () {
     alert("A modal box will replace this alert message")
 });
 
+
+// let account = document.getElementsByClassName("content-account")
+// account.addEventListener("click", function () {
+//
+// })
 
 
 

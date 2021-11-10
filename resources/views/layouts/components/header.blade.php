@@ -8,17 +8,14 @@
         </div>
 
         {{--    search bar starts here--}}
-        <div class="search-container">
             <form method="get" action={{ route('search') }}>
-                <div class="search-box">
+                <div class="search-container">
                     <input type="text" placeholder="Search your recipe..." name="search">
                     <button class="search-btn" type="submit" value="submit">
                         <i class="fa fa-search"></i>
                     </button>
                 </div>
-
             </form>
-        </div>
 
         {{--    profile collapse starts here--}}
 
@@ -31,17 +28,34 @@
             {{--                <a href={{ route('logout') }}>Logout</a>--}}
             {{--            @else--}}
             <button type="button" class="collapsible">
-                            <img class="profile"
-                                 src={{ asset('images/account.png') }} alt="profile"/>
+                <img class="profile"
+                     src={{ asset('images/account.png') }} alt="profile"/>
             </button>
             {{--            @endif--}}
             <div class="content">
-                <p>
-                    <i class="fas fa-user-circle"></i>&nbsp; <b>My account</b> </br> <hr>
-                    <i class="fas fa-bookmark"></i>&nbsp;<b>My recipes</b> </br> <hr>
-                    <i class="fas fa-cogs"></i>&nbsp; <b>Settings</b> </br> <hr>
-                    <i class="fas fa-sign-out-alt"></i>&nbsp;<b> Log out</b> </br>
-                </p>
+                <a href={{ url ('/register') }}>
+                    <div type="button" class="content-account">
+                        <i class="fas fa-user-circle"></i>&nbsp; <b>My account</b> </br>
+                    </div>
+                </a>
+                <hr>
+                <a href={{url('/register')}}>
+                    <div class="content-recipes">
+                        <i class="fas fa-bookmark"></i>&nbsp;<b>My recipes</b> </br>
+                    </div>
+                </a>
+                <hr>
+                <a href={{url('/register')}}>
+                    <div class="content-settings">
+                        <i class="fas fa-cogs"></i>&nbsp; <b>Settings</b> </br>
+                    </div>
+                </a>
+                <hr>
+                <a href={{url('/resgiter')}}>
+                    <div class="content-signout">
+                        <i class="fas fa-sign-out-alt"></i>&nbsp;<b> Log out</b> </br>
+                    </div>
+                </a>
             </div>
         </div>
 

@@ -41,6 +41,10 @@ $box-shadow-image: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
 0 41.8px 33.4px rgba(0, 0, 0, 0.086);
 
+$box-shadow-focus: 0px 0px 8px 2px $bright-accent;
+$box-shadow-focus-search: 0px 0px 8px 2px $dark-green;
+
+
 html {
     background-color: $background-color;
     height: 100%;
@@ -49,7 +53,7 @@ html {
 }
 
 body {
-    color: #4E918E;
+    color: $dark-green;
     font-family: "Montserrat Alternates", sans-serif;
     margin: 0 auto;
 }
@@ -91,7 +95,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 /* buttons start here */
-.save-btn, .like-btn, .search-btn, .view-btn, .post-btn, .login-btn, .register-btn, .recipe-btn {
+.search-btn {
     background: $light-accent;
     cursor: pointer;
     justify-content: center;
@@ -99,18 +103,44 @@ html::-webkit-scrollbar-thumb {
     font-size: $font-16;
 }
 
-.save-btn, .like-btn, .view-btn, .post-btn, .login-btn, .register-btn, .recipe-btn {
+.search-btn:hover{
+    background: $light-accent;
+}
+
+.search-btn:focus-within{
+    box-shadow: $box-shadow-focus-search;
+}
+
+.save-btn,
+.like-btn,
+.view-btn,
+.post-btn,
+.login-btn,
+.register-btn,
+.recipe-btn {
+    background: $light-accent;
     color: $bright-accent;
+    padding: 20px 25px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font-size: $font-16;
     border: none;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
-    padding: 20px 25px;
     margin: 15px;
 }
 
-.save-btn:hover, .like-btn:hover, .view-btn:hover, .post-btn:hover, .login-btn:hover, .register-btn:hover, .recipe-btn:hover {
-    color: $light-accent;
+
+.save-btn:hover,
+.like-btn:hover,
+.view-btn:hover,
+.post-btn:hover,
+.login-btn:hover,
+.register-btn:hover,
+.recipe-btn:hover {
     background-color: $bright-accent;
+    color: $light-accent;
 }
 
 
@@ -149,61 +179,43 @@ html::-webkit-scrollbar-thumb {
     border-radius: $border-radius;
     padding: 10px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     cursor: pointer;
     box-shadow: $box-shadow;
+    width: 400px;
+
 }
 
 form {
+
 }
 
-.search-box {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 400px;
-    justify-content: space-between;
-    align-items: center;
+.search-container:focus-within{
+    box-shadow: $box-shadow-focus-search;
+
 }
 
-input[type=text] {
-    border: none;
-    background: $light-accent;
-    cursor: pointer;
-    text-align: center;
-}
-
-input[type=file] {
-    border: none;
-    display: none;
-    background: $light-accent;
-    cursor: pointer;
-    text-align: center;
-}
-
-input[type=file] {
-    border: none;
-    background: $light-accent;
-    cursor: pointer;
-    text-align: center;
-}
-
-input[type=email] {
-    border: none;
-    background: $light-accent;
-    cursor: pointer;
-    text-align: center;
-}
-
+input[type=text],
+input[type=file],
+input[type=email],
 input[type=password] {
     border: none;
     background: $light-accent;
     cursor: pointer;
-    text-align: center;
+
+    //display: none;
 }
 
+
 //TODO: get rid off border when click
-input[type=text]:focus {
+input[type=text]:focus,
+input[type=file]:focus,
+input[type=email]:focus,
+input[type=password]:focus {
+    outline: none;
+    background-color: yellow;
+transform: scale(1.5);
 }
 
 ::placeholder {
@@ -239,14 +251,8 @@ input[type=text]:focus {
     top: 3px;
 }
 
-.collapsible:active{
-}
-
-.active, .profile{
-}
-
 .content {
-    padding: 0 18px;
+    padding: 15px 20px;
     overflow: hidden;
     display: none;
     background-color: $light-accent;
@@ -255,7 +261,9 @@ input[type=text]:focus {
     width: 50%;
     position: absolute;
     top: 125px;
-    right: 85px;
+    right: 80px;
+    box-shadow: $box-shadow;
+
 }
 
 /* login starts here */
@@ -269,7 +277,8 @@ input[type=text]:focus {
     justify-content: center;
 }
 
-.login-details, .account-details {
+.login-details,
+.account-details {
     border-radius: $border-radius;
     border-bottom: 1px solid $light-accent;
     border-left: 1px solid $light-accent;
@@ -286,7 +295,8 @@ input[type=text]:focus {
     border-bottom: 1px solid $light-accent;
 }
 
-.login-email, .login-password {
+.login-email,
+.login-password {
     margin: 20px 25px 0 25px;
     background: $light-accent;
     height: 15px;
@@ -296,6 +306,11 @@ input[type=text]:focus {
     align-items: center;
     cursor: pointer;
     box-shadow: $box-shadow;
+}
+
+.login-email:focus-within,
+.login-password:focus-within {
+    box-shadow: $box-shadow-focus;
 }
 
 .login-no-account {
@@ -331,7 +346,11 @@ input[type=text]:focus {
     border-bottom: 1px solid $light-accent;
 }
 
-.register-first-name, .register-last-name, .register-email, .register-password, .register-password-confirm {
+.register-first-name,
+.register-last-name,
+.register-email,
+.register-password,
+.register-password-confirm {
     margin: 20px 25px 0 25px;
     background: $light-accent;
     height: 15px;
@@ -342,6 +361,15 @@ input[type=text]:focus {
     cursor: pointer;
     box-shadow: $box-shadow;
 }
+
+.register-first-name:focus-within,
+.register-last-name:focus-within,
+.register-email:focus-within,
+.register-password:focus-within,
+.register-password-confirm:focus-within {
+    box-shadow: $box-shadow-focus;
+}
+
 
 /* account starts here */
 .account-container {
@@ -370,12 +398,19 @@ input[type=text]:focus {
     border-bottom: 1px solid $light-accent;
 }
 
-.account-first-name, .account-last-name, .account-email {
+.account-first-name,
+.account-last-name,
+.account-email {
     margin: 25px;
     height: 10px;
     border-radius: 30px;
     padding: 0 20px;
+}
 
+.account-first-name:focus-within,
+.account-last-name:focus-within,
+.account-email:focus-within{
+    box-shadow: $box-shadow-focus;
 }
 
 
@@ -407,10 +442,12 @@ input[type=text]:focus {
     border-radius: $border-radius;
     border-bottom: 1px solid $light-accent;
 }
+
 .show-image-container {
     display: flex;
     justify-content: center;
 }
+
 .show-image {
     border-radius: $border-radius;
     box-shadow: $box-shadow-image;
@@ -420,6 +457,7 @@ input[type=text]:focus {
     margin: 50px 15px 15px 15px;
 
 }
+
 .show-tags {
     display: flex;
     padding: 15px 15px 15px 0;
@@ -449,7 +487,6 @@ input[type=text]:focus {
     justify-content: center;
 }
 
-
 .home-filter {
     display: flex;
     flex-direction: column;
@@ -472,12 +509,19 @@ input[type=text]:focus {
     align-items: center;
 }
 
-.main-ingredient, .dish-type, .special-occasions {
+.main-ingredient,
+.dish-type,
+.special-occasions {
     padding: 0 10px;
     margin: 0 20px;
 }
 
-.home-feed, .create-feed, .login-feed, .register-feed, .account-feed, .show-feed {
+.home-feed,
+.create-feed,
+.login-feed,
+.register-feed,
+.account-feed,
+.show-feed {
     margin-top: 120px;
 }
 
@@ -525,7 +569,8 @@ badge {
     box-shadow: $box-shadow;
 }
 
-.card-tags, .card-buttons {
+.card-tags,
+.card-buttons {
     margin: 25px 15px 15px 15px;
 }
 
@@ -600,7 +645,6 @@ badge {
     justify-content: center;
 }
 
-
 .create-recipe {
     border-radius: $border-radius;
     border-bottom: 1px solid $light-accent;
@@ -632,7 +676,10 @@ badge {
     box-shadow: $box-shadow;
 }
 
-.create-title, .create-tags, .create-ingredients, .create-instructions {
+.create-title,
+.create-tags,
+.create-ingredients,
+.create-instructions {
     margin: 20px 25px 0 25px;
     background: $light-accent;
     height: 15px;
@@ -644,7 +691,17 @@ badge {
     box-shadow: $box-shadow;
 }
 
-.create-btn-container, .login-btn-container, .account-btn-container, .register-btn-container {
+.create-title:focus-within,
+.create-tags:focus-within,
+.create-ingredients:focus-within,
+.create-instructions:focus-within{
+    box-shadow: $box-shadow-focus;
+}
+
+.create-btn-container,
+.login-btn-container,
+.account-btn-container,
+.register-btn-container {
     text-align: center;
     margin: 20px;
 }

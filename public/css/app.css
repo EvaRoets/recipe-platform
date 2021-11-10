@@ -6178,7 +6178,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 /* buttons start here */
-.save-btn, .like-btn, .search-btn, .view-btn, .post-btn, .login-btn, .register-btn, .recipe-btn {
+.search-btn {
   background: #DED0D0;
   cursor: pointer;
   justify-content: center;
@@ -6186,18 +6186,43 @@ html::-webkit-scrollbar-thumb {
   font-size: 16px;
 }
 
-.save-btn, .like-btn, .view-btn, .post-btn, .login-btn, .register-btn, .recipe-btn {
+.search-btn:hover {
+  background: #DED0D0;
+}
+
+.search-btn:focus-within {
+  box-shadow: 0px 0px 8px 2px #4E918E;
+}
+
+.save-btn,
+.like-btn,
+.view-btn,
+.post-btn,
+.login-btn,
+.register-btn,
+.recipe-btn {
+  background: #DED0D0;
   color: #eb7878;
+  padding: 20px 25px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
   border: none;
   border-radius: 30px;
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
-  padding: 20px 25px;
   margin: 15px;
 }
 
-.save-btn:hover, .like-btn:hover, .view-btn:hover, .post-btn:hover, .login-btn:hover, .register-btn:hover, .recipe-btn:hover {
-  color: #DED0D0;
+.save-btn:hover,
+.like-btn:hover,
+.view-btn:hover,
+.post-btn:hover,
+.login-btn:hover,
+.register-btn:hover,
+.recipe-btn:hover {
   background-color: #eb7878;
+  color: #DED0D0;
 }
 
 .search-btn {
@@ -6232,54 +6257,33 @@ html::-webkit-scrollbar-thumb {
   border-radius: 30px;
   padding: 10px 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   cursor: pointer;
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
-}
-
-.search-box {
-  display: flex;
-  flex-wrap: nowrap;
   width: 400px;
-  justify-content: space-between;
-  align-items: center;
 }
 
-input[type=text] {
-  border: none;
-  background: #DED0D0;
-  cursor: pointer;
-  text-align: center;
+.search-container:focus-within {
+  box-shadow: 0px 0px 8px 2px #4E918E;
 }
 
-input[type=file] {
-  border: none;
-  display: none;
-  background: #DED0D0;
-  cursor: pointer;
-  text-align: center;
-}
-
-input[type=file] {
-  border: none;
-  background: #DED0D0;
-  cursor: pointer;
-  text-align: center;
-}
-
-input[type=email] {
-  border: none;
-  background: #DED0D0;
-  cursor: pointer;
-  text-align: center;
-}
-
+input[type=text],
+input[type=file],
+input[type=email],
 input[type=password] {
   border: none;
   background: #DED0D0;
   cursor: pointer;
-  text-align: center;
+}
+
+input[type=text]:focus,
+input[type=file]:focus,
+input[type=email]:focus,
+input[type=password]:focus {
+  outline: none;
+  background-color: yellow;
+  transform: scale(1.5);
 }
 
 ::-moz-placeholder {
@@ -6328,7 +6332,7 @@ input[type=password] {
 }
 
 .content {
-  padding: 0 18px;
+  padding: 15px 20px;
   overflow: hidden;
   display: none;
   background-color: #DED0D0;
@@ -6337,7 +6341,8 @@ input[type=password] {
   width: 50%;
   position: absolute;
   top: 125px;
-  right: 85px;
+  right: 80px;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* login starts here */
@@ -6350,7 +6355,8 @@ input[type=password] {
   justify-content: center;
 }
 
-.login-details, .account-details {
+.login-details,
+.account-details {
   border-radius: 30px;
   border-bottom: 1px solid #DED0D0;
   border-left: 1px solid #DED0D0;
@@ -6367,7 +6373,8 @@ input[type=password] {
   border-bottom: 1px solid #DED0D0;
 }
 
-.login-email, .login-password {
+.login-email,
+.login-password {
   margin: 20px 25px 0 25px;
   background: #DED0D0;
   height: 15px;
@@ -6377,6 +6384,11 @@ input[type=password] {
   align-items: center;
   cursor: pointer;
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.login-email:focus-within,
+.login-password:focus-within {
+  box-shadow: 0px 0px 8px 2px #eb7878;
 }
 
 .login-no-account {
@@ -6410,7 +6422,11 @@ input[type=password] {
   border-bottom: 1px solid #DED0D0;
 }
 
-.register-first-name, .register-last-name, .register-email, .register-password, .register-password-confirm {
+.register-first-name,
+.register-last-name,
+.register-email,
+.register-password,
+.register-password-confirm {
   margin: 20px 25px 0 25px;
   background: #DED0D0;
   height: 15px;
@@ -6420,6 +6436,14 @@ input[type=password] {
   align-items: center;
   cursor: pointer;
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.register-first-name:focus-within,
+.register-last-name:focus-within,
+.register-email:focus-within,
+.register-password:focus-within,
+.register-password-confirm:focus-within {
+  box-shadow: 0px 0px 8px 2px #eb7878;
 }
 
 /* account starts here */
@@ -6449,11 +6473,19 @@ input[type=password] {
   border-bottom: 1px solid #DED0D0;
 }
 
-.account-first-name, .account-last-name, .account-email {
+.account-first-name,
+.account-last-name,
+.account-email {
   margin: 25px;
   height: 10px;
   border-radius: 30px;
   padding: 0 20px;
+}
+
+.account-first-name:focus-within,
+.account-last-name:focus-within,
+.account-email:focus-within {
+  box-shadow: 0px 0px 8px 2px #eb7878;
 }
 
 /* show details start here */
@@ -6549,12 +6581,19 @@ input[type=password] {
   align-items: center;
 }
 
-.main-ingredient, .dish-type, .special-occasions {
+.main-ingredient,
+.dish-type,
+.special-occasions {
   padding: 0 10px;
   margin: 0 20px;
 }
 
-.home-feed, .create-feed, .login-feed, .register-feed, .account-feed, .show-feed {
+.home-feed,
+.create-feed,
+.login-feed,
+.register-feed,
+.account-feed,
+.show-feed {
   margin-top: 120px;
 }
 
@@ -6602,7 +6641,8 @@ badge {
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
-.card-tags, .card-buttons {
+.card-tags,
+.card-buttons {
   margin: 25px 15px 15px 15px;
 }
 
@@ -6707,7 +6747,10 @@ badge {
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
-.create-title, .create-tags, .create-ingredients, .create-instructions {
+.create-title,
+.create-tags,
+.create-ingredients,
+.create-instructions {
   margin: 20px 25px 0 25px;
   background: #DED0D0;
   height: 15px;
@@ -6719,7 +6762,17 @@ badge {
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
-.create-btn-container, .login-btn-container, .account-btn-container, .register-btn-container {
+.create-title:focus-within,
+.create-tags:focus-within,
+.create-ingredients:focus-within,
+.create-instructions:focus-within {
+  box-shadow: 0px 0px 8px 2px #eb7878;
+}
+
+.create-btn-container,
+.login-btn-container,
+.account-btn-container,
+.register-btn-container {
   text-align: center;
   margin: 20px;
 }

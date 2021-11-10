@@ -27,7 +27,11 @@ for (i = 0; i < coll.length; i++) {
 var create = document.getElementById("create");
 create.addEventListener("click", function () {
   alert("A modal box will replace this alert message");
-}); // //TODO verify
+}); // let account = document.getElementsByClassName("content-account")
+// account.addEventListener("click", function () {
+//
+// })
+// //TODO verify
 // // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_shrink_header_scroll
 // // https://www.w3schools.com/howto/howto_js_sticky_header.asp
 // //TODO link all JS
