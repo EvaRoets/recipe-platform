@@ -6143,7 +6143,9 @@ body {
 
 label {
   font-style: italic;
+  font-weight: bold;
   font-size: 14px;
+  margin: 10px 35px 0 35px;
 }
 
 a {
@@ -6190,7 +6192,7 @@ html::-webkit-scrollbar-thumb {
   background: #DED0D0;
 }
 
-.search-btn:focus-within {
+.search-container:focus-within {
   box-shadow: 0px 0px 8px 2px #4E918E;
 }
 
@@ -6264,17 +6266,35 @@ html::-webkit-scrollbar-thumb {
   width: 400px;
 }
 
-.search-container:focus-within {
-  box-shadow: 0px 0px 8px 2px #4E918E;
+input[type=search] {
+  outline: none;
+  border: none;
+  background: #DED0D0;
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: -webkit-fill-available;
+}
+
+input[type=search]:focus {
+  outline: none;
 }
 
 input[type=text],
-input[type=file],
 input[type=email],
 input[type=password] {
+  outline: none;
   border: none;
+  margin: 5px 25px 10px 25px;
   background: #DED0D0;
+  border-radius: 30px;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+  align-self: flex-start;
+  width: -webkit-fill-available;
 }
 
 input[type=text]:focus,
@@ -6282,8 +6302,54 @@ input[type=file]:focus,
 input[type=email]:focus,
 input[type=password]:focus {
   outline: none;
-  background-color: yellow;
-  transform: scale(1.5);
+  box-shadow: 0px 0px 8px 2px #eb7878;
+}
+
+input[type=file] {
+  opacity: 0.3;
+}
+
+input[type=file]:hover {
+  opacity: 10;
+}
+
+.create-file {
+  outline: none;
+  border: none;
+  margin: 5px 25px 10px 25px;
+  background: #DED0D0;
+  border-radius: 30px;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+  align-self: flex-start;
+  width: -webkit-fill-available;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  background-color: #7DB29E !important;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2) !important;
+  font-family: "Comfortaa", cursive;
+  color: #FFF5E9;
+}
+
+.create-box {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  margin-top: 20px;
+}
+
+.account-box,
+.register-box,
+.login-box {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin-top: 20px;
 }
 
 ::-moz-placeholder {
@@ -6356,7 +6422,8 @@ input[type=password]:focus {
 }
 
 .login-details,
-.account-details {
+.account-details,
+.register-details {
   border-radius: 30px;
   border-bottom: 1px solid #DED0D0;
   border-left: 1px solid #DED0D0;
@@ -6406,44 +6473,11 @@ input[type=password]:focus {
   justify-content: center;
 }
 
-.register-details {
-  border-radius: 30px;
-  border-bottom: 1px solid #DED0D0;
-  border-left: 1px solid #DED0D0;
-  border-right: 1px solid #DED0D0;
-  margin: 100px 50px;
-  padding: 30px 50px 10px 50px;
-}
-
 .register-title {
   font-family: "Comfortaa", cursive;
   text-align: center;
   border-radius: 30px;
   border-bottom: 1px solid #DED0D0;
-}
-
-.register-first-name,
-.register-last-name,
-.register-email,
-.register-password,
-.register-password-confirm {
-  margin: 20px 25px 0 25px;
-  background: #DED0D0;
-  height: 15px;
-  border-radius: 30px;
-  padding: 10px 20px;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
-}
-
-.register-first-name:focus-within,
-.register-last-name:focus-within,
-.register-email:focus-within,
-.register-password:focus-within,
-.register-password-confirm:focus-within {
-  box-shadow: 0px 0px 8px 2px #eb7878;
 }
 
 /* account starts here */
@@ -6454,16 +6488,6 @@ input[type=password]:focus {
   flex-direction: column;
   align-content: center;
   justify-content: center;
-}
-
-.account-details {
-  border-radius: 30px;
-  border-bottom: 1px solid #DED0D0;
-  border-left: 1px solid #DED0D0;
-  border-right: 1px solid #DED0D0;
-  margin: 100px 50px;
-  padding: 30px 50px 10px 50px;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 .account-title {
@@ -6586,6 +6610,14 @@ input[type=password]:focus {
 .special-occasions {
   padding: 0 10px;
   margin: 0 20px;
+}
+
+.create-btn-container,
+.login-btn-container,
+.account-btn-container,
+.register-btn-container {
+  text-align: center;
+  margin: 20px;
 }
 
 .home-feed,
@@ -6767,13 +6799,5 @@ badge {
 .create-ingredients:focus-within,
 .create-instructions:focus-within {
   box-shadow: 0px 0px 8px 2px #eb7878;
-}
-
-.create-btn-container,
-.login-btn-container,
-.account-btn-container,
-.register-btn-container {
-  text-align: center;
-  margin: 20px;
 }
 

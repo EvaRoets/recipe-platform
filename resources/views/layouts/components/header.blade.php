@@ -8,17 +8,16 @@
         </div>
 
         {{--    search bar starts here--}}
-            <form method="get" action={{ route('search') }}>
-                <div class="search-container">
-                    <input type="text" placeholder="Search your recipe..." name="search">
-                    <button class="search-btn" type="submit" value="submit">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </div>
-            </form>
+        <form method="get" action={{ route('search') }}>
+            <div class="search-container">
+                <input type="search" placeholder="Search your recipe..." name="search">
+                <button class="search-btn" type="submit" value="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </form>
 
         {{--    profile collapse starts here--}}
-
         <div class="profile-container">
             {{--            @if(Auth::check())--}}
             {{--                <a href={{ route('account') }}>--}}

@@ -60,7 +60,9 @@ body {
 
 label {
     font-style: italic;
+    font-weight: bold;
     font-size: $font-14;
+    margin: 10px 35px 0 35px
 }
 
 a {
@@ -103,11 +105,11 @@ html::-webkit-scrollbar-thumb {
     font-size: $font-16;
 }
 
-.search-btn:hover{
+.search-btn:hover {
     background: $light-accent;
 }
 
-.search-btn:focus-within{
+.search-container:focus-within {
     box-shadow: $box-shadow-focus-search;
 }
 
@@ -191,32 +193,93 @@ form {
 
 }
 
-.search-container:focus-within{
-    box-shadow: $box-shadow-focus-search;
+input[type=search]{
+    outline: none;
+    border: none;
+    background: $light-accent;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: -webkit-fill-available;
+}
 
+input[type=search]:focus{
+    outline: none;
 }
 
 input[type=text],
-input[type=file],
 input[type=email],
-input[type=password] {
+input[type=password]{
+    outline: none;
     border: none;
+    margin: 5px 25px 10px 25px;
     background: $light-accent;
+    border-radius: $border-radius;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-
-    //display: none;
+    box-shadow: $box-shadow;
+    align-self: flex-start;
+    width: -webkit-fill-available;
 }
 
-
-//TODO: get rid off border when click
 input[type=text]:focus,
 input[type=file]:focus,
 input[type=email]:focus,
 input[type=password]:focus {
     outline: none;
-    background-color: yellow;
-transform: scale(1.5);
+    box-shadow: $box-shadow-focus;
 }
+
+input[type=file] {
+    opacity: 0.3;
+}
+
+input[type=file]:hover {
+    opacity: 10;
+}
+
+.create-file{
+    outline: none;
+    border: none;
+    margin: 5px 25px 10px 25px;
+    background: $light-accent;
+    border-radius: $border-radius;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: $box-shadow;
+    align-self: flex-start;
+    width: -webkit-fill-available;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    background-color: $light-green !important;
+    box-shadow: $box-shadow !important;
+    font-family: $font-title;
+    color:$background-color;
+}
+
+
+.create-box {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    margin-top: 20px;
+}
+
+.account-box,
+.register-box,
+.login-box {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin-top: 20px;
+}
+
 
 ::placeholder {
     color: $dark-green;
@@ -278,7 +341,8 @@ transform: scale(1.5);
 }
 
 .login-details,
-.account-details {
+.account-details,
+.register-details {
     border-radius: $border-radius;
     border-bottom: 1px solid $light-accent;
     border-left: 1px solid $light-accent;
@@ -330,15 +394,6 @@ transform: scale(1.5);
     justify-content: center;
 }
 
-.register-details {
-    border-radius: $border-radius;
-    border-bottom: 1px solid $light-accent;
-    border-left: 1px solid $light-accent;
-    border-right: 1px solid $light-accent;
-    margin: 100px 50px;
-    padding: 30px 50px 10px 50px;
-}
-
 .register-title {
     font-family: $font-title;
     text-align: center;
@@ -346,29 +401,29 @@ transform: scale(1.5);
     border-bottom: 1px solid $light-accent;
 }
 
-.register-first-name,
-.register-last-name,
-.register-email,
-.register-password,
-.register-password-confirm {
-    margin: 20px 25px 0 25px;
-    background: $light-accent;
-    height: 15px;
-    border-radius: $border-radius;
-    padding: 10px 20px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: $box-shadow;
-}
-
-.register-first-name:focus-within,
-.register-last-name:focus-within,
-.register-email:focus-within,
-.register-password:focus-within,
-.register-password-confirm:focus-within {
-    box-shadow: $box-shadow-focus;
-}
+//.register-first-name,
+//.register-last-name,
+//.register-email,
+//.register-password,
+//.register-password-confirm {
+//    margin: 20px 25px 0 25px;
+//    background: $light-accent;
+//    height: 15px;
+//    border-radius: $border-radius;
+//    padding: 10px 20px;
+//    justify-content: center;
+//    align-items: center;
+//    cursor: pointer;
+//    box-shadow: $box-shadow;
+//}
+//
+//.register-first-name:focus-within,
+//.register-last-name:focus-within,
+//.register-email:focus-within,
+//.register-password:focus-within,
+//.register-password-confirm:focus-within {
+//    box-shadow: $box-shadow-focus;
+//}
 
 
 /* account starts here */
@@ -379,16 +434,6 @@ transform: scale(1.5);
     flex-direction: column;
     align-content: center;
     justify-content: center;
-}
-
-.account-details {
-    border-radius: $border-radius;
-    border-bottom: 1px solid $light-accent;
-    border-left: 1px solid $light-accent;
-    border-right: 1px solid $light-accent;
-    margin: 100px 50px;
-    padding: 30px 50px 10px 50px;
-    box-shadow: $box-shadow-featured;
 }
 
 .account-title {
@@ -409,7 +454,7 @@ transform: scale(1.5);
 
 .account-first-name:focus-within,
 .account-last-name:focus-within,
-.account-email:focus-within{
+.account-email:focus-within {
     box-shadow: $box-shadow-focus;
 }
 
@@ -514,6 +559,14 @@ transform: scale(1.5);
 .special-occasions {
     padding: 0 10px;
     margin: 0 20px;
+}
+
+.create-btn-container,
+.login-btn-container,
+.account-btn-container,
+.register-btn-container {
+    text-align: center;
+    margin: 20px;
 }
 
 .home-feed,
@@ -694,15 +747,11 @@ badge {
 .create-title:focus-within,
 .create-tags:focus-within,
 .create-ingredients:focus-within,
-.create-instructions:focus-within{
+.create-instructions:focus-within {
     box-shadow: $box-shadow-focus;
 }
 
-.create-btn-container,
-.login-btn-container,
-.account-btn-container,
-.register-btn-container {
-    text-align: center;
-    margin: 20px;
-}
+
+
+
 

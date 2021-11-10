@@ -19,20 +19,18 @@
                     <div class="login-title">
                         <h2>Login</h2>
                     </div>
-                    <div class="login-email">
+                    <div class="login-box">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email"/>
-                    </div>
-                    <div class="login-password">
                         <label for="password">Password</label>
                         <input type="password" name="password"/>
-                    </div>
-                    <div class="login-btn-container">
-                        <a href="">
-                            <button class="login-btn" type="submit" name="login" value="Login">
-                                <i class="fas fa-sign-in-alt"></i>&nbsp; Login
-                            </button>
-                        </a>
+                        <div class="login-btn-container">
+                            <a href="">
+                                <button class="login-btn" type="submit" name="login" value="Login">
+                                    <i class="fas fa-sign-in-alt"></i>&nbsp; Login
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="login-no-account">
