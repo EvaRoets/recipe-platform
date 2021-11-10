@@ -20,29 +20,29 @@
             </form>
         </div>
 
+
         {{--    profile collapse starts here--}}
         <div class="profile-container">
-            @if(Auth::check())
-                <a href={{ route('account') }}>
-                    <img class="profile" src={{ asset('images/account.png') }} alt="profile"/>
-                    Welcome, {{ Auth::user()->first_name }}
-                </a><br>
-                <a href={{ route('logout') }}>Logout</a>
-            @else
-                <button type="button" class="collapsible">
-                    <a href={{ route('login') }}><img class="profile"
-                                                      src={{ asset('images/account.png') }} alt="profile"/></a>
-                </button>
-                <div class="content">
-                    <p>
-                        <i class="fas fa-user-circle"></i>&nbsp; My Flavorly account </br>
-                        <i class="fas fa-bookmark"></i>&nbsp; My recipes</br>
-                        <i class="fas fa-cogs"></i>&nbsp; Settings</br>
-                        <i class="fas fa-sign-out-alt"></i>&nbsp; Log out</br>
-                    </p>
-                </div>
-            @endif
-
+{{--            @if(Auth::check())--}}
+{{--                <a href={{ route('account') }}>--}}
+{{--                    <img class="profile" src={{ asset('images/account.png') }} alt="profile"/>--}}
+{{--                    Welcome, {{ Auth::user()->first_name }}--}}
+{{--                </a><br>--}}
+{{--                <a href={{ route('logout') }}>Logout</a>--}}
+{{--            @else--}}
+            <button type="button" class="collapsible">
+                <img class="profile"
+                     src={{ asset('images/account.png') }} alt="profile"/>
+            </button>
+{{--            @endif--}}
+            <div class="content">
+                <p>
+                    <i class="fas fa-user-circle"></i>&nbsp; <b>My account</b> </br> <hr>
+                    <i class="fas fa-bookmark"></i>&nbsp;<b>My recipes</b> </br> <hr>
+                    <i class="fas fa-cogs"></i>&nbsp; <b>Settings</b> </br> <hr>
+                    <i class="fas fa-sign-out-alt"></i>&nbsp;<b> Log out</b> </br>
+                </p>
+            </div>
         </div>
     </div>
 </header>

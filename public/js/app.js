@@ -7,12 +7,7 @@
   \*****************************/
 /***/ (() => {
 
-// collapsible create-container starts here
-var create = document.getElementById("create");
-create.addEventListener("click", function () {
-  alert("A modal box will replace this alert message");
-}); // collapsible profile starts here
-
+// collapsible profile starts here
 var coll = document.getElementsByClassName("collapsible");
 
 for (i = 0; i < coll.length; i++) {
@@ -20,13 +15,19 @@ for (i = 0; i < coll.length; i++) {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
 
-    if (content.style.display === "block") {
+    if (content.style.display === "inline-block") {
       content.style.display = "none";
     } else {
-      content.style.display = "block";
+      content.style.display = "inline-block";
     }
   });
-} // //TODO verify
+} // collapsible create-container starts here
+
+
+var create = document.getElementById("create");
+create.addEventListener("click", function () {
+  alert("A modal box will replace this alert message");
+}); // //TODO verify
 // // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_shrink_header_scroll
 // // https://www.w3schools.com/howto/howto_js_sticky_header.asp
 // //TODO link all JS

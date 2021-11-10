@@ -6316,23 +6316,24 @@ input[type=password] {
   color: #4E918E;
   padding: 18px;
   width: 100%;
-  border: none;
+  height: auto;
   text-align: center;
   outline: none;
   font-size: 14px;
 }
 
 .active, .collapsible:hover {
-  background-color: #FFF5E9;
+  top: 3px;
 }
 
 .content {
   padding: 0 18px;
-  display: none;
   overflow: hidden;
-  background-color: #7DB29E;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
+  display: none;
+  background-color: #DED0D0;
+  border-radius: 30px;
+  text-align: left;
+  width: 50%;
 }
 
 /* login starts here */

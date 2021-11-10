@@ -229,23 +229,24 @@ input[type=text]:focus {
     color: $dark-green;
     padding: 18px;
     width: 100%;
-    border: none;
+    height: auto;
     text-align: center;
     outline: none;
     font-size: $font-14;
 }
 
 .active, .collapsible:hover {
-    background-color: $background-color;
+    top: 3px;
 }
 
 .content {
     padding: 0 18px;
-    display: none;
     overflow: hidden;
-    background-color: $light-green;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
+    display: none;
+    background-color: $light-accent;
+    border-radius: $border-radius;
+    text-align: left;
+    width: 50%;
 }
 
 /* login starts here */
