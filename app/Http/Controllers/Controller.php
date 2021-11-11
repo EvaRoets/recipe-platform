@@ -21,18 +21,15 @@ class Controller extends BaseController
 
     public function search()
     {
-        $posts = Post::where('title', 'LIKE', '%'.request()->search.'%')->get();
+        $posts = Post::where('title', 'LIKE', '%' . request()->search . '%')->get();
         return view('home', ['posts' => $posts]);
     }
 
     function login()
     {
-        if(Auth::check())
-        {
+        if (Auth::check()) {
             return redirect()->account();
-        }
-        else
-        {
+        } else {
             return view('account.login', ['frosted' => true]);
         }
     }
@@ -55,6 +52,7 @@ class Controller extends BaseController
 //        TODO: activate code again
         return view('account.account');
     }
+
     function settings()
     {
         return view('account.settings');
@@ -62,18 +60,14 @@ class Controller extends BaseController
 
     function recipebook()
     {
-        if(Auth::check())
-        {
+        if (Auth::check()) {
             $favorites = explode(',', Auth::user()->favorites);
             $posts = [];
-            foreach($favorites as $favorite)
-            {
+            foreach ($favorites as $favorite) {
                 array_push($posts, Post::where('id', $favorite)->first());
             }
             return view('recipes.recipeBook', ['posts' => $posts]);
-        }
-        else
-        {
+        } else {
             return redirect()->home();
         }
         //        TODO: activate code again
@@ -82,17 +76,12 @@ class Controller extends BaseController
 
     function savePost()
     {
-        if(Auth::check())
-        {
+        if (Auth::check()) {
             $favorites = explode(',', Auth::user()->favorites);
-            if(!in_array(request()->postid, $favorites))
-            {
-                if(!Auth::user()->favorites = ' ')
-                {
+            if (!in_array(request()->postid, $favorites)) {
+                if (!Auth::user()->favorites = ' ') {
                     $newFavorites = Auth::user()->favorites . ',' . request()->postid;
-                }
-                else
-                {
+                } else {
                     $newFavorites = request()->postid;
                 }
                 Auth::user()->favorites = $newFavorites;
