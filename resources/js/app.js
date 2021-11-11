@@ -1,5 +1,5 @@
 // collapsible profile starts here
-let coll = document.getElementsByClassName("collapsible");
+let coll = document.querySelector(".collapsible");
 for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function () {
         this.classList.toggle("active");
@@ -29,27 +29,41 @@ window.onclick = function (e) {
 };
 
 
-// //TODO verify
-// // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_shrink_header_scroll
-// // https://www.w3schools.com/howto/howto_js_sticky_header.asp
-// //TODO link all JS
-// //sticky and smaller navbar on scroll
-// window.onscroll = function () {
-//     scrollSmaller();
-//     scrollSticky();
-// };
-//
-// let navbar = document.getElementsByClassName("navbar");
-// let sticky = navbar.offsetTop;
-//
-// function scrollSmaller() {
-//     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-//         navbar.style.fontSize = "30px";
-//     } else {
-//         navbar.style.fontSize = "90px";
-//     }
-// }
-//
+//sticky and smaller navbar on scroll
+window.onscroll = function () {
+    scrollSmaller();
+    // scrollSticky();
+};
+
+let navbar = document.querySelector(".navbar");
+let logo = document.querySelector(".logo")
+let profile = document.querySelector(".profile")
+let searchCont = document.querySelector(".search-container")
+let sticky = navbar.offsetTop;
+
+function scrollSmaller() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        profile.style.width = "50px";
+        profile.style.paddingTop = "0";
+        profile.style.paddingBottom = "0";
+        logo.style.width = "70px";
+        logo.style.paddingTop = "0";
+        logo.style.paddingBottom = "0";
+        coll.style.margin = "0";
+    } else {
+        profile.style.width = "70px";
+        profile.style.padding = "20px";
+        logo.style.width = "100px";
+        logo.style.padding = "20px";
+        coll.style.padding = "18px";
+        coll.style.margin = "0 100px";
+        searchCont.style.width = "400px";
+    }
+}
+
+
+// https://www.w3schools.com/howto/howto_js_sticky_header.asp
+
 // function scrollSticky() {
 //     if (window.pageYOffset > sticky) {
 //         navbar.classList.add("sticky");
