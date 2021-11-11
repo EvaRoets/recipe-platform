@@ -118,6 +118,8 @@ html::-webkit-scrollbar-thumb {
 .view-btn,
 .post-btn,
 .login-btn,
+.logout-btn,
+.home-btn,
 .register-btn,
 .recipe-btn {
     background: $light-accent;
@@ -133,12 +135,13 @@ html::-webkit-scrollbar-thumb {
     margin: 15px;
 }
 
-
 .save-btn:hover,
 .like-btn:hover,
 .view-btn:hover,
 .post-btn:hover,
 .login-btn:hover,
+.logout-btn:hover,
+.home-btn:hover,
 .register-btn:hover,
 .recipe-btn:hover {
     background-color: $bright-accent;
@@ -273,12 +276,17 @@ input:-webkit-autofill:focus {
 
 .account-box,
 .register-box,
-.login-box {
+.login-box,
+.logout-box{
     display: flex;
     flex-direction: column;
     width: 350px;
     margin-top: 20px;
 }
+.logout-box {
+    align-items: center;
+}
+
 
 
 ::placeholder {
@@ -331,14 +339,16 @@ input:-webkit-autofill:focus {
 .content-account,
 .content-recipes,
 .content-settings,
-.content-signout{
+.content-logout{
     padding: 5px;
 }
 
 
 /* login starts here */
 //TODO: add frosted background styling
-.login-container {
+.login-container,
+.logout-container,
+{
     display: flex;
     justify-items: start;
     align-items: center;
@@ -348,6 +358,7 @@ input:-webkit-autofill:focus {
 }
 
 .login-details,
+.logout-details,
 .account-details,
 .register-details,
 .settings-details{
@@ -360,7 +371,8 @@ input:-webkit-autofill:focus {
     box-shadow: $box-shadow-featured;
 }
 
-.login-title {
+.login-title,
+.logout-title{
     font-family: $font-title;
     text-align: center;
     border-radius: $border-radius;
@@ -385,7 +397,8 @@ input:-webkit-autofill:focus {
     box-shadow: $box-shadow-focus;
 }
 
-.login-no-account {
+.login-no-account,
+.logout-no-account{
     text-align: center;
     margin-top: -70px;
 }
@@ -572,16 +585,25 @@ input:-webkit-autofill:focus {
 
 .create-btn-container,
 .login-btn-container,
+.logout-btn-container,
 .account-btn-container,
 .settings-box,
 .register-btn-container {
     text-align: center;
     margin: 20px;
 }
+.logout-btn-container{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 .home-feed,
 .create-feed,
 .login-feed,
+.logout-feed,
 .register-feed,
 .account-feed,
 .settings-feed,

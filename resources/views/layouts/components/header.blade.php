@@ -50,9 +50,9 @@
                     </div>
                 </a>
                 <hr>
-                <a href={{url('/')}}>
-                    <div class="content-signout">
-                        <i class="fas fa-sign-out-alt"></i>&nbsp;<b> Log out</b> </br>
+                <a href={{url('/logout')}}>
+                    <div class="content-logout">
+                        <i class="fas fa-sign-out-alt"></i>&nbsp;<b>Log out</b> </br>
                     </div>
                 </a>
             </div>

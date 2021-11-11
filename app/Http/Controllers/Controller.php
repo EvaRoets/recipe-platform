@@ -34,6 +34,11 @@ class Controller extends BaseController
         }
     }
 
+    function logout()
+    {
+        return view('account.logout', ['frosted' => true]);
+    }
+
     function register()
     {
         return view('account.register', ['frosted' => true]);
@@ -50,7 +55,7 @@ class Controller extends BaseController
 //            return redirect()->home();
 //        }
 //        TODO: activate code again
-        return view('account.account');
+        return view('account.account', ['frosted' => true]);
     }
 
     function settings()

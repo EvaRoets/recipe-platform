@@ -7,7 +7,7 @@
                     <h2>Settings</h2>
                 </div>
                 <div class="settings-box">
-                    <p>This is where you can find all your settings.</p>
+                    <h4>This is where you can find all your settings.</h4>
                 </div>
             </div>
         </div>
