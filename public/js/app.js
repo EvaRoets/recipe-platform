@@ -8,7 +8,7 @@
 /***/ (() => {
 
 // collapsible profile starts here
-var coll = document.querySelector(".collapsible");
+var coll = document.getElementsByClassName("collapsible");
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function () {
@@ -44,7 +44,7 @@ window.onclick = function (e) {
 
 
 window.onscroll = function () {
-  scrollSmaller(); // scrollSticky();
+  scrollSmaller();
 };
 
 var navbar = document.querySelector(".navbar");
@@ -71,14 +71,7 @@ function scrollSmaller() {
     coll.style.margin = "0 100px";
     searchCont.style.width = "400px";
   }
-} // https://www.w3schools.com/howto/howto_js_sticky_header.asp
-// function scrollSticky() {
-//     if (window.pageYOffset > sticky) {
-//         navbar.classList.add("sticky");
-//     } else {
-//         navbar.classList.remove("sticky");
-//     }
-// }
+}
 
 /***/ }),
 

@@ -1,5 +1,5 @@
 // collapsible profile starts here
-let coll = document.querySelector(".collapsible");
+let coll = document.getElementsByClassName("collapsible");
 for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function () {
         this.classList.toggle("active");
@@ -32,7 +32,6 @@ window.onclick = function (e) {
 //sticky and smaller navbar on scroll
 window.onscroll = function () {
     scrollSmaller();
-    // scrollSticky();
 };
 
 let navbar = document.querySelector(".navbar");
@@ -60,14 +59,3 @@ function scrollSmaller() {
         searchCont.style.width = "400px";
     }
 }
-
-
-// https://www.w3schools.com/howto/howto_js_sticky_header.asp
-
-// function scrollSticky() {
-//     if (window.pageYOffset > sticky) {
-//         navbar.classList.add("sticky");
-//     } else {
-//         navbar.classList.remove("sticky");
-//     }
-// }

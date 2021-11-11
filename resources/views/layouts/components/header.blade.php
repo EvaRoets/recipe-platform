@@ -19,13 +19,13 @@
 
         {{--    profile collapse starts here--}}
         <div class="profile-container">
-{{--            @if(Auth::check())--}}
-{{--                <a href={{ route('account') }}>--}}
-{{--                    <img class="profile" src={{ asset('images/account.png') }} alt="profile"/>--}}
-{{--                    Welcome, {{ Auth::user()->first_name }}--}}
-{{--                </a><br>--}}
-{{--                <a href={{ route('logout') }}>Logout</a>--}}
-{{--            @else--}}
+            {{--            @if(Auth::check())--}}
+            {{--                <a href={{ route('account') }}>--}}
+            {{--                    <img class="profile" src={{ asset('images/account.png') }} alt="profile"/>--}}
+            {{--                    Welcome, {{ Auth::user()->first_name }}--}}
+            {{--                </a><br>--}}
+            {{--                <a href={{ route('logout') }}>Logout</a>--}}
+            {{--            @else--}}
             <button type="button" class="collapsible">
                 <img class="profile"
                      src={{ asset('images/account.png') }} alt="profile"/>
