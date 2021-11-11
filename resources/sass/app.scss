@@ -623,7 +623,6 @@ input:-webkit-autofill:focus {
 }
 
 .home-feed,
-.create-feed,
 .login-feed,
 .logout-feed,
 .register-feed,
@@ -670,7 +669,7 @@ input:-webkit-autofill:focus {
     font-weight: $font-14;
 }
 
-.card-gallery
+.card-gallery,
 .card-featured-gallery {
     display: flex;
     flex-direction: column;
@@ -724,6 +723,8 @@ input:-webkit-autofill:focus {
 .card-featured-tags,
 .card-featured-buttons {
     margin: 25px 15px 15px 15px;
+    text-align: center;
+
 }
 
 .card-featured-image-container {
@@ -755,7 +756,7 @@ input:-webkit-autofill:focus {
     cursor: pointer;
 }
 
-.card-buttons
+.card-buttons,
 .card-featured-buttons {
     display: flex;
     flex-direction: row;
@@ -764,35 +765,6 @@ input:-webkit-autofill:focus {
     align-items: center;
 }
 
-/*Pop-up starts here*/
-.create-container {
-    position: fixed;
-    bottom: 0;
-    margin: 0 50px;
-}
-
-.add-btn {
-    background: $background-color;
-    color: $bright-accent;
-    padding: 10px 25px;
-    border: none;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    box-shadow: $box-shadow;
-    width: 500px;
-    transition: width 1.5s, height 1.5s
-}
-
-.add-btn:hover {
-    background: $bright-accent;
-    color: $background-color;
-    transform: scale(1);
-    width: 545px;
-    height: 50px;
-}
 
 .footer-container {
     background-color: $background-color;
@@ -814,16 +786,6 @@ input:-webkit-autofill:focus {
     justify-content: center;
 }
 
-.create-recipe {
-    border-radius: $border-radius;
-    border-bottom: 1px solid $light-accent;
-    border-left: 1px solid $light-accent;
-    border-right: 1px solid $light-accent;
-    margin: 100px;
-    padding: 30px 50px 10px 50px;
-    box-shadow: $box-shadow-featured;
-    max-width: 545px;
-}
 
 .create-recipe-title {
     font-family: $font-title;
@@ -873,7 +835,74 @@ input:-webkit-autofill:focus {
 }
 
 
-/* here starts recipeBook */
+/*Create Pop-up starts here*/
+.create-container {
+    position: fixed;
+    bottom: 0;
+    margin: 0 50px;
+}
 
+.add-btn {
+    background: $background-color;
+    color: $bright-accent;
+    padding: 10px 25px;
+    border: none;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $box-shadow;
+    width: 500px;
+}
+
+.add-btn:hover {
+    background: $bright-accent;
+    color: $background-color;
+
+}
+.create-recipe-container {
+    display: none;
+    position: fixed;
+    padding-top: 50px;
+    left: 0;
+    bottom: 6px;
+    width: 100%;
+}
+
+.create-feed {
+    position: relative;
+    border-radius: $border-radius;
+    border-bottom: 1px solid $light-accent;
+    border-left: 1px solid $light-accent;
+    border-right: 1px solid $light-accent;
+    padding: 30px 50px 10px 50px;
+    box-shadow: $box-shadow-focus-search;
+    max-width: 545px;
+    background-color: $background-color;
+    margin: auto;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatebottom;
+    animation-duration: 0.4s
+}
+.close-btn {
+    float: right;
+    color: $light-accent;
+    font-size: 30px;
+    font-weight: bold;
+}
+.close-btn:hover {
+    color: $bright-accent;
+    cursor: pointer;
+}
+@-webkit-keyframes animatebottom {
+    from {bottom:-300px; opacity:0}
+    to {bottom:0; opacity:1}
+}
+@keyframes animatebottom {
+    from {bottom:-300px; opacity:0}
+    to {bottom:0; opacity:1}
+}
 
 

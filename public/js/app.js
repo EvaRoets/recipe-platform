@@ -21,12 +21,26 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "inline-block";
     }
   });
-} // // collapsible create-container starts here
-// let create = document.getElementById("create");
-// create.addEventListener("click", function () {
-//     alert("A modal box will replace this alert message")
-// });
-// //TODO verify
+} // pop-up create-container starts here
+
+
+var create = document.querySelector("#create");
+var createContainer = document.querySelector(".create-recipe-container");
+var closeBtn = document.querySelector(".close-btn");
+
+create.onclick = function () {
+  createContainer.style.display = "block";
+};
+
+closeBtn.onclick = function () {
+  createContainer.style.display = "none";
+};
+
+window.onclick = function (e) {
+  if (e.target === createContainer) {
+    createContainer.style.display = "none";
+  }
+}; // //TODO verify
 // // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_shrink_header_scroll
 // // https://www.w3schools.com/howto/howto_js_sticky_header.asp
 // //TODO link all JS

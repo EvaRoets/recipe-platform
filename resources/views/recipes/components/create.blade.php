@@ -15,43 +15,40 @@
         <div class="create-feed">
             <form method="post" action={{ route("createpost") }} enctype="multipart/form-data">
                 @csrf
-                <div class="create-recipe">
-                    <div class="create-recipe-title">
-                        <h2>Add your recipe</h2>
+                <span class="close-btn">&times;</span>
+                <div class="create-recipe-title">
+                    <h2>Add recipe</h2>
+                </div>
+                <div class="create-box">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title">
+                    <label for="image">Image(s)</label>
+                    <div class="create-file">
+                        <input type="file" id="image" name="image" multiple>
                     </div>
-                    <div class="create-box">
-                        <label for="title">Title</label>
-                        <input type="text" id="title" name="title">
-                        <label for="image">Image(s)</label>
-                        <div class="create-file">
-                            <input type="file" id="image" name="image" multiple>
-                        </div>
-                        <label for="tags">Tag(s)</label>
-                        <input type="text" id="tags" name="tags">
-                        <label for="ingredients">Ingredients</label>
-                        <input type="text" name="ingredients" id="ingredients">
-                        <label for="Instructions">Instructions</label>
-                        <input type="text" name="description">
-                        <div class="create-btn-container">
-                            <a href="">
-                                <button class="post-btn" type="submit">
-                                    <i class="fas fa-plus-circle"></i>&nbsp; Add
-                                </button>
-                            </a>
-                        </div>
+                    <label for="tags">Tag(s)</label>
+                    <input type="text" id="tags" name="tags">
+                    <label for="ingredients">Ingredients</label>
+                    <input type="text" name="ingredients" id="ingredients">
+                    <label for="Instructions">Instructions</label>
+                    <input type="text" name="description">
+                    <div class="create-btn-container">
+                        <a href="">
+                            <button class="post-btn" type="submit">
+                                <i class="fas fa-plus-circle"></i>&nbsp; Add
+                            </button>
+                        </a>
                     </div>
-
                 </div>
             </form>
         </div>
     </div>
 @endsection
-
-{{--TODO check for input attributes--}}
-{{--TODO add dropdown with selectable ingredient quantities--}}
-{{--TODO let user add additional row--}}
-{{--TODO add ingredients and quantities with pictures--}}
-{{--TODO adjust ingredients depending on nu;ber of persons for recipe--}}
-{{--TODO add how long it takes to cook the recipe--}}
+{{--TODO optional check for input attributes--}}
+{{--TODO optional add dropdown with selectable ingredient quantities--}}
+{{--TODO optional let user add additional row--}}
+{{--TODO optional add ingredients and quantities with pictures--}}
+{{--TODO optional adjust ingredients depending on nu;ber of persons for recipe--}}
+{{--TODO optional add how long it takes to cook the recipe--}}
 
 

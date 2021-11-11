@@ -12,11 +12,21 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
-// // collapsible create-container starts here
-// let create = document.getElementById("create");
-// create.addEventListener("click", function () {
-//     alert("A modal box will replace this alert message")
-// });
+// pop-up create-container starts here
+let create = document.querySelector("#create");
+let createContainer = document.querySelector(".create-recipe-container")
+let closeBtn = document.querySelector(".close-btn")
+create.onclick = function () {
+    createContainer.style.display = "block"
+};
+closeBtn.onclick = function () {
+    createContainer.style.display = "none"
+};
+window.onclick = function (e) {
+    if (e.target === createContainer) {
+        createContainer.style.display = "none"
+    }
+};
 
 
 // //TODO verify
