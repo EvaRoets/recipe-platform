@@ -100,6 +100,14 @@ class Controller extends BaseController
     {
         $details = Post::where('id', request()->postid)->first();
         return view('recipes.show', ['details' => $details]);
+
     }
+
+//    function detailsCard()
+//    {
+//        $details = Post::where('id', request()->postid)->first();
+//        return view('recipes.components.card', ['details' => $details]);
+//
+//    }
 
 }

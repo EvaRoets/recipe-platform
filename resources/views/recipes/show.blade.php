@@ -1,3 +1,4 @@
+{{--This is the card that shows a recipe in full--}}
 @extends('layouts.layout')
 @section('content')
     <div class="show-recipe-container">
@@ -11,7 +12,7 @@
                 </div>
                 <div class="show-tags">
                     @foreach(explode(',', $details->tags) as $tag)
-                        <badge>{{ $tag }}</badge>
+                        <badge class="card-featured-badge">{{ $tag }}</badge>
                     @endforeach
                 </div>
                 <div class="show-ingredients">

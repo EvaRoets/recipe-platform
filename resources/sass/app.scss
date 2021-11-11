@@ -135,6 +135,9 @@ html::-webkit-scrollbar-thumb {
     margin: 15px;
 }
 
+.save-btn-card:hover,
+.like-btn-card:hover,
+.view-btn-card:hover,
 .save-btn:hover,
 .like-btn:hover,
 .view-btn:hover,
@@ -146,6 +149,21 @@ html::-webkit-scrollbar-thumb {
 .recipe-btn:hover {
     background-color: $bright-accent;
     color: $light-accent;
+}
+
+.save-btn-card,
+.like-btn-card,
+.view-btn-card {
+    background: $light-accent;
+    color: $bright-accent;
+    padding: 8px 12px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    margin: 5px;
 }
 
 
@@ -274,35 +292,15 @@ input:-webkit-autofill:focus {
 }
 
 .recipe-book-box {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin: 20px 0;
+    //TODO: look into overflowing columns
+    //column-count:2;
+    //column-gap: 50px;
 }
 
-.left-page,
-.right-page {
-    margin: 25px;
-    padding: 20px;
-}
-
-.vertical {
-    border: 1px solid $light-accent;
-    border-radius: $border-radius;
-
-
-    height: 300px;
-    position: absolute;
-    left: 50%;
-}
-
-.left-page {
-    border: red solid 2px;
-}
-
-.right-page {
-    border: blue solid 2px;
-}
 
 
 .logout-box {
@@ -647,21 +645,40 @@ input:-webkit-autofill:focus {
     box-shadow: $box-shadow-featured;
 }
 
-.card-title {
+.card-container {
+    border-radius: $border-radius;
+    border-bottom: 1px solid $light-accent;
+    border-left: 1px solid $light-accent;
+    border-right: 1px solid $light-accent;
+    padding: 15px 25px 5px 25px;
+    box-shadow: $box-shadow-image;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title,
+.card-featured-title {
     font-family: $font-title;
     text-align: center;
     border-radius: $border-radius;
     border-bottom: 1px solid $light-accent;
 }
 
-.card-gallery {
+.card-title {
+    font-weight: $font-14;
+}
+
+.card-gallery
+.card-featured-gallery {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
 }
 
-.card-tags {
+.card-featured-tags {
     display: flex;
     padding: 15px 15px 15px 0;
     flex-direction: row;
@@ -671,7 +688,25 @@ input:-webkit-autofill:focus {
     max-width: 500px;
 }
 
-badge {
+.card-tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 0.7;
+}
+
+.card-badge {
+    color: $background-color;
+    background: $bright-accent;
+    padding: 7px;
+    margin: 3px 5px;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    font-size: 12px;
+}
+
+.card-featured-badge {
     color: $background-color;
     background: $bright-accent;
     padding: 10px;
@@ -682,15 +717,37 @@ badge {
 
 .card-tags,
 .card-buttons {
+    margin: 15px 10px 10px 10px;
+    text-align: center;
+}
+
+.card-featured-tags,
+.card-featured-buttons {
     margin: 25px 15px 15px 15px;
 }
 
-.card-image-container {
+.card-featured-image-container {
     display: flex;
     justify-content: center;
 }
 
+.card-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .card-image {
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-image;
+    max-width: 250px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+.card-featured-image {
     border-radius: $border-radius;
     box-shadow: $box-shadow-image;
     width: 500px;
@@ -698,7 +755,8 @@ badge {
     cursor: pointer;
 }
 
-.card-buttons {
+.card-buttons
+.card-featured-buttons {
     display: flex;
     flex-direction: row;
     align-content: flex-start;

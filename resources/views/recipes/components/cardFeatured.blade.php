@@ -1,18 +1,18 @@
 {{--This is the card that appears in the feed--}}
 <div class="card-featured-container">
-    <div class="card-title">
+    <div class="card-featured-title">
         <h2>{{ $data->title }}</h2>
     </div>
-    <div class="card-gallery">
-        <div class="card-tags">
+    <div class="card-featured-gallery">
+        <div class="card-featured-tags">
             @foreach(explode(',', $data->tags) as $tag)
-                <badge>{{ $tag }}</badge>
+                <badge class="card-featured-badge">{{ $tag }}</badge>
             @endforeach
         </div>
-        <div class="card-image-container">
-            <img class="card-image" alt="recipe-picture(s)" src={{ asset($data->image) }} />
+        <div class="card-featured-image-container">
+            <img class="card-featured-image" alt="recipe-picture(s)" src={{ asset($data->image) }} />
         </div>
-        <div class="card-buttons">
+        <div class="card-featured-buttons">
             <a href={{ route("save", ['postid' => $data->id]) }}>
                 <button class="save-btn"><i class="fas fa-bookmark"></i></button>
             </a>

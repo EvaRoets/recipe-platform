@@ -6218,6 +6218,9 @@ html::-webkit-scrollbar-thumb {
   margin: 15px;
 }
 
+.save-btn-card:hover,
+.like-btn-card:hover,
+.view-btn-card:hover,
 .save-btn:hover,
 .like-btn:hover,
 .view-btn:hover,
@@ -6229,6 +6232,21 @@ html::-webkit-scrollbar-thumb {
 .recipe-btn:hover {
   background-color: #eb7878;
   color: #DED0D0;
+}
+
+.save-btn-card,
+.like-btn-card,
+.view-btn-card {
+  background: #DED0D0;
+  color: #eb7878;
+  padding: 8px 12px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+  margin: 5px;
 }
 
 .search-btn {
@@ -6347,32 +6365,10 @@ input:-webkit-autofill:focus {
 }
 
 .recipe-book-box {
-  display: flex;
-  flex-direction: row;
-  margin-top: 20px;
-  position: relative;
-}
-
-.left-page,
-.right-page {
-  margin: 25px;
-  padding: 20px;
-}
-
-.vertical {
-  border: 1px solid #DED0D0;
-  border-radius: 30px;
-  height: 300px;
-  position: absolute;
-  left: 50%;
-}
-
-.left-page {
-  border: red solid 2px;
-}
-
-.right-page {
-  border: blue solid 2px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin: 20px 0;
 }
 
 .logout-box {
@@ -6697,21 +6693,39 @@ input:-webkit-autofill:focus {
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
-.card-title {
+.card-container {
+  border-radius: 30px;
+  border-bottom: 1px solid #DED0D0;
+  border-left: 1px solid #DED0D0;
+  border-right: 1px solid #DED0D0;
+  padding: 15px 25px 5px 25px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086);
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-title,
+.card-featured-title {
   font-family: "Comfortaa", cursive;
   text-align: center;
   border-radius: 30px;
   border-bottom: 1px solid #DED0D0;
 }
 
-.card-gallery {
+.card-title {
+  font-weight: 14px;
+}
+
+.card-gallery .card-featured-gallery {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
 }
 
-.card-tags {
+.card-featured-tags {
   display: flex;
   padding: 15px 15px 15px 0;
   flex-direction: row;
@@ -6721,7 +6735,25 @@ input:-webkit-autofill:focus {
   max-width: 500px;
 }
 
-badge {
+.card-tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  line-height: 0.7;
+}
+
+.card-badge {
+  color: #FFF5E9;
+  background: #eb7878;
+  padding: 7px;
+  margin: 3px 5px;
+  border-radius: 30px;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+}
+
+.card-featured-badge {
   color: #FFF5E9;
   background: #eb7878;
   padding: 10px;
@@ -6732,15 +6764,35 @@ badge {
 
 .card-tags,
 .card-buttons {
+  margin: 15px 10px 10px 10px;
+  text-align: center;
+}
+
+.card-featured-tags,
+.card-featured-buttons {
   margin: 25px 15px 15px 15px;
 }
 
-.card-image-container {
+.card-featured-image-container {
   display: flex;
   justify-content: center;
 }
 
+.card-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .card-image {
+  border-radius: 30px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086);
+  max-width: 250px;
+  height: auto;
+  cursor: pointer;
+}
+
+.card-featured-image {
   border-radius: 30px;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086);
   width: 500px;
@@ -6748,7 +6800,7 @@ badge {
   cursor: pointer;
 }
 
-.card-buttons {
+.card-buttons .card-featured-buttons {
   display: flex;
   flex-direction: row;
   align-content: flex-start;
