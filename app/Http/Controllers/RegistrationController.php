@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class RegistrationController extends Controller
 {
-    function register()
+    function registration()
     {
         $this->validate(request(), [
             'name' => 'required',

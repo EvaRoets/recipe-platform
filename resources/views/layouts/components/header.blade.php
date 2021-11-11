@@ -38,7 +38,7 @@
                     </div>
                 </a>
                 <hr>
-                <a href={{url('/recipebook')}}>
+                <a href={{ url ('/recipeBook') }}>
                     <div class="content-recipes">
                         <i class="fas fa-bookmark"></i>&nbsp;<b>My recipes</b> </br>
                     </div>
@@ -57,7 +57,6 @@
                 </a>
             </div>
         </div>
-
     </div>
 </header>
 

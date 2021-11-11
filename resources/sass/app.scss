@@ -171,7 +171,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .logo {
-    width: 150px;
+    width: 100px;
     height: auto;
     padding: 20px;
 }
@@ -196,23 +196,27 @@ form {
 
 }
 
-input[type=search]{
+input[type=search] {
     outline: none;
     border: none;
     background: $light-accent;
     border-radius: 30px;
     padding: 10px 20px;
     cursor: pointer;
+}
+
+input[type=search] {
     width: -webkit-fill-available;
 }
 
-input[type=search]:focus{
+input[type=search]:focus {
     outline: none;
 }
 
 input[type=text],
 input[type=email],
-input[type=password]{
+input[type=password],
+.create-file {
     outline: none;
     border: none;
     margin: 5px 25px 10px 25px;
@@ -243,27 +247,12 @@ input[type=file]:hover {
     opacity: 10;
 }
 
-.create-file{
-    outline: none;
-    border: none;
-    margin: 5px 25px 10px 25px;
-    background: $light-accent;
-    border-radius: $border-radius;
-    padding: 10px 20px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: $box-shadow;
-    align-self: flex-start;
-    width: -webkit-fill-available;
-}
-
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
     background-color: $light-green !important;
     box-shadow: $box-shadow !important;
     font-family: $font-title;
-    color:$background-color;
+    color: $background-color;
 }
 
 
@@ -277,17 +266,48 @@ input:-webkit-autofill:focus {
 .account-box,
 .register-box,
 .login-box,
-.logout-box{
+.logout-box {
     display: flex;
     flex-direction: column;
     width: 350px;
     margin-top: 20px;
 }
-.logout-box {
-    align-items: center;
+
+.recipe-book-box {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    position: relative;
+}
+
+.left-page,
+.right-page {
+    margin: 25px;
+    padding: 20px;
+}
+
+.vertical {
+    border: 1px solid $light-accent;
+    border-radius: $border-radius;
+
+
+    height: 300px;
+    position: absolute;
+    left: 50%;
+}
+
+.left-page {
+    border: red solid 2px;
+}
+
+.right-page {
+    border: blue solid 2px;
 }
 
 
+.logout-box {
+    align-items: center;
+}
 
 ::placeholder {
     color: $dark-green;
@@ -302,7 +322,7 @@ input:-webkit-autofill:focus {
 }
 
 .profile {
-    width: 100px;
+    width: 70px;
     height: auto;
     padding: 20px;
     cursor: pointer;
@@ -323,7 +343,7 @@ input:-webkit-autofill:focus {
 }
 
 .content {
-    padding: 25px 25px;
+    padding: 20px 20px;
     overflow: hidden;
     display: none;
     background-color: $light-accent;
@@ -331,7 +351,7 @@ input:-webkit-autofill:focus {
     text-align: left;
     width: 50%;
     position: absolute;
-    top: 125px;
+    top: 100px;
     right: 80px;
     box-shadow: $box-shadow;
 }
@@ -339,7 +359,7 @@ input:-webkit-autofill:focus {
 .content-account,
 .content-recipes,
 .content-settings,
-.content-logout{
+.content-logout {
     padding: 5px;
 }
 
@@ -361,7 +381,8 @@ input:-webkit-autofill:focus {
 .logout-details,
 .account-details,
 .register-details,
-.settings-details{
+.recipe-book-details,
+.settings-details {
     border-radius: $border-radius;
     border-bottom: 1px solid $light-accent;
     border-left: 1px solid $light-accent;
@@ -372,7 +393,7 @@ input:-webkit-autofill:focus {
 }
 
 .login-title,
-.logout-title{
+.logout-title {
     font-family: $font-title;
     text-align: center;
     border-radius: $border-radius;
@@ -398,7 +419,7 @@ input:-webkit-autofill:focus {
 }
 
 .login-no-account,
-.logout-no-account{
+.logout-no-account {
     text-align: center;
     margin-top: -70px;
 }
@@ -406,7 +427,8 @@ input:-webkit-autofill:focus {
 
 /* register starts here */
 //TODO: add frosted background styling
-.register-container {
+.register-container,
+.recipe-book-container {
     display: flex;
     justify-items: start;
     align-items: center;
@@ -415,7 +437,8 @@ input:-webkit-autofill:focus {
     justify-content: center;
 }
 
-.register-title {
+.register-title,
+.recipe-book-title {
     font-family: $font-title;
     text-align: center;
     border-radius: $border-radius;
@@ -449,7 +472,7 @@ input:-webkit-autofill:focus {
 
 /* account starts here */
 .account-container,
-.settings-container{
+.settings-container {
     display: flex;
     justify-items: start;
     align-items: center;
@@ -459,7 +482,7 @@ input:-webkit-autofill:focus {
 }
 
 .account-title,
-.settings-title{
+.settings-title {
     font-family: $font-title;
     text-align: center;
     border-radius: $border-radius;
@@ -592,7 +615,8 @@ input:-webkit-autofill:focus {
     text-align: center;
     margin: 20px;
 }
-.logout-btn-container{
+
+.logout-btn-container {
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -605,6 +629,7 @@ input:-webkit-autofill:focus {
 .login-feed,
 .logout-feed,
 .register-feed,
+.recipe-book-feed,
 .account-feed,
 .settings-feed,
 .show-feed {
@@ -785,6 +810,12 @@ badge {
 }
 
 
+.frosted {
+    background-color: yellow;
+}
+
+
+/* here starts recipeBook */
 
 
 

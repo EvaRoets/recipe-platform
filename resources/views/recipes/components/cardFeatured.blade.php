@@ -1,5 +1,4 @@
 {{--This is the card that appears in the feed--}}
-
 <div class="card-featured-container">
     <div class="card-title">
         <h2>{{ $data->title }}</h2>

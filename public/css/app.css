@@ -6250,7 +6250,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .logo {
-  width: 150px;
+  width: 100px;
   height: auto;
   padding: 20px;
 }
@@ -6277,6 +6277,9 @@ input[type=search] {
   border-radius: 30px;
   padding: 10px 20px;
   cursor: pointer;
+}
+
+input[type=search] {
   width: -webkit-fill-available;
 }
 
@@ -6286,7 +6289,8 @@ input[type=search]:focus {
 
 input[type=text],
 input[type=email],
-input[type=password] {
+input[type=password],
+.create-file {
   outline: none;
   border: none;
   margin: 5px 25px 10px 25px;
@@ -6317,21 +6321,6 @@ input[type=file]:hover {
   opacity: 10;
 }
 
-.create-file {
-  outline: none;
-  border: none;
-  margin: 5px 25px 10px 25px;
-  background: #DED0D0;
-  border-radius: 30px;
-  padding: 10px 20px;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
-  align-self: flex-start;
-  width: -webkit-fill-available;
-}
-
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
   background-color: #7DB29E !important;
@@ -6355,6 +6344,35 @@ input:-webkit-autofill:focus {
   flex-direction: column;
   width: 350px;
   margin-top: 20px;
+}
+
+.recipe-book-box {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  position: relative;
+}
+
+.left-page,
+.right-page {
+  margin: 25px;
+  padding: 20px;
+}
+
+.vertical {
+  border: 1px solid #DED0D0;
+  border-radius: 30px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+}
+
+.left-page {
+  border: red solid 2px;
+}
+
+.right-page {
+  border: blue solid 2px;
 }
 
 .logout-box {
@@ -6388,7 +6406,7 @@ input:-webkit-autofill:focus {
 }
 
 .profile {
-  width: 100px;
+  width: 70px;
   height: auto;
   padding: 20px;
   cursor: pointer;
@@ -6407,7 +6425,7 @@ input:-webkit-autofill:focus {
 }
 
 .content {
-  padding: 25px 25px;
+  padding: 20px 20px;
   overflow: hidden;
   display: none;
   background-color: #DED0D0;
@@ -6415,7 +6433,7 @@ input:-webkit-autofill:focus {
   text-align: left;
   width: 50%;
   position: absolute;
-  top: 125px;
+  top: 100px;
   right: 80px;
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
@@ -6442,6 +6460,7 @@ input:-webkit-autofill:focus {
 .logout-details,
 .account-details,
 .register-details,
+.recipe-book-details,
 .settings-details {
   border-radius: 30px;
   border-bottom: 1px solid #DED0D0;
@@ -6485,7 +6504,8 @@ input:-webkit-autofill:focus {
 }
 
 /* register starts here */
-.register-container {
+.register-container,
+.recipe-book-container {
   display: flex;
   justify-items: start;
   align-items: center;
@@ -6494,7 +6514,8 @@ input:-webkit-autofill:focus {
   justify-content: center;
 }
 
-.register-title {
+.register-title,
+.recipe-book-title {
   font-family: "Comfortaa", cursive;
   text-align: center;
   border-radius: 30px;
@@ -6658,6 +6679,7 @@ input:-webkit-autofill:focus {
 .login-feed,
 .logout-feed,
 .register-feed,
+.recipe-book-feed,
 .account-feed,
 .settings-feed,
 .show-feed {
@@ -6835,4 +6857,10 @@ badge {
 .create-instructions:focus-within {
   box-shadow: 0px 0px 8px 2px #eb7878;
 }
+
+.frosted {
+  background-color: yellow;
+}
+
+/* here starts recipeBook */
 

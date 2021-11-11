@@ -60,23 +60,23 @@ class Controller extends BaseController
 
     function settings()
     {
-        return view('account.settings');
+        return view('account.settings', ['frosted' => true]);
     }
 
-    function recipebook()
+    function recipeBook()
     {
-        if (Auth::check()) {
-            $favorites = explode(',', Auth::user()->favorites);
-            $posts = [];
-            foreach ($favorites as $favorite) {
-                array_push($posts, Post::where('id', $favorite)->first());
-            }
-            return view('recipes.recipeBook', ['posts' => $posts]);
-        } else {
-            return redirect()->home();
-        }
+//        if (Auth::check()) {
+//            $favorites = explode(',', Auth::user()->favorites);
+//            $posts = [];
+//            foreach ($favorites as $favorite) {
+//                array_push($posts, Post::where('id', $favorite)->first());
+//            }
+//            return view('recipes.recipeBook', ['posts' => $posts]);
+//        } else {
+//            return redirect()->home();
+//        }
         //        TODO: activate code again
-//        return view('recipes.recipeBook');
+        return view('recipes.recipeBook');
     }
 
     function savePost()

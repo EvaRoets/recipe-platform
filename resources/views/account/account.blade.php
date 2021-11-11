@@ -15,10 +15,10 @@
                     <p>Email: eva_roets@hotmail.com</p>
                     {{--                    TODO: display password with asterisk--}}
                     {{--                    <p>Password: {{ Auth::user()->password }}</p>--}}
-                    <p>Password: *****</p>
+                    <p>Password: ******************</p>
                     {{--                    </div>--}}
                     <div class="account-btn-container">
-                        <a href={{ route('recipebook') }}>
+                        <a href={{ route('recipeBook') }}>
                             <button class="recipe-btn">
                                 <i class="fas fa-eye"></i>&nbsp; See my recipes
                             </button>
