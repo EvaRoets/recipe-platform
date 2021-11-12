@@ -23,7 +23,7 @@
                     </ul>
                 @endif
                 <div class="create-feed">
-                    <form method="post" action={{ route("createpost") }} enctype="multipart/form-data">
+                    <form method="post" action={{ route("createPost") }} enctype="multipart/form-data">
                         @csrf
                         <span class="close-btn">&times;</span>
                         <div class="create-recipe-title">
@@ -32,22 +32,27 @@
                         <div class="create-box">
                             <label for="title">Title</label>
                             <input type="text" id="title" name="title">
+
                             <label for="image">Image(s)</label>
                             <div class="create-file">
                                 <input type="file" id="image" name="image" multiple>
                             </div>
+
                             <label for="tags">Tag(s)</label>
                             <input type="text" id="tags" name="tags">
+
                             <label for="ingredients">Ingredients</label>
                             <input type="text" name="ingredients" id="ingredients">
+
                             <label for="Instructions">Instructions</label>
                             <input type="text" name="description">
+
                             <div class="create-btn-container">
-                                <a href="">
+{{--                                <a href="">--}}
                                     <button class="post-btn" type="submit">
                                         <i class="fas fa-plus-circle"></i>&nbsp; Add
                                     </button>
-                                </a>
+{{--                                </a>--}}
                             </div>
                         </div>
                     </form>

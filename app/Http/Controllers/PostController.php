@@ -4,23 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
     function creator()
     {
-        if(Auth::check())
-        {
+        if (Auth::check()) {
             return view("recipes.components.create");
-        }
-        else
-        {
+        } else {
             return redirect()->home();
         }
     }
 
-    function createpost(Request $request)
+    function createPost(Request $request)
     {
         $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg|max:5048',
@@ -30,15 +27,19 @@ class PostController extends Controller
             'description' => 'required'
         ]);
 
-        $imageName = time() . '-' . $request->name . '.' . $request->image->extension();  
+        $imageName = time() . '-' . $request->name . '.' . $request->image->extension();
         $request->image->move(public_path('images'), $imageName);
+        $user_login_id = auth()->id();
+
 
         Post::create([
-            'image' => 'images/'.$imageName,
+            'user_id' => $user_login_id,
             'title' => $request->input('title'),
-            'tags' => $request->input('tags'),
             'ingredients' => $request->input('ingredients'),
-            'description' => $request->input('description')
+            'description' => $request->input('description'),
+            'tags' => $request->input('tags'),
+            'image' => 'images/' . $imageName,
+            'votes' => 0
         ]);
 
         return redirect()->home();

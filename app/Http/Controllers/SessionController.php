@@ -6,9 +6,10 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class SessionController extends Controller
 {
-    function checklogin(Request $request)
+    function checkLogin(Request $request)
     {
         $attributes = $request->validate([
             'email' => 'required|email',
@@ -23,6 +24,7 @@ class SessionController extends Controller
         }
         else
         {
+//TODO correct login error message
             return back()->with('error', 'Wrong Login Details');
         }
     }

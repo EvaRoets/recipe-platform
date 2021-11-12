@@ -51,6 +51,7 @@ var navbar = document.querySelector(".navbar");
 var logo = document.querySelector(".logo");
 var profile = document.querySelector(".profile");
 var searchCont = document.querySelector(".search-container");
+var welcome = document.querySelector(".welcome");
 var sticky = navbar.offsetTop;
 
 function scrollSmaller() {
@@ -62,6 +63,7 @@ function scrollSmaller() {
     logo.style.paddingTop = "0";
     logo.style.paddingBottom = "0";
     coll.style.margin = "0";
+    welcome.style.display = "none";
   } else {
     profile.style.width = "70px";
     profile.style.padding = "20px";
@@ -70,8 +72,23 @@ function scrollSmaller() {
     coll.style.padding = "18px";
     coll.style.margin = "0 100px";
     searchCont.style.width = "400px";
+    welcome.style.margin = "-15px";
   }
 }
+/*hide password starts here */
+// TODO: render account password in asteriks
+
+
+var pswd = document.querySelector(".hide-password");
+
+pswd.onclick = function () {
+  if (pswd.color === "password") {
+    pswd.type = "text";
+  } else {
+    pswd.type = "password";
+  } // {{ Auth::user()->password }}.str.replace(/./g, '*');
+
+};
 
 /***/ }),
 

@@ -7,7 +7,7 @@ use App\Http\Controllers\SessionController;
 use App\Http\Controllers\RegistrationController;
 
 Route::get('/', [Controller::class, 'index'])->name('home');
-Route::post('/checklogin', [SessionController::class, 'checklogin'])->name('checklogin');
+Route::post('/check-login', [SessionController::class, 'checkLogin'])->name('checkLogin');
 Route::get('/login', [Controller::class, 'login'])->name('login');
 
 Route::get('/logout', [SessionController::class, 'logout'])->name('logout');
@@ -18,14 +18,13 @@ Route::post('/registration', [RegistrationController::class, 'registration'])->n
 
 Route::get('/account', [Controller::class, 'account'])->name('account');
 
-Route::get('/recipeBook', [Controller::class, 'recipeBook'])->name('recipeBook');
+Route::get('/recipe-book', [Controller::class, 'recipeBook'])->name('recipeBook');
 Route::get('/save', [Controller::class, 'savePost'])->name('save');
 Route::get('/search', [Controller::class, 'search'])->name('search');
 Route::get('/details', [Controller::class, 'details'])->name('details');
 //Route::get('/recipeBook', [Controller::class, 'detailsCard'])->name('details');
 
 Route::get('/creator', [PostController::class, 'creator'])->name('creator');
-Route::post('/createpost', [PostController::class, 'createpost'])->name('createpost');
+Route::post('/create-post', [PostController::class, 'createPost'])->name('createPost');
 Route::get('/settings', [Controller::class, 'settings'])->name('settings');
 
-//TODO: check all routes

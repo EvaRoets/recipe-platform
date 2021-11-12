@@ -9,6 +9,7 @@
                 <div class="recipe-filter">
                 </div>
                 <div class="recipe-book-box">
+{{--                    TODO add message if recipe book is empty--}}
                     @foreach($posts as $key => $data)
                         @include('recipes.components.card')
                     @endforeach

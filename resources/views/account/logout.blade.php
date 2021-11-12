@@ -22,9 +22,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="logout-no-account">
-                    <p>Didn't mean to log out? Log back in <a href={{ route('login') }}>here</a>!</p>
-                </div>
         </div>
     </div>
 @endsection

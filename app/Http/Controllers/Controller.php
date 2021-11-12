@@ -73,8 +73,6 @@ class Controller extends BaseController
         } else {
             return redirect('/');
         }
-//        //        TODO: activate code again
-//        return view('recipes.recipeBook');
     }
 
     function savePost()

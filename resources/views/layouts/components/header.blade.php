@@ -20,21 +20,16 @@
         {{--    profile collapse starts here--}}
         <div class="profile-container">
             @if(Auth::check())
-{{--                            <a href={{ route('account') }}>--}}
-                {{--                                <img class="profile" src={{ asset('images/account.png') }} alt="profile"/>--}}
-                {{--                                Welcome, {{ Auth::user()->first_name }}--}}
-                {{--                            </a><br>--}}
-                {{--                            <a href={{ route('logout') }}>Logout</a>--}}
                 <button type="button" class="collapsible">
                     <img class="profile"
                          src={{ asset('images/account.png') }} alt="profile"/>
+                    <div class="welcome">Welcome, {{ Auth::user()->first_name }}</div>
                 </button>
-                Welcome, {{ Auth::user()->first_name }}
-            @else <a href=" {{ route('login') }}">
-                <div type="button" class="content-account">
-                    <i class="fas fa-sign-in-alt"></i>&nbsp; <b>Log in</b> </br>
-                </div>
-            </a>
+{{--            @else <a href=" {{ route('login') }}">--}}
+{{--                <div type="button" class="content-account">--}}
+{{--                    <i class="fas fa-sign-in-alt"></i>&nbsp; <b>Log in</b> </br>--}}
+{{--                </div>--}}
+{{--            </a>--}}
             @endif
             <div class="content">
                 <a href={{ route('account') }}>

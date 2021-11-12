@@ -13,7 +13,7 @@
             </ul>
         @endif
         <div class="login-feed">
-            <form method="post" action={{ route('checklogin') }}>
+            <form method="post" action={{ route('checkLogin') }}>
                 @csrf
                 <div class="login-details">
                     <div class="login-title">

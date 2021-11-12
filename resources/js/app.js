@@ -35,9 +35,10 @@ window.onscroll = function () {
 };
 
 let navbar = document.querySelector(".navbar");
-let logo = document.querySelector(".logo")
-let profile = document.querySelector(".profile")
-let searchCont = document.querySelector(".search-container")
+let logo = document.querySelector(".logo");
+let profile = document.querySelector(".profile");
+let searchCont = document.querySelector(".search-container");
+let welcome = document.querySelector(".welcome");
 let sticky = navbar.offsetTop;
 
 function scrollSmaller() {
@@ -49,6 +50,7 @@ function scrollSmaller() {
         logo.style.paddingTop = "0";
         logo.style.paddingBottom = "0";
         coll.style.margin = "0";
+        welcome.style.display = "none";
     } else {
         profile.style.width = "70px";
         profile.style.padding = "20px";
@@ -57,5 +59,21 @@ function scrollSmaller() {
         coll.style.padding = "18px";
         coll.style.margin = "0 100px";
         searchCont.style.width = "400px";
+        welcome.style.margin = "-15px";
+
     }
+}
+
+/*hide password starts here */
+// TODO: render account password in asteriks
+let pswd = document.querySelector(".hide-password");
+pswd.onclick = function() {
+    if (pswd.color === "password") {
+        pswd.type = "text";
+    } else {
+        pswd.type = "password";
+    }
+
+    // {{ Auth::user()->password }}.str.replace(/./g, '*');
+
 }

@@ -13,7 +13,7 @@
             </ul>
         @endif
         <div class="create-feed">
-            <form method="post" action={{ route("createpost") }} enctype="multipart/form-data">
+            <form method="post" action={{ route("createPost") }} enctype="multipart/form-data">
                 @csrf
                 <span class="close-btn">&times;</span>
                 <div class="create-recipe-title">
@@ -29,6 +29,7 @@
                     <label for="tags">Tag(s)</label>
                     <input type="text" id="tags" name="tags">
                     <label for="ingredients">Ingredients</label>
+{{--                    TODO: switch to textarea--}}
                     <input type="text" name="ingredients" id="ingredients">
                     <label for="Instructions">Instructions</label>
                     <input type="text" name="description">
