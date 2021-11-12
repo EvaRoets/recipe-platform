@@ -30,6 +30,6 @@ class SessionController extends Controller
     function logout()
     {
         Auth::logout();
-        return redirect()->route('home');
+        return redirect()->route('login');
     }
 }

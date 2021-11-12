@@ -14,9 +14,9 @@
                                     <i class="fas fa-home"></i>&nbsp;<b>Home</b> </br>
                                 </button>
                             </a>
-                            <a href="{{ route('login') }}">
+                            <a href="{{ route('logout') }}">
                                 <button class="logout-btn" type="submit" name="logout" value="Logout">
-                                    <i class="fas fa-sign-out-alt"></i>&nbsp;<b>Log out</b> </br>
+                                    <i class="fas fa-sign-out-alt"></i>&nbsp;<b>Log out</b></br>
                                 </button>
                             </a>
                         </div>

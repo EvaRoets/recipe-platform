@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
     <div class="register-container">
-        Check for errors
+{{--        Check for errors--}}
         @if ($message = Session::get('error'))
             <strong>{{ $message }}</strong>
         @endif
@@ -37,7 +37,6 @@
                             </a>
                         </div>
                     </div>
-
                 </div>
             </form>
         </div>

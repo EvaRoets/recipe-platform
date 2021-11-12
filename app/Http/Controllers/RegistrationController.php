@@ -19,6 +19,6 @@ class RegistrationController extends Controller
         $user = User::create(request(['name', 'first_name', 'email', 'password']));
 
         Auth::login($user);
-        return redirect()->home();
+        return redirect("/");
     }
 }

@@ -9,8 +9,9 @@ use App\Http\Controllers\RegistrationController;
 Route::get('/', [Controller::class, 'index'])->name('home');
 Route::post('/checklogin', [SessionController::class, 'checklogin'])->name('checklogin');
 Route::get('/login', [Controller::class, 'login'])->name('login');
+
 Route::get('/logout', [SessionController::class, 'logout'])->name('logout');
-Route::get('/logout', [Controller::class, 'logout'])->name('logout');
+Route::get('/confirm-logout', [Controller::class, 'confirmLogout'])->name('confirmLogout');
 
 Route::get('/register', [Controller::class, 'register'])->name('register');
 Route::post('/registration', [RegistrationController::class, 'registration'])->name('registration');

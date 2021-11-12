@@ -6871,10 +6871,6 @@ input:-webkit-autofill:focus {
   box-shadow: 0px 0px 8px 2px #eb7878;
 }
 
-.frosted {
-  background-color: yellow;
-}
-
 /*Create Pop-up starts here*/
 .create-container {
   position: fixed;

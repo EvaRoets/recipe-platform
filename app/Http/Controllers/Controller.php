@@ -34,7 +34,7 @@ class Controller extends BaseController
         }
     }
 
-    function logout()
+    function confirmLogout()
     {
         return view('account.logout', ['frosted' => true]);
     }
@@ -46,16 +46,14 @@ class Controller extends BaseController
 
     function account()
     {
-//        if(Auth::check())
-//        {
-//            return view('account');
-//        }
-//        else
-//        {
-//            return redirect()->home();
-//        }
-//        TODO: activate code again
-        return view('account.account', ['frosted' => true]);
+        if(Auth::check())
+        {
+            return view('account.account', ['frosted' => true]);
+        }
+        else
+        {
+            return redirect()->home();
+        }
     }
 
     function settings()
@@ -65,18 +63,18 @@ class Controller extends BaseController
 
     function recipeBook()
     {
-//        if (Auth::check()) {
-//            $favorites = explode(',', Auth::user()->favorites);
-//            $posts = [];
-//            foreach ($favorites as $favorite) {
-//                array_push($posts, Post::where('id', $favorite)->first());
-//            }
-//            return view('recipes.recipeBook', ['posts' => $posts]);
-//        } else {
-//            return redirect()->home();
-//        }
-        //        TODO: activate code again
-        return view('recipes.recipeBook');
+        if (Auth::check()) {
+            $favorites = explode(',', Auth::user()->favorites);
+            $posts = [];
+            foreach ($favorites as $favorite) {
+                array_push($posts, Post::where('id', $favorite)->first());
+            }
+            return view('recipes.recipeBook', ['posts' => $posts]);
+        } else {
+            return redirect('/');
+        }
+//        //        TODO: activate code again
+//        return view('recipes.recipeBook');
     }
 
     function savePost()
