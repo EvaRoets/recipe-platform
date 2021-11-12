@@ -6509,6 +6509,22 @@ input:-webkit-autofill:focus {
   cursor: pointer;
 }
 
+.collapsible:hover .profile-account {
+  display: none;
+}
+
+.collapsible:hover .profile-account-hover {
+  display: block;
+}
+
+.collapsible:hover .welcome {
+  color: #eb7878;
+}
+
+.profile-account-hover {
+  display: none;
+}
+
 .welcome {
   font-family: "Montserrat Alternates", sans-serif;
   margin: -15px;

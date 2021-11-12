@@ -8,15 +8,6 @@
         </div>
 
         {{--    search bar starts here--}}
-        {{--        <form method="get" action={{ route('search') }}>--}}
-        {{--            <div class="search-container">--}}
-        {{--                <input type="search" placeholder="It can just be pizza..." name="search">--}}
-        {{--                <button class="search-btn" type="submit" value="submit">--}}
-        {{--                    <i class="fa fa-search"></i>--}}
-        {{--                </button>--}}
-        {{--            </div>--}}
-        {{--        </form>--}}
-
         <form method="get" action={{ route('search') }}>
             <div class="search-container">
                 <div class="td">
@@ -36,15 +27,12 @@
         <div class="profile-container">
             @if(Auth::check())
                 <button type="button" class="collapsible">
-                    <img class="profile"
-                         src={{ asset('images/account.png') }} alt="profile"/>
-                    <div class="welcome">Welcome, {{ Auth::user()->first_name }}</div>
+                    <div class="profile">
+                        <img class="profile-account" src={{ asset('images/account.png') }} alt="profile"/>
+                        <img class="profile-account-hover" src={{ asset('images/account-hover.png') }} alt="profile-hover"/>
+                    </div>
+                    <div class="welcome"><b>Welcome, {{ Auth::user()->first_name }}</b></div>
                 </button>
-                {{--            @else <a href=" {{ route('login') }}">--}}
-                {{--                <div type="button" class="content-account">--}}
-                {{--                    <i class="fas fa-sign-in-alt"></i>&nbsp; <b>Log in</b> </br>--}}
-                {{--                </div>--}}
-                {{--            </a>--}}
             @endif
             <div class="content">
                 <a href={{ route('account') }}>
