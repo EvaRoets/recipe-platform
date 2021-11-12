@@ -1,5 +1,6 @@
 // collapsible profile starts here
 let coll = document.getElementsByClassName("collapsible");
+// let coll = document.querySelector("#collapsible");
 for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function () {
         this.classList.toggle("active");
@@ -39,29 +40,31 @@ let logo = document.querySelector(".logo");
 let profile = document.querySelector(".profile");
 let searchCont = document.querySelector(".search-container");
 let welcome = document.querySelector(".welcome");
+let content = document.querySelector('.content')
 let sticky = navbar.offsetTop;
+
 
 function scrollSmaller() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         profile.style.width = "50px";
-        profile.style.paddingTop = "0";
-        profile.style.paddingBottom = "0";
+        profile.style.padding = "20px 0 0 0";
         logo.style.width = "70px";
-        logo.style.paddingTop = "0";
-        logo.style.paddingBottom = "0";
-        coll.style.margin = "0";
+        logo.style.padding = "0 20px";
         welcome.style.display = "none";
+        content.style.top = "96px";
+
     } else {
         profile.style.width = "70px";
         profile.style.padding = "20px";
         logo.style.width = "100px";
         logo.style.padding = "20px";
-        coll.style.padding = "18px";
-        coll.style.margin = "0 100px";
         searchCont.style.width = "400px";
         welcome.style.margin = "-15px";
+        welcome.style.display = "block";
+        content.style.top = "125px";
     }
 }
+
 
 /*hide password starts here */
 // TODO: render account password in asteriks

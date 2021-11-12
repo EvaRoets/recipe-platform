@@ -6533,7 +6533,7 @@ input:-webkit-autofill:focus {
 .collapsible {
   background-color: #FFF5E9;
   color: #4E918E;
-  padding: 18px;
+  padding: 0 0 25px 0;
   outline: none;
   border: none;
 }
@@ -6551,7 +6551,7 @@ input:-webkit-autofill:focus {
   text-align: left;
   width: 50%;
   position: absolute;
-  top: 100px;
+  top: 125px;
   right: 80px;
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
