@@ -88,7 +88,7 @@ class Controller extends BaseController
                 Auth::user()->favorites = $newFavorites;
                 Auth::user()->save();
             }
-            return redirect()->back();
+            return redirect()->route('recipeBook');
         }
     }
 

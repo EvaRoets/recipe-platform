@@ -27,6 +27,18 @@
                     <h3>Instructions</h3>
                     <p>{{ $details->description }}</p>
                 </div>
+                <div class="show-buttons">
+                    <a href={{ route("save", ['postid' => $details->id]) }}>
+                        <button class="save-btn"><i class="fas fa-bookmark"></i></button>
+                    </a>
+
+                    <a href="{{ route('home') }}">
+                        <button class="home-btn" type="submit" name="home" value="home">
+                            <i class="fas fa-home"></i>&nbsp</br>
+                        </button>
+                    </a>
+                </div>
+
             </div>
         </div>
         <div class="create-container" id="create">
@@ -46,7 +58,7 @@
                     </ul>
                 @endif
                 <div class="create-feed">
-                    <form method="post" action={{ route("createpost") }} enctype="multipart/form-data">
+                    <form method="post" action={{ route("createPost") }} enctype="multipart/form-data">
                         @csrf
                         <span class="close-btn">&times;</span>
                         <div class="create-recipe-title">
