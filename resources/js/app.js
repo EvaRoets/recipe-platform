@@ -60,20 +60,19 @@ function scrollSmaller() {
         coll.style.margin = "0 100px";
         searchCont.style.width = "400px";
         welcome.style.margin = "-15px";
-
     }
 }
 
 /*hide password starts here */
 // TODO: render account password in asteriks
-let pswd = document.querySelector(".hide-password");
-pswd.onclick = function() {
-    if (pswd.color === "password") {
-        pswd.type = "text";
-    } else {
-        pswd.type = "password";
-    }
+// let pswd = document.querySelector(".hide-password");
+// pswd.onclick = function() {
+//     if (pswd.color === "password") {
+//         pswd.type = "text";
+//     } else {
+//         pswd.type = "password";
+//     }
 
     // {{ Auth::user()->password }}.str.replace(/./g, '*');
 
-}
+// }

@@ -8,14 +8,29 @@
         </div>
 
         {{--    search bar starts here--}}
+        {{--        <form method="get" action={{ route('search') }}>--}}
+        {{--            <div class="search-container">--}}
+        {{--                <input type="search" placeholder="It can just be pizza..." name="search">--}}
+        {{--                <button class="search-btn" type="submit" value="submit">--}}
+        {{--                    <i class="fa fa-search"></i>--}}
+        {{--                </button>--}}
+        {{--            </div>--}}
+        {{--        </form>--}}
+
         <form method="get" action={{ route('search') }}>
             <div class="search-container">
-                <input type="search" placeholder="Search your recipe..." name="search">
-                <button class="search-btn" type="submit" value="submit">
-                    <i class="fa fa-search"></i>
-                </button>
+                <div class="td">
+                    <input type="search" placeholder="It can just be pizza..." name="search">
+                </div>
+                <div class="td" id="s-cover">
+                    <button class="search-btn-s-cover" type="submit" value="submit">
+                        <div id="s-circle"></div>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </form>
+
 
         {{--    profile collapse starts here--}}
         <div class="profile-container">
@@ -25,11 +40,11 @@
                          src={{ asset('images/account.png') }} alt="profile"/>
                     <div class="welcome">Welcome, {{ Auth::user()->first_name }}</div>
                 </button>
-{{--            @else <a href=" {{ route('login') }}">--}}
-{{--                <div type="button" class="content-account">--}}
-{{--                    <i class="fas fa-sign-in-alt"></i>&nbsp; <b>Log in</b> </br>--}}
-{{--                </div>--}}
-{{--            </a>--}}
+                {{--            @else <a href=" {{ route('login') }}">--}}
+                {{--                <div type="button" class="content-account">--}}
+                {{--                    <i class="fas fa-sign-in-alt"></i>&nbsp; <b>Log in</b> </br>--}}
+                {{--                </div>--}}
+                {{--            </a>--}}
             @endif
             <div class="content">
                 <a href={{ route('account') }}>

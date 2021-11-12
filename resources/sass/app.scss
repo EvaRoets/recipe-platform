@@ -16,10 +16,10 @@ $font-16: 16px;
 
 /*Font-Awesome starts here*/
 $fa-font-path: "../webfonts";
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
-@import "~@fortawesome/fontawesome-free/scss/regular";
-@import "~@fortawesome/fontawesome-free/scss/solid";
-@import "~@fortawesome/fontawesome-free/scss/brands";
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
 
 /* General starts here*/
 $border-radius: 30px;
@@ -109,9 +109,6 @@ html::-webkit-scrollbar-thumb {
     background: $light-accent;
 }
 
-.search-container:focus-within {
-    box-shadow: $box-shadow-focus-search;
-}
 
 .save-btn,
 .like-btn,
@@ -194,14 +191,29 @@ html::-webkit-scrollbar-thumb {
     padding: 20px;
 }
 
+
 /*searchbar starts here */
+//.search-container {
+//    margin: 0 100px;
+//    background: $light-accent;
+//    height: 30px;
+//    border-radius: $border-radius;
+//    padding: 10px 20px;
+//    display: flex;
+//    justify-content: space-between;
+//    align-items: center;
+//    cursor: pointer;
+//    box-shadow: $box-shadow;
+//    width: 400px;
+//}
+
 .search-container {
+    display: table;
     margin: 0 100px;
     background: $light-accent;
     height: 30px;
     border-radius: $border-radius;
     padding: 10px 20px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
@@ -209,8 +221,8 @@ html::-webkit-scrollbar-thumb {
     width: 400px;
 }
 
-form {
-
+.search-container:focus-within {
+    box-shadow: $box-shadow-focus-search;
 }
 
 input[type=search] {
@@ -220,15 +232,116 @@ input[type=search] {
     border-radius: 30px;
     padding: 10px 20px;
     cursor: pointer;
-}
-
-input[type=search] {
     width: -webkit-fill-available;
 }
 
 input[type=search]:focus {
     outline: none;
 }
+
+.td {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.search-btn-s-cover {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+#s-cover {
+    width: 1px;
+    padding-left: 35px;
+}
+
+.search-btn-s-cover {
+    position: relative;
+    display: block;
+    width: 28px;
+    height: 32px;
+    cursor: pointer;
+}
+
+#s-circle {
+    position: relative;
+    top: -4px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    margin-top: 0;
+    border: 4px solid $dark-green;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: 0.5s ease all;
+    box-shadow: $box-shadow;
+}
+
+.search-btn-s-cover span {
+    position: absolute;
+    top: 68px;
+    left: 43px;
+    display: block;
+    width: 45px;
+    height: 15px;
+    background-color: transparent;
+    border-radius: 10px;
+    transform: rotateZ(52deg);
+    transition: 0.5s ease all;
+}
+
+.search-btn-s-cover span:before,
+.search-btn-s-cover span:after {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    right: 84px;
+    width: 16px;
+    height: 4px;
+    background-color: $dark-green;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    transform: rotateZ(0);
+    transition: 0.5s ease all;
+}
+
+#s-cover:hover #s-circle {
+    top: 1px;
+    width: 22px;
+    height: 4px;
+    border-width: 0;
+    background-color: $bright-accent;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+}
+
+#s-cover:hover span {
+    top: 60%;
+    left: 0;
+    width: 22px;
+    margin-top: -9px;
+    transform: rotateZ(0);
+}
+
+#s-cover:hover .search-btn-s-cover span:before {
+    bottom: 11px;
+    transform: rotateZ(52deg);
+}
+
+#s-cover:hover .search-btn-s-cover span:after {
+    bottom: 1px;
+    transform: rotateZ(-52deg);
+}
+
+#s-cover:hover .search-btn-s-cover span:before,
+#s-cover:hover .search-btn-s-cover span:after {
+    right: -5px;
+    width: 15px;
+    background-color: $bright-accent;
+    box-shadow: $box-shadow;
+}
+
 
 input[type=text],
 input[type=email],
@@ -303,7 +416,6 @@ input:-webkit-autofill:focus {
 }
 
 
-
 .logout-box {
     align-items: center;
 }
@@ -326,7 +438,8 @@ input:-webkit-autofill:focus {
     padding: 20px;
     cursor: pointer;
 }
-.welcome{
+
+.welcome {
     font-family: $font-family;
     margin: -15px;
 }
@@ -421,8 +534,8 @@ input:-webkit-autofill:focus {
     box-shadow: $box-shadow-focus;
 }
 
-.login-no-account,
-.logout-no-account {
+.login-yes-account,
+.login-no-account {
     text-align: center;
     margin-top: -70px;
 }
@@ -637,7 +750,7 @@ input:-webkit-autofill:focus {
 .account-feed,
 .settings-feed,
 .show-feed {
-    margin-top: 120px;
+    margin-top: 100px;
 }
 
 /*card featured begins here*/
@@ -682,6 +795,7 @@ input:-webkit-autofill:focus {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
+    align-items: center;
 }
 
 .card-featured-tags {
@@ -735,7 +849,7 @@ input:-webkit-autofill:focus {
 
 .card-buttons,
 .card-featured-buttons,
-.show-buttons{
+.show-buttons {
     display: flex;
     flex-direction: row;
     align-content: flex-start;
@@ -761,7 +875,6 @@ input:-webkit-autofill:focus {
     box-shadow: $box-shadow-image;
     width: 250px;
     height: 180px;
-    height: auto;
     cursor: pointer;
     object-fit: cover;
     overflow: hidden;
@@ -777,19 +890,16 @@ input:-webkit-autofill:focus {
     overflow: hidden;
 }
 
-img{
+img {
     max-width: 100%;
     max-height: 100%;
     vertical-align: middle;
 }
 
-
-
-
 .footer-container {
-    background-color: $background-color;
+    //background-color: $background-color;
     font-size: $font-12;
-    //position: fixed;
+    position: fixed;
     bottom: 0;
     text-align: center;
     padding: 2px;
@@ -881,6 +991,7 @@ img{
     color: $background-color;
 
 }
+
 .create-recipe-container {
     display: none;
     position: fixed;
@@ -906,32 +1017,49 @@ img{
     animation-name: animatebottom;
     animation-duration: 0.4s
 }
+
 .close-btn {
     float: right;
     color: $light-accent;
     font-size: 30px;
     font-weight: bold;
 }
+
 .close-btn:hover {
     color: $bright-accent;
     cursor: pointer;
 }
+
 @-webkit-keyframes animatebottom {
-    from {bottom:-300px; opacity:0}
-    to {bottom:0; opacity:1}
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
 }
+
 @keyframes animatebottom {
-    from {bottom:-300px; opacity:0}
-    to {bottom:0; opacity:1}
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
 }
 
 
 /* Hide password toggle starts here */
-.password-box{
-    display:flex;
+.password-box {
+    display: flex;
     flex-direction: column;
 }
-.hide-password{
+
+.hide-password {
     position: relative;
     display: flex;
     width: 50px;
@@ -944,7 +1072,7 @@ img{
     height: 0;
 }
 
-.toggle{
+.toggle {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -972,7 +1100,7 @@ img{
     box-shadow: $box-shadow;
 }
 
-input:checked + .toggle{
+input:checked + .toggle {
     background-color: $bright-accent;
 }
 

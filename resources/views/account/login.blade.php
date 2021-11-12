@@ -25,7 +25,6 @@
                         <label for="password">Password</label>
                         <input type="password" name="password"/>
                         <div class="login-btn-container">
-{{--                            this tag can remain empty--}}
                             <a href="">
                                 <button class="login-btn" type="submit" name="login" value="Login">
                                     <i class="fas fa-sign-in-alt"></i>&nbsp; Login

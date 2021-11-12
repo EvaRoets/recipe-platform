@@ -6082,23 +6082,6 @@ readers do not read off random characters that represent icons */
 @font-face {
   font-family: "Font Awesome 5 Free";
   font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?77206a6bb316fa0aded5083cc57f92b9);
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?77206a6bb316fa0aded5083cc57f92b9?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?7a3337626410ca2f40718481c755640f) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?bb58e57c48a3e911f15fa834ff00d44a) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?491974d108fe4002b2aaf7ffc48249a0) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?4689f52cc96215721344e51e5831eec1#fontawesome) format("svg");
-}
-.far {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-}
-
-/*!
- * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
-@font-face {
-  font-family: "Font Awesome 5 Free";
-  font-style: normal;
   font-weight: 900;
   font-display: block;
   src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?9bbb245e67a133f6e486d8d2545e14a5);
@@ -6124,6 +6107,23 @@ readers do not read off random characters that represent icons */
 }
 .fab {
   font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+/*!
+ * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?77206a6bb316fa0aded5083cc57f92b9);
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?77206a6bb316fa0aded5083cc57f92b9?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?7a3337626410ca2f40718481c755640f) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?bb58e57c48a3e911f15fa834ff00d44a) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?491974d108fe4002b2aaf7ffc48249a0) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?4689f52cc96215721344e51e5831eec1#fontawesome) format("svg");
+}
+.far {
+  font-family: "Font Awesome 5 Free";
   font-weight: 400;
 }
 
@@ -6190,10 +6190,6 @@ html::-webkit-scrollbar-thumb {
 
 .search-btn:hover {
   background: #DED0D0;
-}
-
-.search-container:focus-within {
-  box-shadow: 0px 0px 8px 2px #4E918E;
 }
 
 .save-btn,
@@ -6275,17 +6271,21 @@ html::-webkit-scrollbar-thumb {
 
 /*searchbar starts here */
 .search-container {
+  display: table;
   margin: 0 100px;
   background: #DED0D0;
   height: 30px;
   border-radius: 30px;
   padding: 10px 20px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
   width: 400px;
+}
+
+.search-container:focus-within {
+  box-shadow: 0px 0px 8px 2px #4E918E;
 }
 
 input[type=search] {
@@ -6295,14 +6295,114 @@ input[type=search] {
   border-radius: 30px;
   padding: 10px 20px;
   cursor: pointer;
-}
-
-input[type=search] {
   width: -webkit-fill-available;
 }
 
 input[type=search]:focus {
   outline: none;
+}
+
+.td {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.search-btn-s-cover {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+#s-cover {
+  width: 1px;
+  padding-left: 35px;
+}
+
+.search-btn-s-cover {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 32px;
+  cursor: pointer;
+}
+
+#s-circle {
+  position: relative;
+  top: -4px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  margin-top: 0;
+  border: 4px solid #4E918E;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: 0.5s ease all;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.search-btn-s-cover span {
+  position: absolute;
+  top: 68px;
+  left: 43px;
+  display: block;
+  width: 45px;
+  height: 15px;
+  background-color: transparent;
+  border-radius: 10px;
+  transform: rotateZ(52deg);
+  transition: 0.5s ease all;
+}
+
+.search-btn-s-cover span:before,
+.search-btn-s-cover span:after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  right: 84px;
+  width: 16px;
+  height: 4px;
+  background-color: #4E918E;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  transform: rotateZ(0);
+  transition: 0.5s ease all;
+}
+
+#s-cover:hover #s-circle {
+  top: 1px;
+  width: 22px;
+  height: 4px;
+  border-width: 0;
+  background-color: #eb7878;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+}
+
+#s-cover:hover span {
+  top: 60%;
+  left: 0;
+  width: 22px;
+  margin-top: -9px;
+  transform: rotateZ(0);
+}
+
+#s-cover:hover .search-btn-s-cover span:before {
+  bottom: 11px;
+  transform: rotateZ(52deg);
+}
+
+#s-cover:hover .search-btn-s-cover span:after {
+  bottom: 1px;
+  transform: rotateZ(-52deg);
+}
+
+#s-cover:hover .search-btn-s-cover span:before,
+#s-cover:hover .search-btn-s-cover span:after {
+  right: -5px;
+  width: 15px;
+  background-color: #eb7878;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
 input[type=text],
@@ -6499,8 +6599,8 @@ input:-webkit-autofill:focus {
   box-shadow: 0px 0px 8px 2px #eb7878;
 }
 
-.login-no-account,
-.logout-no-account {
+.login-yes-account,
+.login-no-account {
   text-align: center;
   margin-top: -70px;
 }
@@ -6688,7 +6788,7 @@ input:-webkit-autofill:focus {
 .account-feed,
 .settings-feed,
 .show-feed {
-  margin-top: 120px;
+  margin-top: 100px;
 }
 
 /*card featured begins here*/
@@ -6733,6 +6833,7 @@ input:-webkit-autofill:focus {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
+  align-items: center;
 }
 
 .card-featured-tags {
@@ -6810,7 +6911,6 @@ input:-webkit-autofill:focus {
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086);
   width: 250px;
   height: 180px;
-  height: auto;
   cursor: pointer;
   -o-object-fit: cover;
      object-fit: cover;
@@ -6835,8 +6935,8 @@ img {
 }
 
 .footer-container {
-  background-color: #FFF5E9;
   font-size: 12px;
+  position: fixed;
   bottom: 0;
   text-align: center;
   padding: 2px;

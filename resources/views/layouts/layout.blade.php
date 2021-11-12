@@ -36,6 +36,8 @@
 @include('layouts.components.header')
 @section('content')
 @show
+<script src="../../../js/app.js"></script>
+<noscript>Your browser does not support JavaScript.</noscript>
 @include('layouts.components.footer')
 </body>
 </html>

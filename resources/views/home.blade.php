@@ -25,7 +25,9 @@
                 <div class="create-feed">
                     <form method="post" action={{ route("createPost") }} enctype="multipart/form-data">
                         @csrf
-                        <span class="close-btn">&times;</span>
+                        <!--                TODO: check why close-btn doesn't work-->
+
+                            <span class="close-btn">&times;</span>
                         <div class="create-recipe-title">
                             <h2>Add recipe</h2>
                         </div>
@@ -44,7 +46,7 @@
                             <label for="ingredients">Ingredients</label>
                             <input type="text" name="ingredients" id="ingredients">
 
-                            <label for="Instructions">Instructions</label>
+                            <label for="description">Instructions</label>
                             <input type="text" name="description">
 
                             <div class="create-btn-container">

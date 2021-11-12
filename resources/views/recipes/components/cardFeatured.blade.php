@@ -10,7 +10,10 @@
             @endforeach
         </div>
         <div class="card-featured-image-container">
-            <img class="card-featured-image" alt="recipe-picture(s)" src={{ asset($data->image) }} />
+            <a href={{ route("details", ['postid' => $data->id]) }}>
+                <img class="card-featured-image" alt="recipe-picture(s)" src={{ asset($data->image) }} />
+            </a>
+
         </div>
         <div class="card-featured-buttons">
             <a href={{ route("save", ['postid' => $data->id]) }}>

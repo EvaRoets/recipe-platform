@@ -1,5 +1,5 @@
 <div class="home-filter">
-    <form action="" method="" >
+    <form method="get" action="">
         <div class="filter">
             <div class="main-ingredient">
                 <br><label for="main-ingredient"><h4>Main ingredient</h4></label><br>

@@ -76,6 +76,7 @@ class Controller extends BaseController
     }
 
     function savePost()
+//        TODO: save posts after previous posts were saved
     {
         if (Auth::check()) {
             $favorites = explode(',', Auth::user()->favorites);

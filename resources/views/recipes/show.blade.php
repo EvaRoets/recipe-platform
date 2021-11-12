@@ -31,7 +31,6 @@
                     <a href={{ route("save", ['postid' => $details->id]) }}>
                         <button class="save-btn"><i class="fas fa-bookmark"></i></button>
                     </a>
-
                     <a href="{{ route('home') }}">
                         <button class="home-btn" type="submit" name="home" value="home">
                             <i class="fas fa-home"></i>&nbsp</br>

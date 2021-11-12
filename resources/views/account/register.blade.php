@@ -38,6 +38,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="login-yes-account">
+                    <p>Already have an account? Sign up <a href={{ route('login') }}>here</a>!</p>
+                </div>
             </form>
         </div>
     </div>

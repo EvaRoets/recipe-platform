@@ -15,9 +15,6 @@
             </a>
         </div>
         <div class="card-buttons">
-            <a href={{ route("save", ['postid' => $data->id]) }}>
-                <button class="save-btn-card"><i class="fas fa-bookmark"></i></button>
-            </a>
             <a href="">
                 <button class="like-btn-card"><i class="fas fa-heart"></i></button>
             </a>
