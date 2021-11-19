@@ -12,9 +12,9 @@ $light-accent: #DED0D0;
 $font-title: 'Comfortaa', cursive;
 $font-family: 'Montserrat Alternates', sans-serif;
 $font-filter: 'Ubuntu', sans-serif;
-$font-12: 12px;
-$font-14: 14px;
-$font-16: 16px;
+$font-12: 0.75rem;
+$font-14: 1em;
+$font-16: 1rem;
 
 /*Font-Awesome starts here*/
 $fa-font-path: "../webfonts";
@@ -24,27 +24,33 @@ $fa-font-path: "../webfonts";
 @import '~@fortawesome/fontawesome-free/scss/regular.scss';
 
 /* General starts here*/
-$border-radius: 30px;
-$box-shadow: 4px 4px 6px 0 rgb(255 255 255 / 30%),
--4px -4px 6px 0 rgb(116 125 136 / 20%),
-inset -4px -4px 6px 0 rgb(255 255 255 / 20%),
-inset 4px 4px 6px 0 rgb(0 0 0 / 20%);
 
-$box-shadow-featured: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-0 12.5px 10px rgba(0, 0, 0, 0.06),
-0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-0 100px 80px rgba(0, 0, 0, 0.12);
+/* shadow */
+$border-radius: 1.875rem;
+$box-shadow: 0.25rem 0.25rem 0.375rem 0 rgb(255 255 255 / 30%),
+-0.25rem -0.25rem 0.375rem 0 rgb(116 125 136 / 20%),
+inset -0.25rem -0.25rem 0.375rem 0 rgb(255 255 255 / 20%),
+inset 0.25rem 0.25rem 0.375rem 0 rgb(0 0 0 / 20%);
 
-$box-shadow-image: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-0 12.5px 10px rgba(0, 0, 0, 0.06),
-0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-0 41.8px 33.4px rgba(0, 0, 0, 0.086);
+$box-shadow-featured: 0 0.175rem 0.138rem rgba(0, 0, 0, 0.034),
+0 0.419rem 0.331rem rgba(0, 0, 0, 0.048),
+0 0.781rem 0.625rem rgba(0, 0, 0, 0.06),
+0 1.394rem 1.119rem rgba(0, 0, 0, 0.072),
+0 2.613rem 2.088rem rgba(0, 0, 0, 0.086),
+0 6.25rem 5rem rgba(0, 0, 0, 0.12);
 
-$box-shadow-focus: 0px 0px 8px 2px $bright-accent;
-$box-shadow-focus-search: 0px 0px 8px 2px $dark-green;
+$box-shadow-image: 0 0.175rem 0.138rem rgba(0, 0, 0, 0.034),
+0 0.419rem 0.331rem rgba(0, 0, 0, 0.048),
+0 0.781rem 0.625rem rgba(0, 0, 0, 0.06),
+0 1.394rem 1.119rem rgba(0, 0, 0, 0.072),
+0 2.613rem 2.088rem rgba(0, 0, 0, 0.086);
+
+$box-shadow-focus: 0 0 0.5rem 0.125rem $bright-accent;
+$box-shadow-focus-search: 0 0 0.5rem 0.125rem $dark-green;
+
+
+/* borders */
+$light-border: 1px solid $light-accent;
 
 
 html {
@@ -64,7 +70,7 @@ label {
     font-style: italic;
     font-weight: bold;
     font-size: $font-14;
-    margin: 10px 35px 0 35px
+    margin: 0.625rem 2.188rem 0 2.188rem
 }
 
 a {
@@ -74,7 +80,7 @@ a {
 }
 
 a:active {
-    top: 3px;
+    top: 0.188rem;
 }
 
 p {
@@ -95,7 +101,7 @@ html::-webkit-scrollbar-thumb {
     background-color: $dark-green;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
-    margin: 5px;
+    margin: 0.313rem;
 }
 
 /* buttons start here */
@@ -123,7 +129,7 @@ html::-webkit-scrollbar-thumb {
 .recipe-btn {
     background: $light-accent;
     color: $bright-accent;
-    padding: 20px 25px;
+    padding: 1.25rem 1.563rem;
     cursor: pointer;
     justify-content: center;
     align-items: center;
@@ -131,7 +137,7 @@ html::-webkit-scrollbar-thumb {
     border: none;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
-    margin: 15px;
+    margin: 0.938rem;
 }
 
 .save-btn-card:hover,
@@ -155,14 +161,14 @@ html::-webkit-scrollbar-thumb {
 .view-btn-card {
     background: $light-accent;
     color: $bright-accent;
-    padding: 8px 12px;
+    padding: 0.5rem 0.75rem;
     cursor: pointer;
     justify-content: center;
     align-items: center;
     border: none;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
-    margin: 5px;
+    margin: 0.313rem;
 }
 
 
@@ -181,46 +187,32 @@ html::-webkit-scrollbar-thumb {
     position: fixed;
     top: 0;
     border-radius: $border-radius;
-    border-bottom: 1px solid $light-accent;
+    border-bottom: $light-border;
 }
 
 .logo-container {
 }
 
 .logo {
-    width: 100px;
+    width: 6.25rem;
     height: auto;
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 
 /*searchbar starts here */
-//.search-container {
-//    margin: 0 100px;
-//    background: $light-accent;
-//    height: 30px;
-//    border-radius: $border-radius;
-//    padding: 10px 20px;
-//    display: flex;
-//    justify-content: space-between;
-//    align-items: center;
-//    cursor: pointer;
-//    box-shadow: $box-shadow;
-//    width: 400px;
-//}
-
 .search-container {
     display: table;
-    margin: 0 100px;
+    margin: 0 6.25rem;
     background: $light-accent;
-    height: 30px;
+    height: 1.875rem;
     border-radius: $border-radius;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
     box-shadow: $box-shadow;
-    width: 400px;
+    width: 25rem;
 }
 
 .search-container:focus-within {
@@ -231,10 +223,13 @@ input[type=search] {
     outline: none;
     border: none;
     background: $light-accent;
-    border-radius: 30px;
-    padding: 10px 20px;
+    border-radius: $border-radius;
+    padding: 0.625rem 1.25rem;
     cursor: pointer;
-    width: -webkit-fill-available;
+    width: 100%;
+    //width: -moz-available;
+    //width: -webkit-fill-available;
+    max-width: stretch;
 }
 
 input[type=search]:focus {
@@ -254,26 +249,26 @@ input[type=search]:focus {
 }
 
 #s-cover {
-    width: 1px;
-    padding-left: 35px;
+    width: 0.063rem;
+    padding-left: 2.188rem;
 }
 
 .search-btn-s-cover {
     position: relative;
     display: block;
-    width: 28px;
-    height: 32px;
+    width: 1.75rem;
+    height: 2rem;
     cursor: pointer;
 }
 
 #s-circle {
     position: relative;
-    top: -4px;
+    top: -0.25rem;
     left: 0;
-    width: 12px;
-    height: 12px;
+    width: 0.75rem;
+    height: 0.75rem;
     margin-top: 0;
-    border: 4px solid $dark-green;
+    border: 0.25rem solid $dark-green;
     background-color: transparent;
     border-radius: 50%;
     transition: 0.5s ease all;
@@ -282,13 +277,13 @@ input[type=search]:focus {
 
 .search-btn-s-cover span {
     position: absolute;
-    top: 68px;
-    left: 43px;
+    top: 4.25rem;
+    left: 2.688rem;
     display: block;
-    width: 45px;
-    height: 15px;
+    width: 2.813rem;
+    height: 0.938rem;
     background-color: transparent;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     transform: rotateZ(52deg);
     transition: 0.5s ease all;
 }
@@ -297,10 +292,10 @@ input[type=search]:focus {
 .search-btn-s-cover span:after {
     content: '';
     position: absolute;
-    bottom: 1px;
-    right: 84px;
-    width: 16px;
-    height: 4px;
+    bottom: 0.063rem;
+    right: 5.25rem;
+    width: 1rem;
+    height: 0.25rem;
     background-color: $dark-green;
     box-shadow: $box-shadow;
     border-radius: $border-radius;
@@ -309,9 +304,9 @@ input[type=search]:focus {
 }
 
 #s-cover:hover #s-circle {
-    top: 1px;
-    width: 22px;
-    height: 4px;
+    top: 0.063rem;
+    width: 1.375rem;
+    height: 0.25rem;
     border-width: 0;
     background-color: $bright-accent;
     box-shadow: $box-shadow;
@@ -321,25 +316,25 @@ input[type=search]:focus {
 #s-cover:hover span {
     top: 60%;
     left: 0;
-    width: 22px;
-    margin-top: -9px;
+    width: 1.375rem;
+    margin-top: -0.563rem;
     transform: rotateZ(0);
 }
 
 #s-cover:hover .search-btn-s-cover span:before {
-    bottom: 11px;
+    bottom: 0.688rem;
     transform: rotateZ(52deg);
 }
 
 #s-cover:hover .search-btn-s-cover span:after {
-    bottom: 1px;
+    bottom: 0.063rem;
     transform: rotateZ(-52deg);
 }
 
 #s-cover:hover .search-btn-s-cover span:before,
 #s-cover:hover .search-btn-s-cover span:after {
-    right: -5px;
-    width: 15px;
+    right: -0.313rem;
+    width: 0.938rem;
     background-color: $bright-accent;
     box-shadow: $box-shadow;
 }
@@ -351,10 +346,10 @@ input[type=password],
 .create-file {
     outline: none;
     border: none;
-    margin: 5px 25px 10px 25px;
+    margin: 0.313rem 1.563rem 0.625rem 1.563rem;
     background: $light-accent;
     border-radius: $border-radius;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -391,8 +386,8 @@ input:-webkit-autofill:focus {
 .create-box {
     display: flex;
     flex-direction: column;
-    width: 550px;
-    margin-top: 20px;
+    width: 34.375rem;
+    margin-top: 1.25rem;
 }
 
 .account-box,
@@ -401,8 +396,8 @@ input:-webkit-autofill:focus {
 .logout-box {
     display: flex;
     flex-direction: column;
-    width: 350px;
-    margin-top: 20px;
+    width: 21.875rem;
+    margin-top: 1.25rem;
     overflow: hidden;
 
 }
@@ -410,11 +405,11 @@ input:-webkit-autofill:focus {
 .recipe-book-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    margin: 20px 0;
+    grid-gap: 0.625rem;
+    margin: 1.25rem 0;
     //TODO: look into overflowing columns
     //column-count:2;
-    //column-gap: 50px;
+    //column-gap: 3.125rem;
 }
 
 
@@ -435,9 +430,9 @@ input:-webkit-autofill:focus {
 }
 
 .profile {
-    width: 70px;
+    width: 4.375rem;
     height: auto;
-    padding: 20px;
+    padding: 1.25rem;
     cursor: pointer;
 }
 
@@ -460,23 +455,23 @@ input:-webkit-autofill:focus {
 
 .welcome {
     font-family: $font-family;
-    margin: -15px;
+    margin: -0.938rem;
 }
 
 .collapsible {
     background-color: $background-color;
     color: $dark-green;
-    padding: 0 0 25px 0;
+    padding: 0 0 1.563rem 0;
     outline: none;
     border: none;
 }
 
 .active, .collapsible:hover {
-    top: 3px;
+    top: 0.188rem;
 }
 
 .content {
-    padding: 20px 20px;
+    padding: 1.25rem 1.25rem;
     overflow: hidden;
     display: none;
     background-color: $light-accent;
@@ -484,8 +479,8 @@ input:-webkit-autofill:focus {
     text-align: left;
     width: 50%;
     position: absolute;
-    top: 125px;
-    right: 80px;
+    top: 7.813rem;
+    right: 5rem;
     box-shadow: $box-shadow;
 }
 
@@ -493,7 +488,7 @@ input:-webkit-autofill:focus {
 .content-recipes,
 .content-settings,
 .content-logout {
-    padding: 5px;
+    padding: 0.313rem;
 }
 
 
@@ -517,29 +512,30 @@ input:-webkit-autofill:focus {
 .recipe-book-details,
 .settings-details {
     border-radius: $border-radius;
-    border-bottom: 1px solid $light-accent;
-    border-left: 1px solid $light-accent;
-    border-right: 1px solid $light-accent;
-    margin: 100px 50px;
-    padding: 30px 50px 10px 50px;
+    border-bottom: $light-border;
+    border-left: $light-border;
+    border-right: $light-border;
+    margin: 6.25rem 3.125rem;
+    padding: 1.875rem 3.125rem 0.625rem 3.125rem;
     box-shadow: $box-shadow-featured;
 }
+
 
 .login-title,
 .logout-title {
     font-family: $font-title;
     text-align: center;
     border-radius: $border-radius;
-    border-bottom: 1px solid $light-accent;
+    border-bottom: $light-border;
 }
 
 .login-email,
 .login-password {
-    margin: 20px 25px 0 25px;
+    margin: 1.25rem 1.563rem 0 1.563rem;
     background: $light-accent;
-    height: 15px;
+    height: 0.938rem;
     border-radius: $border-radius;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -554,7 +550,7 @@ input:-webkit-autofill:focus {
 .login-yes-account,
 .login-no-account {
     text-align: center;
-    margin-top: -70px;
+    margin-top: -4.375;
 }
 
 
@@ -575,7 +571,7 @@ input:-webkit-autofill:focus {
     font-family: $font-title;
     text-align: center;
     border-radius: $border-radius;
-    border-bottom: 1px solid $light-accent;
+    border-bottom: $light-border;
 }
 
 //.register-first-name,
@@ -583,11 +579,11 @@ input:-webkit-autofill:focus {
 //.register-email,
 //.register-password,
 //.register-password-confirm {
-//    margin: 20px 25px 0 25px;
+//    margin: 1.25rem 1.563rem 0 1.563rem;
 //    background: $light-accent;
-//    height: 15px;
+//    height: 0.938rem;
 //    border-radius: $border-radius;
-//    padding: 10px 20px;
+//    padding: 0.625rem 1.25rem;
 //    justify-content: center;
 //    align-items: center;
 //    cursor: pointer;
@@ -619,16 +615,16 @@ input:-webkit-autofill:focus {
     font-family: $font-title;
     text-align: center;
     border-radius: $border-radius;
-    border-bottom: 1px solid $light-accent;
+    border-bottom: $light-border;
 }
 
 .account-first-name,
 .account-last-name,
 .account-email {
-    margin: 25px;
-    height: 10px;
-    border-radius: 30px;
-    padding: 0 20px;
+    margin: 1.563rem;
+    height: 0.625rem;
+    border-radius: 1.875rem;
+    padding: 0 1.25rem;
 }
 
 .account-first-name:focus-within,
@@ -650,20 +646,20 @@ input:-webkit-autofill:focus {
 .show-recipe {
     justify-content: center;
     border-radius: $border-radius;
-    border-bottom: 1px solid $light-accent;
-    border-left: 1px solid $light-accent;
-    border-right: 1px solid $light-accent;
-    margin: 100px;
-    padding: 30px 50px 10px 50px;
+    border-bottom: $light-border;
+    border-left: $light-border;
+    border-right: $light-border;
+    margin: 6.25rem;
+    padding: 1.875rem 3.125rem 0.625rem 3.125rem;
     box-shadow: $box-shadow-featured;
-    width: 1100px;
+    width: 68.75rem;
 }
 
 .show-title {
     font-family: $font-title;
     text-align: center;
     border-radius: $border-radius;
-    border-bottom: 1px solid $light-accent;
+    border-bottom: $light-border;
 }
 
 .show-image-container {
@@ -674,30 +670,30 @@ input:-webkit-autofill:focus {
 .show-image {
     border-radius: $border-radius;
     box-shadow: $box-shadow-image;
-    width: 900px;
-    height: 450px;
+    width: 56.25rem;
+    height: 28.125rem;
     cursor: pointer;
-    margin: 50px 15px 15px 15px;
+    margin: 3.125rem 0.938rem 0.938rem 0.938rem;
     object-fit: cover;
     overflow: hidden;
 }
 
 .show-tags {
     display: flex;
-    padding: 15px 15px 15px 0;
+    padding: 0.938rem 0.938rem 0.938rem 0;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     line-height: 0.7;
-    margin: 25px 15px 15px 15px;
+    margin: 1.563rem 0.938rem 0.938rem 0.938rem;
 }
 
 .show-ingredients {
-    padding: 0 10px 15px 10px;
+    padding: 0 0.625rem 0.938rem 0.625rem;
 }
 
 .show-instructions {
-    padding: 0 10px 50px 10px;
+    padding: 0 0.625rem 3.125rem 0.625rem;
 
 }
 
@@ -736,8 +732,8 @@ input:-webkit-autofill:focus {
 .main-ingredient,
 .dish-type,
 .special-occasions {
-    padding: 0 10px;
-    margin: 0 20px;
+    padding: 0 0.625rem;
+    margin: 0 1.25rem;
 }
 
 .create-btn-container,
@@ -747,7 +743,7 @@ input:-webkit-autofill:focus {
 .settings-box,
 .register-btn-container {
     text-align: center;
-    margin: 20px;
+    margin: 1.25rem;
 }
 
 .account-btn-container,
@@ -767,28 +763,28 @@ input:-webkit-autofill:focus {
 .account-feed,
 .settings-feed,
 .show-feed {
-    margin-top: 100px;
+    margin-top: 6.25rem;
 }
 
 /*card featured begins here*/
 .card-featured-container {
     border-radius: $border-radius;
-    border-bottom: 1px solid $light-accent;
-    border-left: 1px solid $light-accent;
-    border-right: 1px solid $light-accent;
-    margin: 100px 50px;
-    padding: 30px 50px 10px 50px;
+    border-bottom: $light-border;
+    border-left: $light-border;
+    border-right: $light-border;
+    margin: 6.25rem 3.125rem;
+    padding: 1.875rem 3.125rem 0.625rem 3.125rem;
     box-shadow: $box-shadow-featured;
 }
 
 .card-container {
     border-radius: $border-radius;
-    border-bottom: 1px solid $light-accent;
-    border-left: 1px solid $light-accent;
-    border-right: 1px solid $light-accent;
-    padding: 15px 25px 5px 25px;
+    border-bottom: $light-border;
+    border-left: $light-border;
+    border-right: $light-border;
+    padding: 0.938rem 1.563rem 0.313rem 1.563rem;
     box-shadow: $box-shadow-image;
-    margin: 0 5px;
+    margin: 0 0.313rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -799,7 +795,7 @@ input:-webkit-autofill:focus {
     font-family: $font-title;
     text-align: center;
     border-radius: $border-radius;
-    border-bottom: 1px solid $light-accent;
+    border-bottom: $light-border;
 }
 
 .card-title {
@@ -817,12 +813,12 @@ input:-webkit-autofill:focus {
 
 .card-featured-tags {
     display: flex;
-    padding: 15px 15px 15px 0;
+    padding: 0.938rem 0.938rem 0.938rem 0;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     line-height: 0.7;
-    max-width: 500px;
+    max-width: 31.25rem;
 }
 
 .card-tags {
@@ -836,31 +832,31 @@ input:-webkit-autofill:focus {
 .card-badge {
     color: $background-color;
     background: $bright-accent;
-    padding: 7px;
-    margin: 3px 5px;
+    padding: 0.438rem;
+    margin: 0.188rem 0.313rem;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
-    font-size: 12px;
+    font-size: $font-12;
 }
 
 .card-featured-badge {
     color: $background-color;
     background: $bright-accent;
-    padding: 10px;
-    margin: 3px 5px;
+    padding: 0.625rem;
+    margin: 0.188rem 0.313rem;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
 }
 
 .card-tags,
 .card-buttons {
-    margin: 15px 10px 10px 10px;
+    margin: 0.938rem 0.625rem 0.625rem 0.625rem;
     text-align: center;
 }
 
 .card-featured-tags,
 .card-featured-buttons {
-    margin: 25px 15px 15px 15px;
+    margin: 1.563rem 0.938rem 0.938rem 0.938rem;
     text-align: center;
 }
 
@@ -890,8 +886,8 @@ input:-webkit-autofill:focus {
 .card-image {
     border-radius: $border-radius;
     box-shadow: $box-shadow-image;
-    width: 250px;
-    height: 180px;
+    width: 15.625rem;
+    height: 11.25rem;
     cursor: pointer;
     object-fit: cover;
     overflow: hidden;
@@ -900,8 +896,8 @@ input:-webkit-autofill:focus {
 .card-featured-image {
     border-radius: $border-radius;
     box-shadow: $box-shadow-image;
-    width: 500px;
-    height: 360px;
+    width: 31.25rem;
+    height: 22.5rem;
     cursor: pointer;
     object-fit: cover;
     overflow: hidden;
@@ -919,7 +915,7 @@ img {
     position: fixed;
     bottom: 0;
     text-align: center;
-    padding: 2px;
+    padding: 0.125rem;
     width: 100%;
 }
 
@@ -938,16 +934,16 @@ img {
     font-family: $font-title;
     text-align: center;
     border-radius: $border-radius;
-    border-bottom: 1px solid $light-accent;
+    border-bottom: $light-border;
 }
 
 .create-images {
     display: flex;
-    margin: 20px 25px 0 25px;
+    margin: 1.25rem 1.563rem 0 1.563rem;
     background: $light-accent;
-    height: 15px;
+    height: 0.938rem;
     border-radius: $border-radius;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
@@ -958,11 +954,11 @@ img {
 .create-tags,
 .create-ingredients,
 .create-instructions {
-    margin: 20px 25px 0 25px;
+    margin: 1.25rem 1.563rem 0 1.563rem;
     background: $light-accent;
-    height: 15px;
+    height: 0.938rem;
     border-radius: $border-radius;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -986,21 +982,21 @@ img {
 .create-container {
     position: fixed;
     bottom: 0;
-    margin: 0 50px;
+    margin: 0 3.125rem;
 }
 
 .add-btn {
     background: $background-color;
     color: $bright-accent;
-    padding: 10px 25px;
+    padding: 0.625rem 1.563rem;
     border: none;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
     cursor: pointer;
     justify-content: center;
     align-items: center;
     box-shadow: $box-shadow;
-    width: 500px;
+    width: 32.25rem;
 }
 
 .add-btn:hover {
@@ -1012,21 +1008,21 @@ img {
 .create-recipe-container {
     display: none;
     position: fixed;
-    padding-top: 50px;
+    padding-top: 3.125rem;
     left: 0;
-    bottom: 6px;
+    bottom: 0.375rem;
     width: 100%;
 }
 
 .create-feed {
     position: relative;
     border-radius: $border-radius;
-    border-bottom: 1px solid $light-accent;
-    border-left: 1px solid $light-accent;
-    border-right: 1px solid $light-accent;
-    padding: 30px 50px 10px 50px;
+    border-bottom: $light-border;
+    border-left: $light-border;
+    border-right: $light-border;
+    padding: 1.875rem 3.125rem 0.625rem 3.125rem;
     box-shadow: $box-shadow-focus-search;
-    max-width: 545px;
+    max-width: 34.063rem;
     background-color: $background-color;
     margin: auto;
     -webkit-animation-name: animatebottom;
@@ -1038,7 +1034,7 @@ img {
 .close-btn {
     float: right;
     color: $light-accent;
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: bold;
 }
 
@@ -1049,7 +1045,7 @@ img {
 
 @-webkit-keyframes animatebottom {
     from {
-        bottom: -300px;
+        bottom: -18.75rem;
         opacity: 0
     }
     to {
@@ -1060,7 +1056,7 @@ img {
 
 @keyframes animatebottom {
     from {
-        bottom: -300px;
+        bottom: -18.75remx;
         opacity: 0
     }
     to {
@@ -1079,8 +1075,8 @@ img {
 .hide-password {
     position: relative;
     display: flex;
-    width: 50px;
-    height: 25px;
+    width: 3.125rem;
+    height: 1.563rem;
 }
 
 .hide-password input {
@@ -1106,10 +1102,10 @@ img {
 .toggle:before {
     position: absolute;
     content: "";
-    height: 20px;
-    width: 20px;
-    left: 3px;
-    bottom: 3px;
+    height: 1.25rem;
+    width: 1.25rem;
+    left: 0.188rem;
+    bottom: 0.188rem;
     background-color: $bright-accent;
     -webkit-transition: .4s;
     transition: .4s;
@@ -1122,13 +1118,13 @@ input:checked + .toggle {
 }
 
 input:focus + .toggle {
-    box-shadow: 0 0 1px $dark-green;
+    box-shadow: 0 0 0.063rem $dark-green;
 }
 
 input:checked + .toggle:before {
-    -webkit-transform: translateX(23px);
-    -ms-transform: translateX(23px);
-    transform: translateX(23px);
+    -webkit-transform: translateX(1.438rem);
+    -ms-transform: translateX(1.438rem);
+    transform: translateX(1.438rem);
 }
 
 
