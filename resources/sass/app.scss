@@ -227,8 +227,6 @@ input[type=search] {
     padding: 0.625rem 1.25rem;
     cursor: pointer;
     width: 100%;
-    //width: -moz-available;
-    //width: -webkit-fill-available;
     max-width: stretch;
 }
 
@@ -355,7 +353,8 @@ input[type=password],
     cursor: pointer;
     box-shadow: $box-shadow;
     align-self: flex-start;
-    width: -webkit-fill-available;
+    width: 100%;
+    max-width: stretch;
 }
 
 input[type=text]:focus,
