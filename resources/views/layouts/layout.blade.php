@@ -9,11 +9,19 @@
 
     {{--Favicon--}}
     <link rel="apple-touch-icon" sizes="180x180" href={{ asset('images/favicon/apple-touch-icon.png') }}>
-    <link rel="icon" type="image/png" sizes="32x32" href={{ asset('images/favicon/favicon-32x32.png') }}>
     <link rel="icon" type="image/png" sizes="16x16" href={{ asset('images/favicon/favicon-16x16.png') }}>
+    <link rel="icon" type="image/png" sizes="32x32" href={{ asset('images/favicon/favicon-32x32.png') }}>
+    <link rel="icon" type="image/png" sizes="192x192" href={{ asset('images/favicon/android-chrome-192x192.png') }}>
+    <link rel="icon" type="image/png" sizes="194x194" href={{'images/favicon/favicon-194x194.png'}}>
+
+    <link rel="mask-icon" href={{'images/favicon/safari-pinned-tab.svg'}} color="#4e918e">
     <link rel="manifest" href={{ asset('images/favicon/site.webmanifest') }}>
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#4e918e">
+    <meta name="msapplication-TileImage" content={{'images/favicon/mstile-144x144.png'}}>
+    <meta name="theme-color" content="#fff5e9">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+
 
     {{--Open Graph--}}
     <meta property="og:title" content="Flavorly">
@@ -36,7 +44,7 @@
 @include('layouts.components.header')
 @section('content')
 @show
-<script src="../../../js/app.js"></script>
+<script src="../../js/app.js"></script>
 <noscript>Your browser does not support JavaScript.</noscript>
 @include('layouts.components.footer')
 </body>

@@ -3,7 +3,7 @@
         {{--    logo starts here--}}
         <div class="logo-container">
             <a href={{ route('home') }} tabindex="0">
-                <img class="logo" src={{ asset('images/logo/flavorly-full-crop.png') }} alt="Flavorly-logo"/>
+                <img class="logo" src={{ asset('images/logo/flavorly-logo.jpg') }} alt="Flavorly-logo"/>
             </a>
         </div>
 
@@ -28,8 +28,8 @@
             @if(Auth::check())
                 <button type="button" class="collapsible" >
                     <div class="profile" tabindex="3">
-                        <img class="profile-account" src={{ asset('images/account.png') }} alt="profile"/>
-                        <img class="profile-account-hover" src={{ asset('images/account-hover.png') }} alt="profile-hover"/>
+                        <img class="profile-account" src={{ asset('images/account.jpg') }} alt="profile"/>
+                        <img class="profile-account-hover" src={{ asset('images/account-hover.jpg') }} alt="profile-hover"/>
                     </div>
                     <div class="welcome"><b>Welcome, {{ Auth::user()->first_name }}</b></div>
                 </button>
