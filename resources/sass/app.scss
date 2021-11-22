@@ -858,6 +858,7 @@ input:-webkit-autofill:focus {
 .card-featured-buttons {
     margin: 1.563rem 0.938rem 0.938rem 0.938rem;
     text-align: center;
+    z-index: -1;
 }
 
 .card-buttons,
@@ -874,6 +875,7 @@ input:-webkit-autofill:focus {
 .card-featured-image-container {
     display: flex;
     justify-content: center;
+    z-index: -1;
 }
 
 .card-image-container {
@@ -901,6 +903,7 @@ input:-webkit-autofill:focus {
     cursor: pointer;
     object-fit: cover;
     overflow: hidden;
+    //z-index: -1;
 }
 
 img {

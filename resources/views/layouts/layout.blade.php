@@ -21,8 +21,6 @@
     <meta name="theme-color" content="#fff5e9">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 
-
-
     {{--Open Graph--}}
     <meta property="og:title" content="Flavorly || all recipes in one place">
     <meta property="og:url" content="https://flavorly.evaroets.com/" />
