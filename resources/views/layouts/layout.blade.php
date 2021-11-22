@@ -24,19 +24,23 @@
 
 
     {{--Open Graph--}}
-    <meta property="og:title" content="Flavorly">
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:title" content="Flavorly || all recipes in one place">
+    <meta property="og:url" content="https://flavorly.evaroets.com/" />
+    <meta property="og:image" content={{'images/flavorly-full.jpg'}} />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="210" />
     <meta property="og:type" content="website"/>
-    <meta property="og:description" content="" />
+    <meta property="og:description" content="Losing track of all your favourite recipes, or simply looking for inspiration for dinner? Falvorly brings all your recipes to one place." />
 
     {{--Twitter tags--}}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="">
+    <meta name="twitter:card" content="app">
+    <meta name="twitter:title" content="Flavorly || all recipes in one place">
+    <meta name="twitter:description" content="Losing track of all your favourite recipes, or simply looking for inspiration for dinner? Falvorly brings all your recipes to one place." />
+    <meta name="twitter:image" content={{'images/flavorly-full.jpg'}}>
+    <meta name="twitter:app:name:iphone" content="Flavorly">
+    <meta name="twitter:app:name:ipad" content="Flavorly">
+    <meta name="twitter:app:name:googleplay" content="Flavorly">
+
 
     <title>Flavorly | All recipes in once place</title>
 </head>
